@@ -1,0 +1,49 @@
+.brm-hero {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-white;
+  }
+
+  .w-ful {
+    @apply px-15;
+  }
+}
+
+.section-brm--hero {
+  #header-fixed & {
+    @apply mt-60;
+
+    @media (min-width: 1024px) {
+      @apply mt-105;
+    }
+  }
+
+  .hero__carousel__image {
+    @apply flex items-center;
+
+    .page & {
+      @apply h-hero_secondary;
+
+      @media (max-width: 1023px) {
+        @apply h-hero_secondary_mobile;
+      }
+    }
+
+    .home &,
+    .wp-core-ui & {
+      @apply h-hero;
+
+      @media (max-width: 1023px) {
+        @apply h-hero_mobile;
+      }
+    }
+
+    .container {
+      @apply px-15;
+    }
+  }
+}

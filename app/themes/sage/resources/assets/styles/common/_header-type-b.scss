@@ -1,0 +1,208 @@
+//// Header Type B
+///
+//
+.header-b {
+  @apply bg-primary-2 pb-15;
+
+  transition: all ease 1s;
+  z-index: 100;
+
+  // Header Bottom
+  .header__bottom {
+    @apply pt-15;
+
+    @media (max-width: 1023px) {
+      @apply flex justify-between items-end pt-0;
+
+      .mobile--tele {
+        @apply flex items-center;
+
+        .nav-is-open & {
+          @apply ml-0 mt-15;
+
+          span {
+            @apply block;
+
+            font-size: 24px;
+          }
+        }
+      }
+
+      .button {
+        .nav-is-open & {
+          @apply block m-0 mt-15;
+        }
+      }
+    }
+
+    // HEader Nav Open
+    .nav-is-open & {
+      @apply fixed items-start p-15 w-full bg-primary-2;
+
+      height: 100vh;
+      z-index: 50;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  // Branding Logo
+  .header__branding {
+    width: 20%;
+    transition: all ease 1s;
+
+    @media (max-width: 1023px) {
+      @apply w-auto;
+
+      max-width: 200px;
+    }
+
+    .nav-is-open & {
+      @apply hidden;
+    }
+  }
+
+  // Main Nav Controller
+  nav {
+    @apply w-full flex justify-between items-end;
+
+    flex-flow: row wrap;
+
+    @media (max-width: 1023px) {
+      @apply items-center;
+
+      .nav-is-open & {
+        @apply justify-start items-start;
+
+        flex-flow: column wrap;
+      }
+    }
+    // Inner Nav Controller
+    .nav {
+      width: 40%;
+
+      @media (max-width: 1023px) {
+        @apply w-auto;
+
+        display: none;
+      }
+    }
+
+    .nav--right,
+    .nav--left {
+      @apply flex items-center;
+
+      flex-flow: row wrap;
+
+      a {
+        @apply uppercase;
+
+        font-size: 24px;
+
+        @media (max-width: 1100px) {
+          font-size: 20px;
+        }
+
+        @media (max-width: 1023px) {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .sub-menu {
+      @apply bg-primary-2 p-0 m-0;
+
+      a {
+        @apply capitalize;
+
+        @media (min-width: 1024px) {
+          @apply px-15;
+
+          margin: 0 !important;
+        }
+      }
+    }
+
+    .nav--right {
+      @apply justify-end;
+
+      .sub-menu {
+        left: 15px;
+      }
+
+      a {
+        @media (min-width: 1024px) {
+          @apply ml-30;
+        }
+      }
+    }
+
+    .nav--left {
+      .sub-menu {
+        left: -15px;
+      }
+
+      a {
+        @media (min-width: 1024px) {
+          @apply mr-30;
+        }
+      }
+    }
+  }
+
+  // hamburger Icon
+  .w-hamburger {
+    @apply bg-primary-1;
+
+    .nav-is-open & {
+      @apply bg-primary-2 mt-15 mb-30;
+    }
+  }
+
+  .nav-toggle {
+    span {
+      &::before,
+      &::after {
+        @apply bg-primary-1;
+
+        .nav-is-open & {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // Nav Mobile
+  #menu-nav-type-b-left.nav,
+  #menu-nav-type-b-right.nav {
+    @media (max-width: 1023px) {
+      @apply hidden;
+
+      .nav-is-open & {
+        @apply block;
+      }
+    }
+  }
+
+  // Fixed Property
+  #header-fixed & {
+    @apply fixed w-full;
+
+    margin-top: 0;
+    top: 0;
+  }
+}
+
+#header-fixed {
+  // Scrool behavior
+  .scroll-head--b {
+    @media (min-width: 1024px) {
+      margin-top: -60px !important;
+
+      .header__branding {
+        width: 15%;
+        margin-top: 15px;
+      }
+    }
+  }
+}

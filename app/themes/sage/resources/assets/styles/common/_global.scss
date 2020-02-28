@@ -1,0 +1,116 @@
+body {
+  @apply font-trade-gothic-lt text-gray-900 bg-white;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 2000px;
+}
+
+.nav-is-open {
+  height: 100vh;
+}
+
+footer {
+  @apply px-15;
+}
+
+hr {
+  @apply block h-px my-8 bg-primary-1;
+
+  clear: both;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply my-16;
+  }
+}
+
+.desktop-none {
+  @media (min-width: 1024px) {
+    display: none !important;
+  }
+}
+
+.mobile-none {
+  @media (max-width: 1023px) {
+    display: none !important;
+  }
+}
+
+address {
+  @apply not-italic leading-normal;
+
+  span:first-child {
+    @apply block;
+  }
+}
+
+iframe {
+  @apply block;
+}
+
+input,
+textarea,
+select, {
+  @apply w-full p-2 text-lg text-black leading-normal border border-solid border-gray-300 appearance-none;
+}
+
+textarea {
+  @apply h-32;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  @apply opacity-75;
+}
+
+ol:not([class]),
+ul:not([class]) {
+  @apply mb-10 pl-10 list-disc;
+}
+
+li:not([class]) {
+  //
+}
+
+li:not([class]) + li:not([class]) {
+  @apply mt-3;
+}
+
+/// Dark backgrounds
+.bg-primary-1,
+.bg-primary-3,
+.text-white,
+.js-background,
+.bg-black,
+.home .hero {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul:not([class]),
+  p,
+  a:not([class]),
+  span:not([class]),
+  label {
+    @apply text-white;
+  }
+
+  .section__content__inner {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul:not([class]),
+    p,
+    span:not([class]),
+    label {
+      color: inherit;
+    }
+  }
+}

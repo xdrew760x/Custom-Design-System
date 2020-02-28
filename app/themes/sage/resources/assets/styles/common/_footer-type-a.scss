@@ -1,0 +1,60 @@
+///// Footer Type A
+///
+//
+
+.footer-a {
+  /// Footer Logo
+  .footer_branding {
+    max-width: 300px;
+
+    @media (max-width: 1023px) {
+      @apply max-w-full mb-15;
+    }
+  }
+  /// Footer Column Control
+  .footer__column {
+    @media (max-width: 1023
+    +
+    px) {
+      @apply flex justify-start items-start;
+
+      flex-flow: column wrap;
+    }
+  }
+
+  /// Footer Copyright
+  .copyright {
+    @apply text-primary-1;
+
+    a {
+      //
+    }
+  }
+
+  // Footer Nav
+  .footer_nav ul {
+    @apply flex justify-end p-0 m-0;
+
+    list-style: none;
+
+    @media (max-width: 1023px) {
+      @apply mt-30;
+
+      flex-flow: column wrap;
+    }
+
+    li + li {
+      @apply ml-15;
+
+      @media (max-width: 1023px) {
+        @apply ml-0;
+      }
+    }
+
+    a {
+      @apply uppercase;
+
+      font-size: 16px;
+    }
+  }
+}

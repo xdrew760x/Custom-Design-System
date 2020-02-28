@@ -1,0 +1,25 @@
+.button {
+  @apply inline-block py-15 px-6 text-sm text-white tracking-widest uppercase border-none rounded-none;
+}
+
+.button--primary {
+  @apply bg-primary-1;
+
+  // Hover
+  @media (hover: hover) {
+    &:hover {
+      @apply text-white bg-primary-3;
+    }
+  }
+}
+
+.button--secondary {
+  @apply bg-primary-4;
+
+  // Hover
+  @media (hover: hover) {
+    &:hover {
+      @apply text-white bg-primary-3;
+    }
+  }
+}

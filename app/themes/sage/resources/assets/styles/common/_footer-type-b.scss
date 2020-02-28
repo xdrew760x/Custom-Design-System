@@ -1,0 +1,15 @@
+.footer-b {
+  .column {
+    @media (max-width: 1023px) {
+      @apply mt-30;
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    @apply mb-15;
+  }
+}

@@ -1,0 +1,62 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-15 leading-tight capitalize;
+}
+
+h1 {
+  @apply text-h1_m text-primary-1;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply text-h1;
+  }
+}
+
+h2 {
+  @apply text-h2_m text-primary-1;
+
+  @media (min-width: 1024px) {
+    @apply text-h2;
+  }
+}
+
+h3 {
+  @apply text-h3 text-primary-1;
+}
+
+h4 {
+  @apply text-h4 text-primary-1;
+}
+
+h5 {
+  @apply text-h5 text-primary-3;
+}
+
+h6 {
+  @apply text-h6 text-primary-3 uppercase;
+}
+
+p {
+  @apply mb-10 text-base text-primary-3;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+li {
+  @apply text-base;
+}
+
+b,
+strong {
+  @apply font-trade-gothic-lt-bold font-normal;
+}
+
+a {
+  @apply text-primary-1;
+}

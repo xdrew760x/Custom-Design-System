@@ -1,0 +1,11 @@
+.section-brm--hero {
+  .slick-dots {
+    @apply relative text-center;
+
+    margin-top: -45px;
+
+    @media (min-width: 1024px) {
+      margin-top: -75px;
+    }
+  }
+}

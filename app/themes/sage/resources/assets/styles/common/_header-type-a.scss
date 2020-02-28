@@ -1,0 +1,137 @@
+.header-a {
+  @apply bg-primary-2 pb-15;
+
+  margin-top: 0;
+  transition: all ease 1s;
+  z-index: 100;
+
+  // Wesbite Logo Styling
+  .header__branding {
+    img {
+      max-width: 350px;
+      transition: all ease 1s;
+
+      @media (max-width: 1200px) {
+        max-width: 250px;
+      }
+
+      @media (max-width: 1023px) {
+        max-width: 215px;
+      }
+    }
+  }
+
+  // Phone Number & CTA
+  .header__top {
+    @media (min-width: 1024px) {
+      @apply flex items-end pb-15;
+
+      flex-flow: row wrap;
+
+      a {
+        @apply ml-30;
+      }
+    }
+  }
+
+  [data-state="open"] .sub-menu {
+    @apply p-0 m-0;
+  }
+
+  // hamburger Icon
+  .w-hamburger {
+    @apply bg-primary-1;
+
+    .nav-is-open & {
+      @apply bg-primary-2 mt-15 mb-30;
+    }
+  }
+
+  .nav-toggle {
+    span {
+      &::before,
+      &::after {
+        @apply bg-primary-1;
+
+        .nav-is-open & {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // Nav Mobile
+  #menu-nav-header-type-a {
+    @apply bg-primary-2;
+
+    z-index: 100;
+
+    @media (min-width: 1024px) {
+      @apply flex justify-end items-center ;
+
+      li {
+        @apply ml-30;
+
+        a {
+          @apply uppercase;
+
+          font-size: 24px;
+        }
+      }
+    }
+
+    // 1023 <=
+    @media (max-width: 1023px) {
+      @apply hidden;
+
+      // Navigation Open
+      .nav-is-open & {
+        @apply block mt-30 p-30 absolute w-full bg-primary-2;
+
+        left: 0;
+        height: 100vh;
+
+        a {
+          @apply uppercase;
+
+          font-size: 28px;
+        }
+      }
+    }
+
+    // sub-menu Background Color control
+    .sub-menu {
+      @media (min-width: 1024px) {
+        @apply bg-primary-2;
+
+        left: -30px !important;
+      }
+
+      a {
+        @apply capitalize;
+      }
+    }
+  }
+
+  // Fixed Property
+  #header-fixed & {
+    @apply fixed w-full;
+
+    margin-top: 0;
+    top: 0;
+  }
+}
+
+#header-fixed {
+  // Scrool behavior
+  .scroll-head--a {
+    @media (min-width: 1024px) {
+      margin-top: -60px !important;
+
+      .header__branding img {
+        max-width: 175px;
+        margin-top: 15px;
+      }
+    }
+  }
+}
