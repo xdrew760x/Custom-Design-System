@@ -102,3 +102,20 @@ function mytheme_setup() {
   add_theme_support( 'align-wide' );
 }
 add_action( 'after_setup_theme', 'mytheme_setup' );
+
+
+/// Registers Block Category for Gutenberg
+
+function my_blocks_plugin_block_categories( $categories ) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'brm_blocks',
+                'title' => __( 'Big Rig Media Blocks', 'mydomain' ),
+                'icon'  => 'wordpress',
+            ),
+        )
+    );
+}
+add_filter( 'block_categories', 'my_blocks_plugin_block_categories', 10, 2 );

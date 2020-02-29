@@ -1,7 +1,7 @@
 {{--
   Title: Carousel Gallery
   Description: Add a carousel gallery..
-  Category: common
+  Category: brm_blocks
   Icon: images-alt
   Keywords: carousel
   Mode: edit
@@ -30,4 +30,3 @@
     </div>
   @endif
 @endif
-

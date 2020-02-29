@@ -1,7 +1,7 @@
 {{--
   Title: Portals
   Description: Add portals to pages within your site.
-  Category: common
+  Category: brm_blocks
   Icon: admin-links
   Keywords: portals
   Mode: edit

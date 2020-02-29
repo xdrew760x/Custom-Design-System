@@ -80,7 +80,7 @@ li:not([class]) + li:not([class]) {
 
 /// Dark backgrounds
 .bg-primary-1,
-.bg-primary-3,
+.bg-primary-2,
 .text-white,
 .js-background,
 .bg-black,
@@ -97,20 +97,5 @@ li:not([class]) + li:not([class]) {
   span:not([class]),
   label {
     @apply text-white;
-  }
-
-  .section__content__inner {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    ul:not([class]),
-    p,
-    span:not([class]),
-    label {
-      color: inherit;
-    }
   }
 }

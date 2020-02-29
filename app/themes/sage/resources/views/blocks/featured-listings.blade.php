@@ -1,7 +1,7 @@
 {{--
   Title: Featured Listings
   Description: Display a specified number of featured listings.
-  Category: common
+  Category: brm_blocks
   Icon: star-filled
   Keywords: featured-listings
   Mode: edit

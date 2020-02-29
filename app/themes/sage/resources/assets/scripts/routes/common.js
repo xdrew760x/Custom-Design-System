@@ -117,6 +117,7 @@ export default {
 
     // Handle portals & featured listings
     if (window.matchMedia('(max-width: 1023px)').matches) {
+      // Portals Becomes Slider on mobile
       if ($('.js-portals').length) {
         $('.js-portals').slick({
           accessibility: true,
@@ -143,6 +144,7 @@ export default {
         })
       }
 
+      // Listing Becomes Slider on mobile
       if ($('.js-listings').length) {
         $('.js-listings').slick({
           accessibility: true,
@@ -160,6 +162,87 @@ export default {
           responsive: [
             {
               breakpoint: 415,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        })
+      }
+
+      // Columns Becomes Slider on mobile
+      if ($('.js-columns-1').length) {
+        $('.js-columns-1').slick({
+          accessibility: true,
+          adaptiveHeight: true,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          arrows: false,
+          dots: true,
+          fade: false,
+          pauseOnFocus: false,
+          pauseOnHover: false,
+          speed: 1000,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          responsive: [
+            {
+              breakpoint: 560,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        })
+      }
+
+      // Columns Becomes Slider on mobile
+      if ($('.js-columns-2').length) {
+        $('.js-columns-2').slick({
+          accessibility: true,
+          adaptiveHeight: true,
+          autoplay: true,
+          autoplaySpeed: 8000,
+          arrows: false,
+          dots: true,
+          fade: false,
+          pauseOnFocus: false,
+          pauseOnHover: false,
+          speed: 1000,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          responsive: [
+            {
+              breakpoint: 560,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        })
+      }
+
+      // Columns Becomes Slider on mobile
+      if ($('.js-columns-3').length) {
+        $('.js-columns-3').slick({
+          accessibility: true,
+          adaptiveHeight: true,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          arrows: false,
+          dots: true,
+          fade: false,
+          pauseOnFocus: false,
+          pauseOnHover: false,
+          speed: 1000,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          responsive: [
+            {
+              breakpoint: 560,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,

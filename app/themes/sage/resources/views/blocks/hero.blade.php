@@ -1,7 +1,7 @@
 {{--
   Title: Hero
   Description: Add a hero with either an image, video or carousel.
-  Category: common
+  Category: brm_blocks
   Icon: images-alt2
   Keywords: hero
   Mode: edit

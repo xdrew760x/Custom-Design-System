@@ -1,7 +1,7 @@
 {{--
   Title: Call to Action
   Description: Induce your users with a specific message.
-  Category: common
+  Category: brm_blocks
   Icon: megaphone
   Keywords: call-to-action
   Mode: edit

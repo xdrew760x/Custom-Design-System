@@ -1,7 +1,7 @@
 {{--
   Title: Testimonials
   Description: Add a testimonials carousel
-  Category: common
+  Category: brm_blocks
   Icon: format-quote
   Keywords: testimonials
   Mode: edit
@@ -26,4 +26,3 @@
     </div>
   </section>
 @endif
-

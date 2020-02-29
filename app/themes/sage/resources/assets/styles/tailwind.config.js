@@ -73,7 +73,7 @@ module.exports = {
       primary: {
         1: '#ea8a2f',
         2: '#333333',
-        3: '#ffffff',
+        3: '#F5F5F5',
         4: '#000000'
       }
     },
@@ -275,8 +275,8 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
-      hero: '562px',
-      hero_mobile: '450px',
+      hero: '800px',
+      hero_mobile: '750px',
       hero_secondary: '350px',
       hero_secondary_mobile: '300px',
       icon: '40px',

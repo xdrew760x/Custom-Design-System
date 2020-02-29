@@ -33,15 +33,15 @@ h4 {
 }
 
 h5 {
-  @apply text-h5 text-primary-3;
+  @apply text-h5 text-primary-2;
 }
 
 h6 {
-  @apply text-h6 text-primary-3 uppercase;
+  @apply text-h6 text-primary-2 uppercase;
 }
 
 p {
-  @apply mb-10 text-base text-primary-3;
+  @apply mb-10 text-base text-primary-2;
 
   &:last-child {
     @apply mb-0;

@@ -9,13 +9,13 @@
 .alignright {
   // 1023 <=
   @media (max-width: 1023px) {
-    @apply block mx-auto;
+    //@apply block mx-auto;
   }
 }
 
 // Align None
 .alignnone {
-  @apply mx-auto max-w-full h-auto;
+  //@apply mx-auto max-w-full h-auto;
 }
 
 // Align Center

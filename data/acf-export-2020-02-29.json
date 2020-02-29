@@ -1,5 +1,263 @@
 [
     {
+        "key": "group_5e597af8e79ec",
+        "title": "Block Column Slider",
+        "fields": [
+            {
+                "key": "field_5e5985c375113",
+                "label": "Background Image",
+                "name": "background_image_column_slider",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5e59867d43450",
+                "label": "Background Color",
+                "name": "background_color_column_slider",
+                "type": "select",
+                "instructions": "Would you like to add a Background color?",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5e5985c375113",
+                            "operator": "==empty"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "bg-primary-1": "Primary 1",
+                    "bg-primary-2": "Primary 2",
+                    "bg-primary-3": "Primary 3",
+                    "bg-white": "White"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e597fb5e8c34",
+                "label": "Slider Control",
+                "name": "slick_control",
+                "type": "select",
+                "instructions": "Max 3 Per Page - \r\nWould you like this section to become a slider on mobile devices?",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "js-columns-1": "Slider One",
+                    "js-columns-2": "Slider Two",
+                    "js-columns-3": "Slider Three"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e598380e87b3",
+                "label": "Flex Justification",
+                "name": "flex_justify",
+                "type": "select",
+                "instructions": "How would you like these columns to Spread within a Row?",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "justify-start": "Left to Right",
+                    "justify-center": "Centered",
+                    "justify-between": "Space Between",
+                    "justify-end": "Right to Left"
+                },
+                "default_value": [
+                    "justify-between"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e598331e87b2",
+                "label": "Flex Alignment",
+                "name": "flex_alignment",
+                "type": "select",
+                "instructions": "How would you like these columns aligned?",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "items-start": "Top",
+                    "items-center": "Centered",
+                    "items-end": "Botton"
+                },
+                "default_value": [
+                    "items-center"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e598b4e07d05",
+                "label": "Vertical Padding",
+                "name": "vertical_padding",
+                "type": "select",
+                "instructions": "How much Vertical padding would you like placed on this section?",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "py-30": "Small",
+                    "py-60": "Medium",
+                    "py-90": "Large"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e597aff41280",
+                "label": "Column Slider",
+                "name": "column_slider",
+                "type": "repeater",
+                "instructions": "Create Columns within rows that will become a slick slider for mobile devices.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5e597ba941283",
+                        "label": "Column Content",
+                        "name": "column_content",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0
+                    },
+                    {
+                        "key": "field_5e59804f4bb6a",
+                        "label": "Column Width",
+                        "name": "column_width",
+                        "type": "select",
+                        "instructions": "Select the Width of this Particular Column",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "width-25": "25%",
+                            "width-33": "33%",
+                            "width-50": "50%",
+                            "width-75": "75%",
+                            "w-full": "100%"
+                        },
+                        "default_value": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "return_format": "value",
+                        "ajax": 0,
+                        "placeholder": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/columns-slider"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_5e3203a891aa7",
         "title": "Header Component",
         "fields": [
@@ -47,6 +305,21 @@
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
+            },
+            {
+                "key": "field_5e586241a4f88",
+                "label": "Book Now URL",
+                "name": "book_now_url",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url"
             },
             {
                 "key": "field_5e5463238819a",
