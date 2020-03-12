@@ -7,6 +7,10 @@
   .footer_branding {
     max-width: 300px;
 
+    @media (max-width: 1200px) {
+      max-width: 250px;
+    }
+
     @media (max-width: 1023px) {
       @apply max-w-full mb-15;
     }
@@ -24,15 +28,27 @@
 
   /// Footer Copyright
   .copyright {
-    @apply text-primary-1;
+    @apply text-primary-3;
 
+    a,
+    span {
+      @apply text-primary-3 font-opensans-regular;
+    }
+  }
+
+  .menu-item-208,
+  .menu-item-209 {
     a {
-      //
+      @apply py-2 px-30 text-white;
+    }
+
+    @media (max-width: 1023px) {
+      @apply mt-15 mb-15;
     }
   }
 
   // Footer Nav
-  .footer_nav ul {
+  .footer_nav {
     @apply flex justify-end p-0 m-0;
 
     list-style: none;
@@ -44,7 +60,11 @@
     }
 
     li + li {
-      @apply ml-15;
+      @apply ml-30;
+
+      @media (max-width: 1336px) {
+        @apply ml-15;
+      }
 
       @media (max-width: 1023px) {
         @apply ml-0;
@@ -52,9 +72,29 @@
     }
 
     a {
-      @apply uppercase;
+      @apply uppercase text-primary-3;
 
       font-size: 16px;
+
+      @media (max-width: 1023px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .menu-item-209 {
+    a {
+      @apply bg-primary-1 text-white;
+    }
+  }
+
+  .menu-item-208 {
+    @media (min-width: 1024px) {
+      @apply ml-30;
+    }
+
+    a {
+      @apply bg-primary-2 text-white;
     }
   }
 }

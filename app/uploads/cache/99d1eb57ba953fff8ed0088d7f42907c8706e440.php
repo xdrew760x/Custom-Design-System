@@ -1,6 +1,8 @@
 <?php
 
-$header_cta = get_field('header_cta', 'options')
+$header_cta = get_field('header_cta', 'options');
+
+$header_booking = get_field('header_booking', 'options');
 
 ?>
 
@@ -16,7 +18,10 @@ $header_cta = get_field('header_cta', 'options')
         <h6 class="mobile-none"><?php echo $header_cta; ?></h6>
       <?php endif; ?>
 
-      <a class="button button--primary mobile-none" href="<?php echo get_permalink(290); ?>">Place Order</a>
+      <?php if($header_booking): ?>
+      <a class="button button--primary mobile-none" href="<?php echo $header_booking; ?>">Place Order</a>
+      <?php endif; ?>
+
     </div>
 
     <div class="flex flex-row flex-wrap md:flex-no-wrap items-center md:items-end justify-between">

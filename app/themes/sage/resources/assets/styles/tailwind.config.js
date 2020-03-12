@@ -71,10 +71,12 @@ module.exports = {
         900: '#2a4365'
       },
       primary: {
-        1: '#ea8a2f',
-        2: '#333333',
-        3: '#F5F5F5',
-        4: '#000000'
+        1: '#1c272f',
+        2: '#f6921e',
+        3: '#f6921e',
+        4: '#F5F5F5',
+        5: '#D8D8D8',
+
       }
     },
     spacing: {
@@ -192,7 +194,21 @@ module.exports = {
       'fontawesome-solid': [
         'Font Awesome\\ 5 Pro Solid'
       ],
-
+      'glegoo-bold': [
+        'glegoo-bold'
+      ],
+      'glegoo-regular': [
+        'glegoo-regular'
+      ],
+      'opensans-light': [
+        'opensans-light'
+      ],
+      'opensans-regular': [
+        'opensans-regular'
+      ],
+      'opensans-bold': [
+        'opensans-bold'
+      ],
 
       sans: [
         '-apple-system',
@@ -235,18 +251,17 @@ module.exports = {
       drop: '24px',
       drop: '24px',
 
-      h1: '64px',
-      h1_m: '54px',
+      h1: '58px',
+      h1_m: '38px',
 
-      h2: '56px',
-      h2_m: '46px',
+      h2: '38px',
 
-      h3: '38px',
-      h4: '32px',
-      h5: '30px',
-      h6: '24px',
+      h3: '23px',
+      h4: '28px',
+      h5: '24px',
+      h6: '20px',
 
-      p: '22px',
+      p: '18px',
 
       xs: '1rem',
       sm: '1.125rem',

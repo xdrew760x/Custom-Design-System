@@ -24,7 +24,7 @@ $header_booking = get_field('header_booking', 'options');
 
     </div>
 
-    <div class="flex flex-row flex-wrap md:flex-no-wrap items-center md:items-end justify-between">
+    <div class="flex flex-row flex-wrap items-center md:items-end justify-center md:justify-between">
 
       <button class="w-hamburger h-hamburger ml-0 mr-auto md:hidden nav-toggle js-hamburger" aria-labelledby="toggle-navigation">
         <span id="toggle-navigation" hidden>Toggle Navigation</span>

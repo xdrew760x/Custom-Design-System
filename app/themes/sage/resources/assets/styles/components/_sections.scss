@@ -1,4 +1,5 @@
-.section {
+.section,
+.section--contained {
   @apply py-45;
 }
 
@@ -14,7 +15,15 @@
   .section__content__inner {
     @apply p-45 w-full;
 
-    max-width: 700px;
+    max-width: 750px;
+
+    @media (max-width: 1023px) {
+      @apply px-0 py-30;
+    }
+
+    .flip & {
+      @apply pl-0 pt-0;
+    }
   }
 }
 
@@ -34,16 +43,18 @@
   }
 }
 
-.section--contained + .section--contained {
-  @media (min-width: 1024px) {
-    @apply pt-0;
-  }
-}
-
 // Includes additional padding for Sections with an Acition
 
 .has-action {
   @apply py-32;
+}
+
+.section__bg {
+  padding-bottom: 35%;
+
+  @media (max-width: 1023px) {
+    padding-bottom: 75%;
+  }
 }
 
 // Flip Order of split or contained content
@@ -54,6 +65,8 @@
   }
 
   .section__bg {
+    @apply bg-center;
+
     order: 2;
   }
 }
@@ -76,7 +89,7 @@
   svg {
     @apply h-icon w-icon;
 
-    fill: #be287e;
+    fill: #d8d8d8;
   }
 }
 

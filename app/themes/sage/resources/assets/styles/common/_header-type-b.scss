@@ -152,7 +152,9 @@
 
   // hamburger Icon
   .w-hamburger {
-    @apply bg-primary-1;
+    @apply bg-white absolute;
+
+    right: 15px;
 
     .nav-is-open & {
       @apply bg-primary-2 mt-15 mb-30;
@@ -163,7 +165,7 @@
     span {
       &::before,
       &::after {
-        @apply bg-primary-1;
+        @apply bg-white;
 
         .nav-is-open & {
           opacity: 1;

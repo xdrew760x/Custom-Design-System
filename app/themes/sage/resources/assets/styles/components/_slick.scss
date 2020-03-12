@@ -1,6 +1,6 @@
 // Dots
 .slick-dots {
-  @apply px-buffer list-none;
+  @apply px-buffer list-none text-center;
 
   li {
     @apply inline-block pl-0 text-base leading-none;
@@ -16,16 +16,16 @@
     text-indent: -9999px;
 
     .brm-testimonials & {
-      @apply bg-white border-white;
+      @apply bg-primary-1;
     }
   }
 
   .slick-active {
     button {
-      @apply bg-white;
+      @apply bg-primary-2;
 
       .brm-testimonials & {
-        @apply bg-primary-1 border-white;
+        @apply bg-primary-2;
       }
     }
   }

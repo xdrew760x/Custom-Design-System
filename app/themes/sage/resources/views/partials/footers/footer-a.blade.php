@@ -18,7 +18,7 @@
 
 </div>
 
-<div class="footer__column footer__bottom md:flex md:flex-row md:items-center md:justify-between mt-5 pt-5 border-t border-solid border-primary-1">
+<div class="footer__column footer__bottom md:flex md:flex-row md:items-center md:justify-between mt-5 pt-5 border-t border-solid border-primary-5">
 
   <div>
     @if( App::siteSocialLinks() )
@@ -35,10 +35,8 @@
     <p class="copyright text-xs text-white">
       <span class="md:inline-block text-white">&copy; {{ date('Y') }} {{ App::siteName() }}</span>
       <span class="hidden md:inline-block text-white">&#124;</span>
-      <a href="{{ get_permalink(190) }}">ADA Compliance</a> &#124;
+      <a href="{{ get_permalink(225) }}">ADA Compliance</a> &#124;
       <a href="{{ get_permalink(3) }}">Privacy Policy</a>
-      <span class="hidden md:inline-block text-white">&#124;</span>
-      <span class="md:inline-block text-white">Website By <a href="https://www.bigrigxpress.com/xpress-website-development/">Big Rig Xpress</a> &reg;</span>
     </p>
   </div>
 

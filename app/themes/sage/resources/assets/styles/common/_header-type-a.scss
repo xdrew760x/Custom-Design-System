@@ -1,9 +1,13 @@
 .header-a {
-  @apply bg-primary-2 pb-15;
+  @apply bg-primary-1 pt-15 pb-15;
 
   margin-top: 0;
   transition: all ease 1s;
   z-index: 100;
+
+  @media (max-width: 1023px) {
+    @apply pb-15;
+  }
 
   // Wesbite Logo Styling
   .header__branding {
@@ -24,6 +28,10 @@
 
   // Phone Number & CTA
   .header__top {
+    h6 {
+      @apply m-0;
+    }
+
     @media (min-width: 1024px) {
       @apply flex items-end pb-15;
 
@@ -41,18 +49,23 @@
 
   // hamburger Icon
   .w-hamburger {
-    @apply bg-primary-1;
+    @apply bg-white absolute;
+
+    right: 15px;
+    margin-top: 0;
 
     .nav-is-open & {
-      @apply bg-primary-2 mt-15 mb-30;
+      @apply bg-primary-1 mb-30;
     }
   }
 
   .nav-toggle {
     span {
+      @apply bg-white;
+
       &::before,
       &::after {
-        @apply bg-primary-1;
+        @apply bg-white;
 
         .nav-is-open & {
           opacity: 1;
@@ -63,8 +76,6 @@
 
   // Nav Mobile
   #menu-nav-header-type-a {
-    @apply bg-primary-2;
-
     z-index: 100;
 
     @media (min-width: 1024px) {
@@ -72,12 +83,20 @@
 
       li {
         @apply ml-30;
+      }
+    }
 
-        a {
-          @apply uppercase;
+    a {
+      @apply uppercase text-white;
 
-          font-size: 20px;
-        }
+      font-size: 20px;
+
+      @media (max-width: 1200px) {
+        font-size: 17px;
+      }
+
+      @media (max-width: 1023px) {
+        font-size: 28px;
       }
     }
 
@@ -87,20 +106,20 @@
 
       // Navigation Open
       .nav-is-open & {
-        @apply block mt-30 p-30 absolute w-full bg-primary-2;
+        @apply block mt-45 p-30 absolute w-full bg-primary-1;
 
         left: 0;
         height: 100vh;
 
         a {
-          @apply uppercase;
+          @apply uppercase leading-normal;
 
           font-size: 28px;
         }
       }
     }
 
-    // Home Button on Desktop Menu
+    // Home Button and other unique menu-items
     .page-item-2 {
       @media (min-width: 1024px) {
         @apply hidden;
@@ -109,9 +128,9 @@
 
     // sub-menu Background Color control
     .sub-menu {
-      @media (min-width: 1024px) {
-        @apply bg-primary-2;
+      @apply bg-primary-1;
 
+      @media (min-width: 1024px) {
         left: -30px !important;
       }
 

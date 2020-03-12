@@ -5,7 +5,7 @@
 .menu-item + .menu-item {
   // 1023 <=
   @media (max-width: 1023px) {
-    #menu-primary-navigation & {
+    #menu-nav-header-type-a & {
       @apply mt-3;
     }
   }

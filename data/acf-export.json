@@ -249,8 +249,8 @@
             ]
         ],
         "menu_order": 0,
-        "position": "normal",
-        "style": "default",
+        "position": "side",
+        "style": "seamless",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
@@ -359,6 +359,48 @@
         "menu_order": 0,
         "position": "normal",
         "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5e5d71fae8436",
+        "title": "Testimonials",
+        "fields": [
+            {
+                "key": "field_5e5d7201a1e36",
+                "label": "Testimonial Source",
+                "name": "review_source",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "testimonials"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "seamless",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
@@ -698,7 +740,7 @@
             ]
         ],
         "menu_order": 1,
-        "position": "normal",
+        "position": "acf_after_title",
         "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
@@ -1221,7 +1263,8 @@
                         "choices": {
                             "bg-primary-1": "Primary 1",
                             "bg-primary-2": "Primary 2",
-                            "bg-primary-3": "Primary 3"
+                            "bg-primary-3": "Primary 3",
+                            "bg-primary-4": "Primary 4"
                         },
                         "allow_null": 1,
                         "other_choice": 0,

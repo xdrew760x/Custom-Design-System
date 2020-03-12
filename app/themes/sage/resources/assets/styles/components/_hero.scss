@@ -29,7 +29,8 @@
   }
 
   .home &,
-  .wp-core-ui & {
+  .wp-core-ui &,
+  .page-template-template-landing & {
     @apply h-hero;
 
     @media (max-width: 1023px) {

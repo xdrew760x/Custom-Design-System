@@ -1,9 +1,8 @@
 body {
-  @apply font-trade-gothic-lt text-gray-900 bg-white;
+  @apply font-glegoo-regular text-gray-900 bg-white;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 2000px;
 }
 
 .nav-is-open {
@@ -15,7 +14,7 @@ footer {
 }
 
 hr {
-  @apply block h-px my-8 bg-primary-1;
+  @apply block h-px my-8 bg-primary-4;
 
   clear: both;
 
@@ -81,6 +80,7 @@ li:not([class]) + li:not([class]) {
 /// Dark backgrounds
 .bg-primary-1,
 .bg-primary-2,
+.bg-primary-3,
 .text-white,
 .js-background,
 .bg-black,

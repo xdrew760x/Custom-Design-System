@@ -58,6 +58,7 @@
 @import "components/sections";
 @import "components/testimonials";
 @import "components/cta";
+@import "components/landing";
 // Slick Slider
 @import "components/slick";
 // Jquery
@@ -73,6 +74,9 @@
 @import "wordpress/acf";
 // Wordpress Gravity Forms
 @import "wordpress/gravityforms";
+
+// Unique Theme Styling
+@import "components/unique";
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your

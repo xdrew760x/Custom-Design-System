@@ -4,11 +4,11 @@ h3,
 h4,
 h5,
 h6 {
-  @apply mb-15 leading-tight capitalize;
+  @apply mb-15 leading-tight capitalize text-primary-1;
 }
 
 h1 {
-  @apply text-h1_m text-primary-1;
+  @apply text-h1_m font-glegoo-regular;
 
   // 1024
   @media (min-width: 1024px) {
@@ -17,46 +17,39 @@ h1 {
 }
 
 h2 {
-  @apply text-h2_m text-primary-1;
-
-  @media (min-width: 1024px) {
-    @apply text-h2;
-  }
+  @apply text-h2 font-glegoo-regular;
 }
 
 h3 {
-  @apply text-h3 text-primary-1;
+  @apply text-h3 font-glegoo-regular uppercase;
 }
 
 h4 {
-  @apply text-h4 text-primary-1;
+  @apply text-h4 font-opensans-bold;
 }
 
 h5 {
-  @apply text-h5 text-primary-2;
+  @apply text-h5  font-opensans-bold;
 }
 
 h6 {
-  @apply text-h6 text-primary-2 uppercase;
+  @apply text-h6 uppercase font-opensans-bold;
 }
 
-p {
-  @apply mb-10 text-base text-primary-2;
+p,
+ul:not([class]) {
+  @apply mb-15 text-base text-primary-1 font-opensans-regular leading-normal;
 
   &:last-child {
     @apply mb-0;
   }
 }
 
-li {
-  @apply text-base;
-}
-
 b,
 strong {
-  @apply font-trade-gothic-lt-bold font-normal;
+  @apply font-opensans-bold;
 }
 
 a {
-  @apply text-primary-1;
+  @apply text-primary-1 font-opensans-bold;
 }

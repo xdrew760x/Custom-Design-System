@@ -32,7 +32,9 @@
   input,
   textarea,
   select {
-    @apply bg-white border-1 border-primary-3;
+    @apply bg-white border-1 border-primary-3 h-45;
+
+    width: 100% !important;
   }
 
   select {
@@ -42,7 +44,9 @@
 
 // Label
 .gfield_label {
-  @apply block mb-0 text-sm font-trade-gothic-lt-bold uppercase;
+  @apply block mb-0 font-glegoo-regular uppercase;
+
+  font-size: 20px !important;
 
   .hidden_label & {
     @apply hidden;

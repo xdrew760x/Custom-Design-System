@@ -107,15 +107,31 @@ add_action( 'after_setup_theme', 'mytheme_setup' );
 /// Registers Block Category for Gutenberg
 
 function my_blocks_plugin_block_categories( $categories ) {
-    return array_merge(
-        $categories,
-        array(
-            array(
-                'slug' => 'brm_blocks',
-                'title' => __( 'Big Rig Media Blocks', 'mydomain' ),
-                'icon'  => 'wordpress',
-            ),
-        )
-    );
+  return array_merge(
+    $categories,
+    array(
+      array(
+        'slug' => 'brm_blocks',
+        'title' => __( 'Big Rig Media Blocks', 'mydomain' ),
+        'icon'  => 'wordpress',
+      ),
+    )
+  );
 }
 add_filter( 'block_categories', 'my_blocks_plugin_block_categories', 10, 2 );
+
+add_action('admin_head', 'my_custom_fonts');
+
+function my_custom_fonts() {
+  echo '<style>
+
+  .edit-post-sidebar {
+    width: 30% !important;
+    transition: all ease 1s;
+  }
+
+  .edit-post-sidebar:hover {
+    width: 40% !important;
+  }
+  </style>';
+}

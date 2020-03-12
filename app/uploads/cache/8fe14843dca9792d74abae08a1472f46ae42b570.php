@@ -76,8 +76,6 @@ $address_email = get_field('email', 'options');
           <span class="hidden md:inline-block">&#124;</span>
           <a href="<?php echo e(get_permalink(190)); ?>">ADA Compliance</a> &#124;
           <a href="<?php echo e(get_permalink(3)); ?>">Privacy Policy</a>
-          <span class="hidden md:inline-block">&#124;</span>
-          <span class="md:inline-block">Website By <a href="https://www.bigrigxpress.com/xpress-website-development/">Big Rig Xpress</a> &reg;</span>
         </p>
       </div>
 
