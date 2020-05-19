@@ -1,11 +1,18 @@
 @php
 
 $content_width = get_field('content_width');
+$content_position = get_field('content_position');
+$max_height = get_field('hero_height');
+$hero_graphic = get_field('hero_graphic');
 
+//Animation
+$hero_animation = get_field('hero_animation');
 @endphp
-<div class="section-brm--hero flex flex-col flex-wrap justify-center bg-center bg-cover bg-no-repeat js-background" style="background-image:url({{ $options['desktop'] }})" data-mobile="{{ $options['mobile'] }}" data-desktop="{{ $options['desktop'] }}">
-  <div class="w-full max-w-10xl mx-auto px-buffer py-10 md:py-0 text-white">
-    <div class="{{ $content_width === 'w-full' ? 'w-full' : ' w-full md:w-2/3 block mx-auto' }}">
+
+
+<div class="section-brm--hero flex flex-col flex-wrap justify-start md:justify-center bg-no-repeat js-background" style="background-image:url({{ $options['desktop'] }}); max-height: {!! $max_height !!}px;" data-mobile="{{ $options['mobile'] }}" data-desktop="{{ $options['desktop'] }}">
+  <div class="hero_content text-white mx-auto block {{ $content_width === 'w-full' ? 'w-full' : ' w-full md:w-1/2' }} {{ $content_position === 'ml-0' ? 'ml-0' : 'full' }} {{ $content_position === 'mr-0' ? 'mr-0' : 'full' }}" style="background-image: url({!! $hero_graphic !!}); max-height: {!! $max_height !!}px;">
+    <div class="hero_content--container container @if(!is_admin()){!! $hero_animation !!}@endif">
       {!! $options['content'] !!}
     </div>
   </div>

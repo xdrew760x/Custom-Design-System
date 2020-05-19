@@ -143,3 +143,69 @@ div.gallery-columns-5 {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+div.gallery-columns-7 {
+  @apply py-30;
+
+  // 1024
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .gallery-item {
+    min-height: 100px;
+
+    img {
+      height: auto;
+      width: auto;
+      min-width: auto;
+    }
+  }
+}
+
+// Cards
+
+.cards {
+  @apply flex justify-between items-start;
+
+  flex-flow: row wrap;
+
+  .card {
+    @apply px-15 py-30 my-15 flex justify-center items-center;
+
+    flex-flow: column nowrap;
+    width: 30%;
+    min-height: 222px;
+
+    @media (max-width: 550px) {
+      width: 100%;
+      min-height: 175px;
+    }
+
+    h6 {
+      @apply m-0;
+    }
+
+    br {
+      display: none;
+    }
+  }
+}
+
+// special Card
+.special {
+  @apply my-15 bg-cover bg-center p-45;
+
+  padding-right: 40%;
+  background-image: url(/app/themes/sage/resources/assets/images/coupon-box.jpg);
+
+  @media (max-width: 768px) {
+    @apply px-15 py-30;
+  }
+
+  h1 {
+    @media (min-width: 1024px) {
+      font-size: 78px;
+    }
+  }
+}

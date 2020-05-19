@@ -4,41 +4,48 @@ h3,
 h4,
 h5,
 h6 {
-  @apply mb-15 leading-tight capitalize text-primary-1;
+  @apply mb-15 leading-tight capitalize;
 }
 
 h1 {
-  @apply text-h1_m font-glegoo-regular;
+  @apply text-h1_m font-moonshiner uppercase text-primary-3;
 
+  .section-brm--hero & {
+    @apply text-h1_hero_m;
+  }
   // 1024
   @media (min-width: 1024px) {
     @apply text-h1;
+
+    .section-brm--hero & {
+      @apply text-h1_hero;
+    }
   }
 }
 
 h2 {
-  @apply text-h2 font-glegoo-regular;
+  @apply text-h2 font-moonshiner text-primary-2;
 }
 
 h3 {
-  @apply text-h3 font-glegoo-regular uppercase;
+  @apply text-h3 uppercase font-moonshiner text-primary-2;
 }
 
 h4 {
-  @apply text-h4 font-opensans-bold;
+  @apply text-h4 font-moonshiner text-primary-4;
 }
 
 h5 {
-  @apply text-h5  font-opensans-bold;
+  @apply text-h5 font-sourcesanspro-b uppercase text-primary-5;
 }
 
 h6 {
-  @apply text-h6 uppercase font-opensans-bold;
+  @apply text-h6 uppercase font-sourcesanspro-b text-primary-1;
 }
 
 p,
 ul:not([class]) {
-  @apply mb-15 text-base text-primary-1 font-opensans-regular leading-normal;
+  @apply mb-15 text-base text-primary-3 leading-normal font-sourcesanspro;
 
   &:last-child {
     @apply mb-0;
@@ -47,9 +54,35 @@ ul:not([class]) {
 
 b,
 strong {
-  @apply font-opensans-bold;
+  @apply font-sourcesanspro-b;
 }
 
 a {
-  @apply text-primary-1 font-opensans-bold;
+  @apply text-primary-3 font-sourcesanspro-b;
+}
+
+small,
+.small-style {
+  @apply text-primary-3 uppercase font-sourcesanspro-b text-small leading-normal block mb-2;
+}
+
+.small-style {
+  @apply relative;
+
+  padding-left: 45px;
+
+  &::before {
+    @apply bg-primary-2;
+
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 30px;
+    height: 1px;
+  }
+}
+
+.featured-style {
+  @apply text-primary-4 capitalize;
 }

@@ -21,7 +21,7 @@
   // 1024
   .menu-item:hover & {
     @media (min-width: 1024px) {
-      @apply block absolute top-100 right-buffer p-buffer pl-0;
+      @apply block absolute top-100 right-buffer pl-0;
 
       left: 0;
       min-width: 250px;
@@ -145,7 +145,7 @@
   @media (max-width: 1023px) {
     > a {
       &::after {
-        @apply inline-block ml-2 font-fontawesome-solid;
+        @apply inline-block text-primary-2 ml-2 font-fontawesome-solid;
 
         content: "\f078";
       }

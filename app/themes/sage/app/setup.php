@@ -89,6 +89,11 @@ add_action('after_setup_theme', function () {
     'footer_navigation' => __('Footer Type a', 'sage')
   ]);
 
+  register_nav_menus([
+    'footer_navigation_c' => __('Footer Type c', 'sage')
+  ]);
+
+
   /// Header Type B
   register_nav_menus([
     'primary_type_b_left' => __('Left Navigation Type B', 'sage')

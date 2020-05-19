@@ -4,7 +4,7 @@
   Category: brm_blocks
   Icon: image-flip-horizontal
   Keywords: section-builder
-  Mode: edit
+  Mode: preview
   Align: full
   --}}
 
@@ -32,6 +32,9 @@
   @break
   @case('contained')
   @include('partials.sections.contained', [$options])
+  @break
+  @case('contained-carousel')
+  @include('partials.sections.contained-carousel', [$options])
   @break
   @default
   @break

@@ -1,28 +1,39 @@
 .section,
 .section--contained {
-  @apply py-45;
+  @apply py-60;
+}
+
+.section--split {
+  @apply flex justify-between items-start;
+
+  @media (max-width: 1023px) {
+    flex-flow: column wrap;
+  }
 }
 
 .container {
   @apply block mx-auto max-w-10xl px-15;
 
   .section--contained & {
+    align-items: center;
     flex-flow: row wrap;
   }
 }
 
 .section__content {
   .section__content__inner {
-    @apply p-45 w-full;
+    @apply p-45 py-30 pr-15 w-full block mx-auto ml-0;
 
-    max-width: 750px;
+    max-width: 720px;
 
     @media (max-width: 1023px) {
-      @apply px-0 py-30;
+      @apply px-15 py-30;
+
+      max-width: 100%;
     }
 
     .flip & {
-      @apply pl-0 pt-0;
+      @apply block mx-auto mr-0 p-30 pl-15;
     }
   }
 }
@@ -36,10 +47,6 @@
     h4 {
       @apply mb-30;
     }
-
-    p {
-      @apply m-0;
-    }
   }
 }
 
@@ -50,7 +57,8 @@
 }
 
 .section__bg {
-  padding-bottom: 35%;
+  padding-bottom: 40%;
+  max-height: 600px;
 
   @media (max-width: 1023px) {
     padding-bottom: 75%;
@@ -64,10 +72,23 @@
     order: 1;
   }
 
-  .section__bg {
-    @apply bg-center;
+  .section__bg,
+  .slider--images {
+    @apply bg-top;
 
     order: 2;
+  }
+}
+
+.normal {
+  @media (max-width: 1023px) {
+    .section__content {
+      order: 1;
+    }
+
+    .section__bg {
+      order: 2;
+    }
   }
 }
 
@@ -86,16 +107,40 @@
 
 // Social Media
 .social-icon {
+  @media (min-width: 768px) {
+    @apply mr-15;
+  }
+
   svg {
     @apply h-icon w-icon;
 
-    fill: #d8d8d8;
+    fill: #17356b;
   }
 }
 
 @media (min-width: 768px) {
+  @apply mr-30;
+
   .edit-post-visual-editor .editor-post-title,
   .edit-post-visual-editor .editor-block-list__block {
     max-width: 1100px;
+  }
+}
+
+.slide--image {
+  @apply bg-cover bg-center;
+
+  padding-bottom: 25%;
+}
+
+.social__media {
+  .container {
+    @apply flex justify-center;
+
+    flex-flow: row wrap;
+
+    a {
+      @apply mx-15;
+    }
   }
 }

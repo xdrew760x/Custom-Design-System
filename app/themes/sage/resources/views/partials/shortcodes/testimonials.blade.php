@@ -7,11 +7,10 @@
 
   @endphp
 
-  <blockquote class="mb-10 brm-testimonial text-center">
-    {!! apply_filters('the_content', $testimonial->post_content) !!}
+  <blockquote class="mb-10 brm-testimonial">
+    <span>{!! apply_filters('the_content', $testimonial->post_content) !!}</span>
     <footer class="mt-30">
-      <strong><cite class="text-sm">&#8211; {{ $testimonial->post_title }}</cite></strong>
-      <p>{{ $testimonial->review_source }}</p>
+      <strong class="text-p">&#8211; {{ $testimonial->post_title }} on {{ $testimonial->review_source }}</strong>
     </footer>
   </blockquote>
   @endforeach

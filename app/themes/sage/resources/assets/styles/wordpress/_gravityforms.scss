@@ -27,7 +27,7 @@
 
 // Field
 .gfield {
-  @apply relative mb-5 overflow-hidden;
+  @apply relative m-0 overflow-hidden;
 
   input,
   textarea,
@@ -44,13 +44,17 @@
 
 // Label
 .gfield_label {
-  @apply block mb-0 font-glegoo-regular uppercase;
+  @apply block mb-0 uppercase;
 
   font-size: 20px !important;
 
   .hidden_label & {
     @apply hidden;
   }
+}
+
+label {
+  @apply font-sourcesanspro;
 }
 
 // Right & Left Half
@@ -105,9 +109,20 @@
 
 // Footer
 .gform_footer {
-  @apply mt-5;
+  @apply mt-5 relative;
 
   clear: both;
+  margin: 0 !important;
+  display: table !important;
+  width: auto !important;
+
+  .button {
+    @apply text-white border-2 bg-primary-2 border-primary-2;
+
+    &:hover {
+      @apply bg-primary-2;
+    }
+  }
 }
 
 // Button

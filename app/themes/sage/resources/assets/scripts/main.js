@@ -59,3 +59,46 @@ if (viewportWidth >= 50) {
     }
   });
 }
+
+/// Animation Controls
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top - 200;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+$(window).scroll(function () {
+   $('.animate-left').each(function () {
+      if (isScrolledIntoView(this) === true) {
+          $(this).addClass('slide-in-left')
+      }
+   });
+});
+
+$(window).scroll(function () {
+   $('.animate-right').each(function () {
+      if (isScrolledIntoView(this) === true) {
+          $(this).addClass('slide-in-right')
+      }
+   });
+});
+
+$(window).scroll(function () {
+   $('.animate-top').each(function () {
+      if (isScrolledIntoView(this) === true) {
+          $(this).addClass('slide-in-top')
+      }
+   });
+});
+
+$(window).scroll(function () {
+   $('.animate-bottom').each(function () {
+      if (isScrolledIntoView(this) === true) {
+          $(this).addClass('slide-in-bottom')
+      }
+   });
+});

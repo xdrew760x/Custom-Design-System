@@ -1,57 +1,104 @@
 .brm-hero {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-white;
-  }
-
   .w-ful {
     @apply px-15;
   }
 }
 
 .section-brm--hero {
-  @apply h-hero;
-
-  @media (max-width: 1023px) {
-    @apply h-hero_mobile;
-  }
-
-  .page & {
-    @apply h-hero_secondary;
-
-    @media (max-width: 1023px) {
-      @apply h-hero_secondary_mobile;
-    }
-  }
+  height: 100vh;
 
   .home &,
-  .wp-core-ui &,
-  .page-template-template-landing & {
-    @apply h-hero;
+  .wp-core-ui & {
+    .container {
+      @apply px-15;
+    }
 
-    @media (max-width: 1023px) {
-      @apply h-hero_mobile;
+    // Fixed Header
+    #header-fixed & {
+      @apply mt-60;
+
+      @media (min-width: 1024px) {
+        @apply mt-105;
+      }
     }
   }
 
-  .container {
-    @apply px-15;
+  .hero_content {
+    @apply flex items-center bg-cover bg-right;
+
+    height: 100vh;
+
+    @media (max-width: 1023px) {
+      @apply px-0;
+
+      max-height: 350px !important;
+    }
+
+    h1 {
+      @apply mb-15 uppercase;
+    }
   }
 
-  // Fixed Header
-  #header-fixed & {
-    @apply mt-60;
+  .hero_content--container {
+    @apply block mx-auto;
 
-    @media (min-width: 1024px) {
-      @apply mt-105;
+    .home & {
+      @apply pr-150;
+
+      @media (max-width: 1023px) {
+        @apply pr-0;
+      }
+    }
+  }
+
+  .ml-0 {
+    .hero_content--container {
+      @apply mr-0 pl-15;
+
+      max-width: 720px;
+
+      @media (max-width: 1023px) {
+        max-width: 100%;
+
+        img {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .mr-0 {
+    transform: rotateY(180deg);
+
+    .hero_content--container {
+      @apply mr-0 text-right;
+
+      transform: rotateY(180deg);
+      max-width: 750px;
+
+      @media (max-width: 1023px) {
+        @apply text-left;
+      }
+
+      img {
+        display: inline-block;
+        float: right;
+        margin-left: 15px;
+        margin-right: 0;
+
+        @media (max-width: 1023px) {
+          float: left;
+          margin-left: 0;
+          margin-right: 15px;
+        }
+      }
+
+      @media (max-width: 1023px) {
+        max-width: 100%;
+      }
     }
   }
 }
-
 // Carousel
 .hero__carousel__image {
   @apply flex items-center;

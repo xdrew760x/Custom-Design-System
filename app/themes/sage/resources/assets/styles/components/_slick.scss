@@ -11,22 +11,43 @@
   }
 
   button {
-    @apply w-dot h-dot bg-primary-1 rounded-full border-2 border-solid border-primary-1 appearance-none;
+    @apply w-dot h-dot bg-primary-1 rounded-full border-2 border-solid border-primary-3 appearance-none;
 
     text-indent: -9999px;
 
     .brm-testimonials & {
-      @apply bg-primary-1;
+      @apply bg-primary-3;
     }
   }
 
   .slick-active {
     button {
-      @apply bg-primary-2;
+      @apply bg-primary-2 border-primary-3;
 
       .brm-testimonials & {
         @apply bg-primary-2;
       }
     }
   }
+}
+
+// Arrows
+.slick-arrow {
+  position: absolute;
+  z-index: 10;
+  top: 45%;
+
+  svg {
+    @apply text-primary-4;
+
+    font-size: 45px;
+  }
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }

@@ -124,14 +124,140 @@ add_action('admin_head', 'my_custom_fonts');
 
 function my_custom_fonts() {
   echo '<style>
+  @media (min-width: 782px) {
+    .is-sidebar-opened .block-editor-editor-skeleton__sidebar {
+      width: 20% !important;
+      min-width: 20% !important;
+      transition: all ease 1s;
+      position: fixed !important;
+      right: 0px !important;
+      left: auto !important;
+      margin-top: 88px;
+    }
+
+    .is-sidebar-opened .block-editor-editor-skeleton__sidebar:hover {
+      width: 40% !important;
+    }
+  }
 
   .edit-post-sidebar {
-    width: 30% !important;
-    transition: all ease 1s;
+    width: 100%;
   }
 
-  .edit-post-sidebar:hover {
-    width: 40% !important;
+  .components-notice-list,
+  .edit-post-layout__metaboxes {
+    max-width: 77%;
   }
+
+  .wp-core-ui .button,
+  .wp-core-ui .button-secondary {
+    background: transparent !important;
+    background-color: inherit !important;
+    color: black;
+  }
+
+  .editor-styles-wrapper .button {
+    color: inherit !important;
+  }
+
   </style>';
 }
+
+
+///////////////////////////////////////////////////////   User Role Rules  ///////////////////////////////////////////////////////
+
+if ( !current_user_can('administrator') ) {
+
+  function remove_menus() {
+
+    remove_menu_page( 'index.php' );
+    remove_menu_page( 'jetpack' );
+    //remove_menu_page( 'edit.php' );
+    remove_menu_page( 'upload.php' );
+    remove_menu_page( 'edit-comments.php' );
+    remove_menu_page( 'edit.php' );
+    remove_menu_page( 'themes.php' );
+    remove_menu_page( 'plugins.php' );
+    remove_menu_page( 'users.php' );
+    remove_menu_page( 'tools.php' );
+    remove_menu_page( 'edit.php?post_type=page' );
+    remove_menu_page( 'edit.php?post_type=testimonials' );
+    remove_menu_page('acf-options-page-components');
+    remove_menu_page( 'edit.php?post_type=testimonials' );
+    remove_menu_page( 'options-general.php' );
+  }
+
+  add_action( 'admin_menu', 'remove_menus' );
+
+
+
+
+  function shapeSpace_remove_toolbar_nodes($wp_admin_bar) {
+
+    $wp_admin_bar->remove_node('updates');
+    $wp_admin_bar->remove_node('comments');
+    $wp_admin_bar->remove_node('new-content');
+    //$wp_admin_bar->remove_node('site-name');
+    $wp_admin_bar->remove_node('edit');
+
+
+    //$wp_admin_bar->remove_node('my-account');
+    $wp_admin_bar->remove_node('search');
+
+    $wp_admin_bar->remove_node('customize');
+
+  }
+
+  ///   Remove Admin bar menu items
+
+  add_action('admin_bar_menu', 'shapeSpace_remove_toolbar_nodes', 999);
+  // Removes Evetns from Admin bar
+  define('TRIBE_DISABLE_TOOLBAR_ITEMS', true);
+
+
+  function hide_personal_options(){
+    echo "\n" . '<script type="text/javascript">jQuery(document).ready(function($) { $(\'form#your-profile > h3:first\').hide(); $(\'form#your-profile > table:first\').hide(); $(\'form#your-profile\').show(); });</script>' . "\n";
+  }
+  add_action('admin_head','hide_personal_options');
+
+
+
+
+  if(!function_exists('remove_plain_bio')){
+    function remove_bio_box($buffer){
+      $buffer = str_replace('<h3>About Yourself</h3>','<h3>User Password</h3>',$buffer);
+      $buffer = preg_replace('/<tr class=\"user-description-wrap\"[\s\S]*?<\/tr>/','',$buffer,1);
+      return $buffer;
+    }
+    function user_profile_subject_start(){ ob_start('remove_bio_box'); }
+    function user_profile_subject_end(){ ob_end_flush(); }
+  }
+  add_action('admin_head-profile.php','user_profile_subject_start');
+  add_action('admin_footer-profile.php','user_profile_subject_end');
+}
+
+if ( current_user_can('coyote_ranch') ) {
+  function remove_menu() {
+    //remove_menu_page( 'edit.php?post_type=coyote-ranch' ); // Events
+    remove_menu_page( 'edit.php?post_type=cactus-ranch' ); // Events
+    remove_menu_page( 'edit.php?post_type=araby-acres' ); // Events
+    remove_menu_page( 'edit.php?post_type=ranch-rialto' ); // Events
+    remove_menu_page( 'edit.php?post_type=tuscany-park' ); // Events
+
+  }
+
+  add_action( 'admin_menu', 'remove_menu' );
+
+}
+
+// Add class to next and previous links
+function add_class_next_post_link($html){
+  $html = str_replace('<a','<a class="next-post"',$html);
+  return $html;
+}
+add_filter('next_post_link','add_class_next_post_link',10,1);
+function add_class_previous_post_link($html){
+  $html = str_replace('<a','<a class="prev-post"',$html);
+  return $html;
+}
+add_filter('previous_post_link','add_class_previous_post_link',10,1);

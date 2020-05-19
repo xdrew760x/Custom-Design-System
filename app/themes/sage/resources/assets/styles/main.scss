@@ -36,6 +36,7 @@
 /** Import theme styles */
 @import "common/fonts";
 @import "common/global";
+@import "common/animations";
 @import "common/type";
 // Header
 @import "common/header-type-a";
@@ -46,6 +47,9 @@
 @import "common/hero-type-a";
 @import "common/hero-type-b";
 @import "common/hero-type-c";
+//Contact
+@import "common/contact-type-a";
+@import "common/contact-type-b";
 // Footer
 @import "common/footer-type-a";
 @import "common/footer-type-b";
@@ -59,6 +63,12 @@
 @import "components/testimonials";
 @import "components/cta";
 @import "components/landing";
+@import "components/property";
+@import "components/partnership";
+// testimonials
+@import "common/testimonial-type-a";
+@import "common/testimonial-type-b";
+
 // Slick Slider
 @import "components/slick";
 // Jquery
@@ -66,6 +76,12 @@
 //Blocks
 @import "blocks/column-slider";
 @import "blocks/card-builder";
+@import "blocks/listing-featured";
+@import "blocks/listing-carousel";
+@import "blocks/portals";
+@import "blocks/our-team";
+@import "blocks/testimonials";
+@import "blocks/property-listings";
 
 // Common Wordpress
 @import "wordpress/default";

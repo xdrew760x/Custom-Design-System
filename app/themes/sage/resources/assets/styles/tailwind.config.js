@@ -71,10 +71,10 @@ module.exports = {
         900: '#2a4365'
       },
       primary: {
-        1: '#1c272f',
-        2: '#f6921e',
-        3: '#f6921e',
-        4: '#F5F5F5',
+        1: '#000066',
+        2: '#F09710',
+        3: '#35070A',
+        4: '#333333',
         5: '#D8D8D8',
 
       }
@@ -106,7 +106,9 @@ module.exports = {
       '75': '75px',
       '90': '90px',
       '105': '105px',
-
+      '120': '120px',
+      '135': '135px',
+      '150': '150px',
       buffer: '0.9375rem'
     },
     backgroundColor: theme => theme('colors'),
@@ -147,13 +149,13 @@ module.exports = {
     },
     boxShadow: {
       default:
-        '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+      '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       md:
-        '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       lg:
-        '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       xl:
-        '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
@@ -194,22 +196,18 @@ module.exports = {
       'fontawesome-solid': [
         'Font Awesome\\ 5 Pro Solid'
       ],
-      'glegoo-bold': [
-        'glegoo-bold'
+      'moonshiner': [
+        'moonshiner'
       ],
-      'glegoo-regular': [
-        'glegoo-regular'
+      'sourcesanspro-b': [
+        'sourcesanspro-b'
       ],
-      'opensans-light': [
-        'opensans-light'
+      'sourcesanspro-it': [
+        'sourcesanspro-it'
       ],
-      'opensans-regular': [
-        'opensans-regular'
+      'sourcesanspro': [
+        'sourcesanspro'
       ],
-      'opensans-bold': [
-        'opensans-bold'
-      ],
-
       sans: [
         '-apple-system',
         'BlinkMacSystemFont',
@@ -251,17 +249,22 @@ module.exports = {
       drop: '24px',
       drop: '24px',
 
-      h1: '58px',
-      h1_m: '38px',
+      h1_hero: '100px',
+      h1_hero_m: '58px',
 
-      h2: '38px',
+      h1: '75px',
+      h1_m: '50px',
 
-      h3: '23px',
-      h4: '28px',
-      h5: '24px',
-      h6: '20px',
+      h2: '60px',
 
-      p: '18px',
+      h3: '50px',
+      h4: '45px',
+      h5: '35px',
+      h6: '30px',
+
+      p: '24px',
+
+      small: '18px',
 
       xs: '1rem',
       sm: '1.125rem',
@@ -290,11 +293,11 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
-      hero: '800px',
-      hero_mobile: '750px',
-      hero_secondary: '350px',
+      hero: '775px',
+      hero_mobile: '360px',
+      hero_secondary: '400px',
       hero_secondary_mobile: '300px',
-      icon: '40px',
+      icon: '50px',
       dot: '20px',
       hamburger: '4px'
     }),
@@ -336,7 +339,7 @@ module.exports = {
     maxHeight: {
       full: '100%',
       screen: '100vh',
-      icon: '20px',
+      icon: '40px',
       phone: '32px'
     },
     maxWidth: {

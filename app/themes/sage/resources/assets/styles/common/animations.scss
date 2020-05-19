@@ -1,0 +1,56 @@
+//// Animations
+/// V.1.0
+//
+
+// Fade in
+.fade {
+  opacity: 0;
+  transition: all ease 2s;
+}
+
+//Animate Relative State for all classes
+.animate-right,
+.animate-left,
+.animate-top {
+  transition: all ease 2s;
+  position: relative;
+}
+
+//Animate Right in
+.animate-right {
+  right: -50px;
+}
+
+//Animate Left in
+.animate-left {
+  left: -50px;
+}
+
+.animate-top {
+  top: -50px;
+}
+
+.animate-bottom {
+  bottom: -50px;
+}
+
+//Animate Action
+.slide-in-right {
+  right: 0;
+  opacity: 1;
+}
+
+.slide-in-left {
+  left: 0;
+  opacity: 1;
+}
+
+.slide-in-top {
+  top: 0;
+  opacity: 1;
+}
+
+.slide-in-bottom {
+  bottom: 0;
+  opacity: 1;
+}

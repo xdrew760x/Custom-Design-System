@@ -1,5 +1,15 @@
+// Update theme colors based off Tailwind.config
+// Output example:  var(--primary-1);
+:root {
+  --white: #fff;
+  --primary-1: #10256b;
+  --primary-2: #f70605;
+  --primary-3: #0769ac;
+  --primary-4: #474747;
+}
+
 body {
-  @apply font-glegoo-regular text-gray-900 bg-white;
+  @apply text-gray-900 bg-white text-p font-sourcesanspro;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,6 +21,27 @@ body {
 
 footer {
   @apply px-15;
+
+  .copyright {
+    span,
+    a {
+      @apply font-sourcesanspro uppercase;
+
+      font-size: 12px;
+    }
+  }
+}
+
+.gradient-bl-tr {
+  background: linear-gradient(45deg, var(--primary-1) 0%, var(--primary-3) 100%);
+}
+
+.gradient-br-tl {
+  background: linear-gradient(135deg, var(--primary-1) 0%, var(--primary-3) 100%);
+}
+
+.gradient-l-r {
+  background: linear-gradient(90deg, var(--primary-3) 30%, var(--primary-1) 70%);
 }
 
 hr {
@@ -77,14 +108,22 @@ li:not([class]) + li:not([class]) {
   @apply mt-3;
 }
 
+//Nav-Home Button
+.menu-item-416 {
+  @media (min-width: 1024px) {
+    @apply hidden;
+  }
+}
+
 /// Dark backgrounds
 .bg-primary-1,
 .bg-primary-2,
 .bg-primary-3,
+.bg-primary-4,
 .text-white,
-.js-background,
 .bg-black,
-.home .hero {
+.hover--state,
+.gradient-l-r {
   h1,
   h2,
   h3,
@@ -95,7 +134,10 @@ li:not([class]) + li:not([class]) {
   p,
   a:not([class]),
   span:not([class]),
-  label {
+  label,
+  svg {
     @apply text-white;
+
+    fill: white !important;
   }
 }

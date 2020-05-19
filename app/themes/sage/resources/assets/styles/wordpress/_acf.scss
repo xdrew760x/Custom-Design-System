@@ -5,12 +5,17 @@
     width: auto;
   }
 
-  .button {
+  .acf-editor-wrap .button {
     background-color: grey;
 
     &:hover {
-      color: white;
+      color: black;
     }
+  }
+
+  .acf-block-preview {
+    background: transparent;
+    color: inherit;
   }
 
   p,
@@ -42,9 +47,9 @@
   background-color: blue !important;
 }
 
-.wp-block {
-  width: 100%;
-  max-width: 85%;
+.block-editor-block-list__layout {
+  width: 75%;
+  padding-right: 5px;
 }
 
 .block-editor-block-list__block {

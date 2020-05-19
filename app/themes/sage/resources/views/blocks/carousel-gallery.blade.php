@@ -4,7 +4,7 @@
   Category: brm_blocks
   Icon: images-alt
   Keywords: carousel
-  Mode: edit
+  Mode: preview
   Align: full
 --}}
 

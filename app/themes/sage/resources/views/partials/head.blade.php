@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="preload" href="@asset('fonts/trade-gothic/trade-gothic-lt.woff')" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="@asset('fonts/trade-gothic/trade-gothic-lt-bold.woff')" as="font" type="font/woff" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   @php wp_head() @endphp
+
 </head>

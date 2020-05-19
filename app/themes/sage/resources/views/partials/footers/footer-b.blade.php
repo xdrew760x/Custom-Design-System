@@ -1,3 +1,6 @@
+<footer class="py-10" role="contentinfo" aria-label="Footer">
+  <div class="w-full max-w-10xl mx-auto px-buffer">
+
 @php
 
 $address_one = get_field('address1', 'options');
@@ -71,12 +74,15 @@ $address_email = get_field('email', 'options');
       <div class="mt-5 md:mt-0">
         <p class="copyright text-xs">
           <span class="md:inline-block">&copy; {{ date('Y') }} {{ App::siteName() }}</span>
-          <span class="hidden md:inline-block">&#124;</span>
-          <a href="{{ get_permalink(190) }}">ADA Compliance</a> &#124;
+          <span class="md:inline-block"> | License #: 1013139</span>
+          <a href="{{ get_permalink(190) }}"> | ADA Compliance</a> &#124;
           <a href="{{ get_permalink(3) }}">Privacy Policy</a>
+          <span>| WEBSITE BY <a href="https://www.bigrigmedia.com/custom-website-development/">BIG RIG MEDIA LLC ®</a></span>
         </p>
       </div>
 
     </div>
 
   </div>
+</div>
+</footer>

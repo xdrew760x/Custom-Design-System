@@ -4,7 +4,7 @@
   Category: brm_blocks
   Icon: admin-links
   Keywords: BigRigMedia
-  Mode: edit
+  Mode: preview
   Align: full
   --}}
 

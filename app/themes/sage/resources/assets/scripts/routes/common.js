@@ -32,7 +32,7 @@ export default {
     paragraphs.forEach(isEmpty)
 
     // Handle hamburger toggle
-    if (window.matchMedia('(max-width: 1199px)').matches) {
+    if (window.matchMedia('(max-width: 1023px)').matches) {
       if (hamburger) {
         hamburger.addEventListener('click', () => {
           document.body.classList.toggle('nav-is-open')
@@ -41,7 +41,7 @@ export default {
     }
 
     // Handle dropdowns visibility state
-    if (window.matchMedia('(max-width: 1199px)').matches) {
+    if (window.matchMedia('(max-width: 1023px)').matches) {
       dropdowns.forEach(dropdown => {
         dropdown.setAttribute('data-state', 'closed')
 
@@ -85,6 +85,7 @@ export default {
       }
     }
 
+
 //// Carousel Hero
     if ($('.js-carousel-hero').length) {
       $('.js-carousel-hero').slick({
@@ -125,19 +126,20 @@ export default {
           autoplay: true,
           autoplaySpeed: 5000,
           arrows: false,
-          dots: true,
+          dots: false,
           fade: false,
           pauseOnFocus: false,
           pauseOnHover: false,
           speed: 1000,
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           responsive: [
             {
-              breakpoint: 415,
+              breakpoint: 768,
               settings: {
+                centerPadding: '30px',
+                centerMode: true,
                 slidesToShow: 1,
-                slidesToScroll: 1,
               },
             },
           ],
@@ -253,23 +255,7 @@ export default {
       }
     }
 
-    // Handle testimonials
-    if ($('.js-testimonials').length) {
-      $('.js-testimonials').slick({
-        accessibility: true,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-        dots: true,
-        fade: true,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        speed: 1000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      })
-    }
+
 
     // Handle cards
     if (cards) {
@@ -287,34 +273,121 @@ export default {
       })
     }
 
-    // Handle listing carousel
+
+    if ($('.js-carousel-sale').length) {
+      $('.js-carousel-sale').slick({
+        accessibility: true,
+        adaptiveHeight: false,
+        autoplay: true,
+        autoplaySpeed: 15000,
+        arrows: false,
+        fade: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        speed: 1000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+
+        responsive: [
+          {
+            breakpoint: 1023,
+            settings: {
+              slidesToShow: 2,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              dots: true,
+            },
+          },
+        ],
+      });
+    }
+
+    // JavaScript to be fired on the home page, after the init JS
+    // Slick
     if ($('.js-carousel-gallery').length) {
       $('.js-carousel-gallery').slick({
         arrows: true,
-        asNavFor: '.js-carousel-thumbs',
+        asNavFor: '.js-carousel-nav',
         dots: false,
         fade: true,
-        prevArrow: '<button type="button" class="absolute top-half left-slick-arrow z-50 w-icon h-icon slick-prev" aria-labelledby="slick-prev"><span id="slick-prev" hidden>Previous</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="fill-white"><path d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z"/></svg></button>',
-        nextArrow: '<button type="button" class="absolute top-half right-slick-arrow z-50 w-icon h-icon slick-next" aria-labelledby="slick-next"><span id="slick-next" hidden>Next</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="fill-white"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z"/></svg></button>',
+        nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
+        prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
         rows: 0,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-      })
+      });
     }
 
-    // Handle listing thumbs
-    if ($('.js-carousel-thumbs').length) {
-      $('.js-carousel-thumbs').slick({
+    if ($('.js-carousel-nav').length) {
+      $('.js-carousel-nav').slick({
         arrows: false,
         asNavFor: '.js-carousel-gallery',
         autoplay: true,
         dots: false,
         focusOnSelect: true,
         rows: 0,
-        slidesToShow: 5,
-        slidesToScroll: 5,
-      })
+        speed: 1000,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      });
     }
+
+
+    $('.js-carousel-featured').slick({
+      accessibility: true,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 15000,
+      fade: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
+      prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
+    });
+
+
+    $('.js-slingle--slider').slick({
+      accessibility: true,
+      adaptiveHeight: false,
+      autoplay: true,
+      autoplaySpeed: 15000,
+      fade: false,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      speed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
+      prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

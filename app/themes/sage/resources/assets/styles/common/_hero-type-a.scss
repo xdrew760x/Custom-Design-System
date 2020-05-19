@@ -1,0 +1,30 @@
+.section-brm--hero {
+  @apply bg-cover bg-right;
+
+  @media (max-width: 1023px) {
+    @apply bg-bottom;
+
+    .home & {
+      height: auto;
+      max-height: auto !important;
+    }
+  }
+
+  .slick-dots {
+    @apply relative text-center;
+
+    margin-top: -45px;
+
+    @media (min-width: 1024px) {
+      margin-top: -75px;
+    }
+  }
+
+  #header-fixed & {
+    @apply mt-135;
+
+    @media (min-width: 1024px) {
+      @apply mt-90;
+    }
+  }
+}

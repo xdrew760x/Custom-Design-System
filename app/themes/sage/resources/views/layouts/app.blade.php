@@ -26,6 +26,9 @@
       @endif
     </main>
     @include('partials.static.call-to-action')
+    @include('partials.contacts')
+    @include('partials.partnership')
+    @include('partials.social-icons')
     @php do_action('get_footer') @endphp
     @include('partials.footer')
     @php wp_footer() @endphp

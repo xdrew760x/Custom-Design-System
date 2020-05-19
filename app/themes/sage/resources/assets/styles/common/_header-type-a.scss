@@ -1,5 +1,5 @@
 .header-a {
-  @apply bg-primary-1 pt-15 pb-15;
+  @apply pt-15 pb-15 bg-white;
 
   margin-top: 0;
   transition: all ease 1s;
@@ -11,17 +11,21 @@
 
   // Wesbite Logo Styling
   .header__branding {
+    margin-top: -45px;
+    margin-bottom: -45px;
+
+    @media (max-width: 768px) {
+      @apply block mx-auto mt-0;
+    }
+
     img {
-      padding-top: 15px;
-      max-width: 350px;
+      @apply block mx-auto;
+
+      max-width: 100px;
       transition: all ease 1s;
 
-      @media (max-width: 1200px) {
-        max-width: 250px;
-      }
-
-      @media (max-width: 1023px) {
-        max-width: 215px;
+      @media (max-width: 768px) {
+        max-width: 75px;
       }
     }
   }
@@ -49,23 +53,23 @@
 
   // hamburger Icon
   .w-hamburger {
-    @apply bg-white absolute;
+    @apply bg-white relative;
 
-    right: 15px;
+    left: 15px;
     margin-top: 0;
 
     .nav-is-open & {
-      @apply bg-primary-1 mb-30;
+      @apply bg-white mb-30;
     }
   }
 
   .nav-toggle {
     span {
-      @apply bg-white;
+      @apply bg-primary-2;
 
       &::before,
       &::after {
-        @apply bg-white;
+        @apply bg-primary-2;
 
         .nav-is-open & {
           opacity: 1;
@@ -74,29 +78,41 @@
     }
   }
 
+  // Last Menu item
+  .menu-item-122 {
+    @apply border-2 border-primary-2 py-2;
+
+    border-radius: 10px;
+    max-width: 175px;
+
+    a {
+      @apply p-15 text-primary-2;
+    }
+  }
+
   // Nav Mobile
-  #menu-nav-header-type-a {
+  .primary-nav-a {
     z-index: 100;
 
+    li {
+      @apply mt-2;
+    }
+
     @media (min-width: 1024px) {
-      @apply flex justify-end items-center ;
+      @apply flex justify-end items-center mt-0;
 
       li {
-        @apply ml-30;
+        @apply ml-15;
       }
     }
 
     a {
-      @apply uppercase text-white;
+      @apply uppercase leading-normal;
 
-      font-size: 20px;
-
-      @media (max-width: 1200px) {
-        font-size: 17px;
-      }
+      font-size: 18px;
 
       @media (max-width: 1023px) {
-        font-size: 28px;
+        font-size: 24px;
       }
     }
 
@@ -106,15 +122,13 @@
 
       // Navigation Open
       .nav-is-open & {
-        @apply block mt-45 p-30 absolute w-full bg-primary-1;
+        @apply block mt-30 p-30 absolute w-full bg-white;
 
         left: 0;
         height: 100vh;
 
         a {
           @apply uppercase leading-normal;
-
-          font-size: 28px;
         }
       }
     }
@@ -128,10 +142,10 @@
 
     // sub-menu Background Color control
     .sub-menu {
-      @apply bg-primary-1;
+      @apply bg-white;
 
       @media (min-width: 1024px) {
-        left: -30px !important;
+        left: -15px !important;
       }
 
       a {
@@ -156,8 +170,9 @@
       margin-top: -60px !important;
 
       .header__branding img {
-        max-width: 175px;
-        margin-top: 15px;
+        max-width: 75px;
+        margin-top: 60px;
+        margin-bottom: -15px;
       }
     }
   }

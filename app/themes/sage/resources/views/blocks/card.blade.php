@@ -4,7 +4,7 @@
   Category: brm_blocks
   Icon: image-flip-horizontal
   Keywords: cards
-  Mode: edit
+  Mode: preview
   Align: full
   --}}
 
