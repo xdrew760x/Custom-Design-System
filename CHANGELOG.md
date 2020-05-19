@@ -40,6 +40,5 @@ when uploaded.
 * New Sponsorship logos Component now created
 * New Testimonials Block Type Now available
 * New Resident Testimonial Block now Available for Properties Fucntion
-=======
-*  ACF Stylesheet updated. Fixed Bugs with Gutenberg Backend. 
+*  ACF Stylesheet updated. Fixed Bugs with Gutenberg Backend.
 >>>>>>> 2340c4ec041aa4de0d4a8a0a976a246683b57150

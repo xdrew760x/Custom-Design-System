@@ -2342,10 +2342,42 @@
                 },
                 "choices": {
                     "contact-a": "Contact A",
-                    "contact-b": "Contact B",
-                    "contact-c": "Contact C"
+                    "contact-b": "Contact B"
                 },
-                "default_value": [],
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5eb26178316c4",
+                "label": "Component size",
+                "name": "contact_size",
+                "type": "select",
+                "instructions": "How would you like this component to display?",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5ea9de0c0b261",
+                            "operator": "==",
+                            "value": "contact-a"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "contained": "Contained",
+                    "w-full": "Full"
+                },
+                "default_value": "w-full",
                 "allow_null": 0,
                 "multiple": 0,
                 "ui": 0,
@@ -2386,33 +2418,6 @@
                 "mime_types": ""
             },
             {
-                "key": "field_5e983311300cf",
-                "label": "Google Map API",
-                "name": "google_map_api",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5ea9de0c0b261",
-                            "operator": "==",
-                            "value": "contact-a"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
                 "key": "field_5e9834732cf41",
                 "label": "Contact Background Color",
                 "name": "contact_background_color",
@@ -2438,12 +2443,79 @@
                     "primary-2": "Primary 2",
                     "primary-3": "Primary 3"
                 },
-                "allow_null": 0,
+                "allow_null": 1,
                 "other_choice": 0,
                 "default_value": "",
                 "layout": "vertical",
                 "return_format": "value",
                 "save_other_choice": 0
+            },
+            {
+                "key": "field_5eb26621d6b7f",
+                "label": "Contact Component Padding Y",
+                "name": "contact_padding_y",
+                "type": "range",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": "",
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5eb2665ad6b80",
+                "label": "Contact Component Padding X",
+                "name": "contact_padding_x",
+                "type": "range",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": "",
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5e983311300cf",
+                "label": "Google Map API",
+                "name": "google_map_api",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5ea9de0c0b261",
+                            "operator": "==",
+                            "value": "contact-a"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
                 "key": "field_5eb094a29a1f3",
@@ -2473,6 +2545,25 @@
                 "delay": 0
             },
             {
+                "key": "field_5eb26e38fb162",
+                "label": "Contact Name",
+                "name": "contact_name",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5eb09c3ae9e8e",
                 "label": "Contact Hours",
                 "name": "contact_hours",
@@ -2486,6 +2577,13 @@
                             "operator": "==",
                             "value": "contact-b"
                         }
+                    ],
+                    [
+                        {
+                            "field": "field_5ea9de0c0b261",
+                            "operator": "==",
+                            "value": "contact-a"
+                        }
                     ]
                 ],
                 "wrapper": {
@@ -2498,6 +2596,29 @@
                 "toolbar": "full",
                 "media_upload": 1,
                 "delay": 0
+            },
+            {
+                "key": "field_5eb2701d02b6e",
+                "label": "Contact Button URL",
+                "name": "contact_button_url",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5ea9de0c0b261",
+                            "operator": "==",
+                            "value": "contact-a"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url"
             }
         ],
         "location": [
@@ -2882,7 +3003,22 @@
                         "type": "select",
                         "instructions": "Select the width of the image Section",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5e3dc4c6e889a",
+                                    "operator": "==",
+                                    "value": "split"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "field_5e3dc4c6e889a",
+                                    "operator": "==",
+                                    "value": "contained"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -2896,9 +3032,7 @@
                             "w-1\/4": "1\/4",
                             "w-3\/4": "3\/4"
                         },
-                        "default_value": [
-                            "w-1\/2"
-                        ],
+                        "default_value": "w-1\/2",
                         "allow_null": 0,
                         "multiple": 0,
                         "ui": 0,
@@ -3185,7 +3319,22 @@
                         "type": "select",
                         "instructions": "Select the width of the Content Section",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5e3dc4c6e889a",
+                                    "operator": "==",
+                                    "value": "split"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "field_5e3dc4c6e889a",
+                                    "operator": "==",
+                                    "value": "contained"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -3199,9 +3348,7 @@
                             "w-1\/4": "1\/4",
                             "w-3\/4": "3\/4"
                         },
-                        "default_value": [
-                            "w-1\/2"
-                        ],
+                        "default_value": "w-1\/2",
                         "allow_null": 0,
                         "multiple": 0,
                         "ui": 0,
@@ -3355,6 +3502,76 @@
         "description": ""
     },
     {
+        "key": "group_5eb271615b41d",
+        "title": "Social icons",
+        "fields": [
+            {
+                "key": "field_5eb2716db8437",
+                "label": "Would you like to display your Social media Icons above the FooteR?",
+                "name": "social_component",
+                "type": "select",
+                "instructions": "Select where to display the social media Icons",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "social_footer": "Footer"
+                },
+                "default_value": false,
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5eb271d06b079",
+                "label": "Component background color",
+                "name": "component_background_color",
+                "type": "color_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5eb2716db8437",
+                            "operator": "==",
+                            "value": "social_footer"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-page-components"
+                }
+            ]
+        ],
+        "menu_order": 7,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_5e3b0db0b4fad",
         "title": "Carousel Gallery Component",
         "fields": [
@@ -3428,6 +3645,54 @@
                 },
                 "default_value": [],
                 "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5eb274171513e",
+                "label": "Footer Background color",
+                "name": "footer_background_color",
+                "type": "color_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
+            },
+            {
+                "key": "field_5eb27601fc1f8",
+                "label": "Would you like to display your company logo within the footer?",
+                "name": "company_logo",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5e3207f311b0e",
+                            "operator": "==",
+                            "value": "footer-c"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "yes": "Yes",
+                    "no": "No"
+                },
+                "default_value": [],
+                "allow_null": 1,
                 "multiple": 0,
                 "ui": 0,
                 "return_format": "value",
