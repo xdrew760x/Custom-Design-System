@@ -11,6 +11,12 @@
   }
 }
 
+.menu-item-200 {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
 .sub-menu {
   @apply hidden;
 
@@ -103,30 +109,6 @@
       }
 
       @apply pl-15;
-    }
-  }
-
-  .current_page_item {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      right: -7.5px;
-
-      @apply bg-primary-1;
-
-      @media (max-width: 1023px) {
-        right: auto;
-        left: 0;
-      }
-
-      footer & {
-        display: none;
-      }
     }
   }
 }

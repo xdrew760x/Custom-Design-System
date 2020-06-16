@@ -44,7 +44,7 @@
 
 // Label
 .gfield_label {
-  @apply block mb-0 uppercase;
+  @apply block mb-0;
 
   font-size: 20px !important;
 
@@ -54,7 +54,7 @@
 }
 
 label {
-  @apply font-sourcesanspro;
+  @apply font-d-condensed-bold capitalize;
 }
 
 // Right & Left Half
@@ -104,6 +104,34 @@ label {
 
     content: "";
     clear: both;
+  }
+}
+
+.ui-datepicker {
+  width: 250px !important;
+
+  .ui-datepicker-title {
+    @apply m-0;
+
+    select {
+      color: white !important;
+    }
+  }
+
+  span {
+    color: white;
+  }
+
+  .ui-datepicker-next,
+  .ui-datepicker-prev {
+    height: auto;
+    width: auto;
+  }
+}
+
+.ui-datepicker-calendar {
+  span {
+    color: black;
   }
 }
 

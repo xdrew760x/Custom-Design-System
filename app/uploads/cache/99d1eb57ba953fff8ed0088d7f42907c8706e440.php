@@ -2,29 +2,30 @@
 
 $header_cta = get_field('header_cta', 'options');
 
-$header_booking = get_field('header_booking', 'options');
+$header_booking = get_field('book_now_url', 'options');
 
 ?>
 
 <div class="header-a">
   <div class="container">
-
+    <?php if($phone || $header_booking || $header_cta): ?>
     <div class="header__top md:flex md:flex-row md:justify-end md:-mb-5">
       <?php if( $phone ): ?>
       <a class="hidden md:inline-block text-sm" href="tel:<?php echo e(preg_replace('/[^0-9]/', '', $phone)); ?>"><?php echo e($phone); ?></a>
       <?php endif; ?>
 
       <?php if($header_cta): ?>
-        <h6 class="mobile-none"><?php echo $header_cta; ?></h6>
+      <h6 class="mobile-none"><?php echo $header_cta; ?></h6>
       <?php endif; ?>
 
       <?php if($header_booking): ?>
-      <a class="button button--primary mobile-none" href="<?php echo $header_booking; ?>">Place Order</a>
+      <a class="button button--secondary mobile-none" href="<?php echo $header_booking; ?>">Book Now</a>
       <?php endif; ?>
 
     </div>
+    <?php endif; ?>
 
-    <div class="flex flex-row flex-wrap md:flex-no-wrap items-center md:items-end justify-between">
+    <div class="flex flex-row flex-wrap items-center md:items-center justify-center md:justify-between">
 
       <button class="w-hamburger h-hamburger ml-0 mr-auto md:hidden nav-toggle js-hamburger" aria-labelledby="toggle-navigation">
         <span id="toggle-navigation" hidden>Toggle Navigation</span>
@@ -50,7 +51,7 @@ $header_booking = get_field('header_booking', 'options');
 
       <nav>
         <?php if(has_nav_menu('primary_navigation')): ?>
-        <?php echo wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'w-full md:w-auto nav', 'container' => '']); ?>
+        <?php echo wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'primary-nav-a w-full md:w-auto nav', 'container' => '']); ?>
 
         <?php endif; ?>
       </nav>

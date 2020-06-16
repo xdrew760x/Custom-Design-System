@@ -12,7 +12,10 @@
           @include('partials.headers.header-c')
         @break
         @default
-          Nothing Yet
+        @case('header-d')
+          @include('partials.headers.header-d')
+        @break
+          <!-- Display Nothing -->
         @break
       @endswitch
     </div>

@@ -32,11 +32,11 @@ $header_booking = get_field('book_now_url', 'options');
       <div class="header__top bg-primary-2">
         <div class="inner__block mx-auto ml-0 flex flex-row  justify-between md:justify-end items-center">
           @if( $phone )
-          <a class="text-sm text-white pl-15 w-1/2 md:w-auto text-center" href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}">{{ $phone }}</a>
+          <a class="text-sm text-white pl-15 w-1/2 md:w-auto text-center" href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}"><i class="fas fa-phone-volume"></i> {{ $phone }}</a>
           @endif
 
           @if($header_booking)
-          <a class="button button--secondary w-1/2 md:w-auto text-center" href="{!! $header_booking !!}">Book Now</a>
+          <a class="button button--primary w-1/2 md:w-auto text-center" href="{!! $header_booking !!}">Book Now</a>
           @endif
         </div>
       </div>
@@ -52,7 +52,7 @@ $header_booking = get_field('book_now_url', 'options');
             <a href="#" class="button button--secondary mt-15 desktop-none">Book Now</a>
 
             @if( $phone )
-            <a class="text-white desktop-none block mt-30" href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}"><img src="/app/themes/sage/resources/assets/images/tel-phone.svg" class="pr-2 inline-block"> {{ $phone }}</a>
+            <a class="text-white desktop-none block mt-30" href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}"><i class="fas fa-phone-volume"></i> {{ $phone }}</a>
             @endif
           </nav>
         </div>

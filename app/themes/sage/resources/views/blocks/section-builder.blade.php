@@ -1,7 +1,7 @@
 {{--
   Title: Section Builder
   Description:
-  Category: brm_blocks
+  Category: columns_blocks
   Icon: image-flip-horizontal
   Keywords: section-builder
   Mode: preview

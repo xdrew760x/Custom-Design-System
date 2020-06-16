@@ -4,7 +4,7 @@
     "customizer": ["./scripts/customizer.js"]
   },
   "publicPath": "/app/themes/sage",
-  "devUrl": "http://ajo-heights.test/",
+  "devUrl": "http://lawson-concrete.test/",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": ["app/**/*.php", "config/**/*.php", "resources/views/**/*.php"]

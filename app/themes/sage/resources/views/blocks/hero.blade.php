@@ -1,7 +1,7 @@
 {{--
   Title: Hero
   Description: Add a hero with either an image, video or carousel.
-  Category: brm_blocks
+  Category: general_blocks
   Icon: images-alt2
   Keywords: Hero Section
   Mode: preview
@@ -23,7 +23,6 @@
       'content' => $hero_cnt,
     ];
   @endphp
-  <section id="{{ $block['keywords'][0] }}" class="w-full brm-hero" role="region" aria-label="Hero">
     @switch( get_field('hero_component') )
       @case('hero-a')
         @include('partials.heroes.hero-a', [$options])
@@ -40,5 +39,4 @@
       @default
       @break
     @endswitch
-  </section>
 @endif

@@ -1,0 +1,27 @@
+.testimonial--type-c {
+  .brm-testimonials {
+    @apply mt-45;
+  }
+
+  .brm-testimonial {
+    @apply border-1 border-black p-30;
+  }
+
+  .slick-slide {
+    margin: 0 10px;
+  }
+
+  .slick-list {
+    margin: 0 -10px;
+  }
+}
+
+.type-c-graphic {
+  display: none !important;
+
+  .testimonial--type-c & {
+    display: block !important;
+
+    @apply mb-15;
+  }
+}

@@ -41,14 +41,6 @@
 
   .hero_content--container {
     @apply block mx-auto;
-
-    .home & {
-      @apply pr-150;
-
-      @media (max-width: 1023px) {
-        @apply pr-0;
-      }
-    }
   }
 
   .ml-0 {

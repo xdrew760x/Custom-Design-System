@@ -71,11 +71,11 @@ module.exports = {
         900: '#2a4365'
       },
       primary: {
-        1: '#000066',
-        2: '#F09710',
-        3: '#35070A',
-        4: '#333333',
-        5: '#D8D8D8',
+        1: '#97050c',
+        2: '#333333',
+        3: '#999999',
+        4: '#ECECEC',
+        5: '#F38630',
 
       }
     },
@@ -196,18 +196,16 @@ module.exports = {
       'fontawesome-solid': [
         'Font Awesome\\ 5 Pro Solid'
       ],
-      'moonshiner': [
-        'moonshiner'
+      'd-condensed-bold': [
+        'd-condensed-bold'
       ],
-      'sourcesanspro-b': [
-        'sourcesanspro-b'
+      'd-condensed': [
+        'd-condensed'
       ],
-      'sourcesanspro-it': [
-        'sourcesanspro-it'
+      'rmconnect': [
+        'rmconnect'
       ],
-      'sourcesanspro': [
-        'sourcesanspro'
-      ],
+
       sans: [
         '-apple-system',
         'BlinkMacSystemFont',
@@ -249,18 +247,20 @@ module.exports = {
       drop: '24px',
       drop: '24px',
 
-      h1_hero: '100px',
-      h1_hero_m: '58px',
+      h1_hero: '76px',
+      h1_hero_m: '27px',
 
-      h1: '75px',
-      h1_m: '50px',
+      h1: '76px',
+      h1_m: '27px',
 
-      h2: '60px',
+      h2: '56px',
 
-      h3: '50px',
-      h4: '45px',
-      h5: '35px',
-      h6: '30px',
+      h3: '34px',
+      h3_m: '24px',
+
+      h4: '26px',
+      h5: '24px',
+      h6: '16px',
 
       p: '24px',
 
@@ -297,7 +297,7 @@ module.exports = {
       hero_mobile: '360px',
       hero_secondary: '400px',
       hero_secondary_mobile: '300px',
-      icon: '50px',
+      icon: '30px',
       dot: '20px',
       hamburger: '4px'
     }),
@@ -339,7 +339,7 @@ module.exports = {
     maxHeight: {
       full: '100%',
       screen: '100vh',
-      icon: '40px',
+      icon: '30px',
       phone: '32px'
     },
     maxWidth: {
@@ -441,7 +441,7 @@ module.exports = {
       '11/12': '91.666667%',
       full: '100%',
       screen: '100vw',
-      icon: '40px',
+      icon: '30px',
       dot: '20px',
       hamburger: '32px'
     }),

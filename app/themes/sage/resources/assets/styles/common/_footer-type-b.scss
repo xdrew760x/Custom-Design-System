@@ -1,15 +1,41 @@
 .footer-b {
+  @apply relative;
+
+  z-index: 10;
+
   .column {
     @media (max-width: 1023px) {
       @apply mt-30;
 
-      &:nth-child(3) {
+      &:nth-child(1) {
         display: none;
       }
     }
   }
 
-  p {
-    @apply mb-15;
+  .footer_branding img {
+    @apply pr-15;
+
+    filter: brightness(1000%);
+  }
+
+  p,
+  a,
+  span {
+    font-size: 18px;
+  }
+
+  .copyright,
+  .copyright span,
+  .copyright a {
+    @apply font-rmconnect text-white;
+
+    font-size: 12px;
+  }
+
+  .copyright {
+    @media (max-width: 1023px) {
+      @apply mt-15 w-3/4;
+    }
   }
 }

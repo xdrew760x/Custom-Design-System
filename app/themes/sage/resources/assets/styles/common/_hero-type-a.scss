@@ -19,12 +19,4 @@
       margin-top: -75px;
     }
   }
-
-  #header-fixed & {
-    @apply mt-135;
-
-    @media (min-width: 1024px) {
-      @apply mt-90;
-    }
-  }
 }

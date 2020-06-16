@@ -1,34 +1,69 @@
 @php
 
-$content_width = get_field('content_width');
-$community_title = get_field('community_title');
-$community_street_address= get_field('community_street_address');
-$community_city_name = get_field('community_city_name');
-$community_state = get_field('community_state');
-$community_zipcode = get_field('community_zipcode');
+$video_group = get_field('hero_video');
+$content_width = get_field('content_carousel_width');
+$content_position = get_field('content_position');
+$max_height = get_field('hero_height');
 
-$webiste_url = get_field('webiste_url');
-$homes_for_sale_url = get_field('homes_for_sale_url');
-$community_telephone = get_field('community_telephone');
 @endphp
 
-<div class="section-brm--hero community--hero flex flex-col flex-wrap justify-center bg-center bg-cover bg-no-repeat js-background" style="background-image:url({{ $options['desktop'] }})" data-mobile="{{ $options['mobile'] }}" data-desktop="{{ $options['desktop'] }}">
-  <div class="container">
-    <div class="hero-community-content bg-white">
-      <h3>{!! $community_title !!}</h3>
-      @if($community_street_address)
-      <p><a href="https://www.google.com/maps/place/{!! $community_street_address !!}+{!! $community_city_name !!}+{!! $community_state !!}+{!! $community_zipcode !!}">{!! $community_street_address !!}<br>
-      {!! $community_city_name !!}, {!! $community_state !!} {!! $community_zipcode !!}</a></p>
-      @endif
-      @if($homes_for_sale_url)
-      <a href="{!! $homes_for_sale_url !!}" class="flex items-center"><img src="/app/themes/sage/resources/assets/images/home-alt.svg" class="mr-2">View Available Homes</a>
-      @endif
-      @if($webiste_url)
-      <a href="{!! $webiste_url !!}" class="flex items-center"><img src="/app/themes/sage/resources/assets/images/external-link.svg" class="mr-2">View Website</a>
-      @endif
-      @if($community_telephone)
-      <a href="tel:{!! $community_telephone !!}" class="flex items-center"><img src="/app/themes/sage/resources/assets/images/phone-office.svg" class="mr-2">{!! $community_telephone !!}</a>
-      @endif
+@if($video_group )
+<video class="hero__video" preload="auto" autoplay loop muted playsinline>
+  <source src="{!! $video_group['hero_mp4'] !!}" type="video/mp4"/>
+  <source src="{{ $video_group['hero_webm'] }}" type="video/webm"/>
+</video>
+@endif
+
+@if(is_admin())
+<script type="text/javascript" src="/app/themes/sage/resources/assets/scripts/slick.min.js"></script>
+@endif
+<script type="text/javascript">
+//// Carousel Hero
+jQuery(document).ready( function($){
+  //// Carousel Hero
+    $('.js-carousel-hero').slick({
+      accessibility: true,
+      adaptiveHeight: false,
+      autoplay: true,
+      autoplaySpeed: 150000,
+      fade: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
+      prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+          },
+        },
+      ],
+    });
+});
+</script>
+
+<section id="{{ $block['keywords'][0] }}" class="w-full brm-hero" role="region" aria-label="Hero">
+  <section class="section-brm--hero flex flex-row items-center js-carousel-hero">
+    @if( have_rows('hero_carousel') )
+    @while( have_rows('hero_carousel') ) @php the_row() @endphp
+    @php
+    $carousel_content = get_sub_field('slide_content');
+    @endphp
+
+    <div class="section-brm--hero flex flex-col flex-wrap justify-start md:justify-center bg-no-repeat js-background">
+      <div class="hero_content text-white mx-auto block {{ $content_width === 'w-full' ? 'w-full' : ' w-full md:w-1/2' }} {{ $content_position === 'ml-0' ? 'ml-0' : 'full' }} {{ $content_position === 'mr-0' ? 'mr-0' : 'full' }}" style="background-image: url({!! $hero_graphic !!}); max-height: {!! $max_height !!}px;">
+        <div class="hero_content--container container @if(!is_admin()){!! $hero_animation !!}@endif">
+          {!! $carousel_content !!}
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+    @endwhile
+    @endif
+  </section>
+</section>

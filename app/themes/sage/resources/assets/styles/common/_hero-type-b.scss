@@ -1,0 +1,24 @@
+.section-brm--hero {
+  @apply w-full;
+
+  overflow: hidden;
+
+  .hero__video {
+    @apply w-full absolute block mx-auto;
+
+    min-width: 1024px;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media (min-width: 1024px) {
+      min-width: 1920px;
+    }
+  }
+
+  .hero_content {
+    @apply relative;
+
+    z-index: 10;
+  }
+}

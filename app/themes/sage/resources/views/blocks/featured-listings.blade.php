@@ -1,7 +1,7 @@
 {{--
   Title: Featured listing
   Description: Display featured listing with a carousel.
-  Category: brm_blocks
+  Category: rv_blocks
   Icon: star-filled
   Keywords: featured-listing
   Mode: preview

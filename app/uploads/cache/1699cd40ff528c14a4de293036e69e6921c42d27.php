@@ -1,22 +1,59 @@
 
 
-<?php if( class_exists('ACF') ): ?>
+  <?php if( class_exists('ACF') ): ?>
   <?php
-    // Define fields
-    $testimonials_wdt = get_field('testimonial_width');
-    $testimonials_mbl = get_field('testimonial_background_image')['sizes']['w960x562'] ?: App\asset_path('images/placeholders/920x562.png');
-    $testimonials_dsk = get_field('testimonial_background_image')['sizes']['w1920x562'] ?: App\asset_path('images/placeholders/1920x562.png');
-    $testimonials_cnt = get_field('testimonial_content');
-    $testimonials_spc = $testimonials_wdt !== 'full' ? 'md:px-10' : 'md:px-0';
+  // Define fields
+  $testimonial_type = get_field('testimonial_type');
+  $testimonials_wdt = get_field('testimonial_width');
+  $testimonials_mbl = get_field('testimonial_background_image')['sizes']['w960x562'];
+  $testimonials_dsk = get_field('testimonial_background_image')['sizes']['w1920x562'];
+  $text_state = !empty(get_field('testimonial_background_image')) ? 'text-white' : null;
+  $testimonials_cnt = get_field('testimonial_content');
+  $testimonials_spc = $testimonials_wdt !== 'full' ? 'md:px-10' : 'md:px-0';
   ?>
-  <section id="<?php echo e($block['keywords'][0]); ?>" class="<?php echo e($testimonials_wdt === 'full' ? 'w-full' : 'w-full max-w-10xl mx-auto'); ?> py-8 md:py-24 <?php echo e($testimonials_spc); ?> text-white bg-primary-1 bg-center bg-cover bg-no-repeat brm-testimonials" data-mobile="<?php echo e($testimonials_mbl); ?>" data-desktop="<?php echo e($testimonials_dsk); ?>" style="background-image:url(<?php echo e($testimonials_dsk); ?>)" role="region" aria-label="Testimonials">
-    <div class="w-full max-w-10xl mx-auto px-buffer">
-      <?php if( $testimonials_cnt ): ?>
-        <?php echo apply_filters('the_content', $testimonials_cnt); ?>
+  <?php if(is_admin()): ?>
+  <script type="text/javascript" src="/app/themes/sage/resources/assets/scripts/slick.min.js"></script>
+  <?php endif; ?>
+  <script type="text/javascript">
+  // Handle testimonials
+  jQuery(document).ready( function($){
 
-      <?php endif; ?>
-      <?php echo do_shortcode('[testimonials]'); ?>
 
-    </div>
+    if ($('.js-testimonials').length) {
+      $('.js-testimonials').slick({
+        accessibility: true,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
+        nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
+        prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
+        dots: false,
+        fade: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      })
+    }
+
+
+  });
+
+  </script>
+  <section id="<?php echo e($block['keywords'][0]); ?>" class="testimonial--<?php echo e($testimonial_type); ?> bg-center bg-cover bg-no-repeat <?php echo $text_state; ?>" data-mobile="<?php echo e($testimonials_mbl); ?>" data-desktop="<?php echo e($testimonials_dsk); ?>" style="background-image:url(<?php echo e($testimonials_dsk); ?>)" role="region" aria-label="Testimonials">
+
+    <?php switch( get_field('testimonial_type') ):
+    case ('type-a'): ?>
+    <?php echo $__env->make('partials.testimonials.testimonial-a', [$options], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php break; ?>
+    <?php case ('type-b'): ?>
+    <?php echo $__env->make('partials.testimonials.testimonial-b', [$options], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php break; ?>
+    <?php default: ?>
+    <?php break; ?>
+    <?php endswitch; ?>
+
   </section>
-<?php endif; ?>
+  <?php endif; ?>

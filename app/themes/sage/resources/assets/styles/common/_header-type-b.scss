@@ -18,10 +18,10 @@
         @apply flex items-center mt-15;
 
         .nav-is-open & {
-          @apply ml-0 mt-15 w-full;
+          @apply ml-0 mt-15 w-full text-white;
 
           span {
-            @apply block;
+            @apply block text-white;
 
             font-size: 24px;
           }
@@ -37,12 +37,12 @@
 
     // HEader Nav Open
     .nav-is-open & {
-      @apply fixed items-start p-15 w-full bg-primary-2;
+      @apply fixed items-start p-15 w-full bg-primary-2 mt-0;
 
       height: 100vh;
       z-index: 50;
-      top: 0;
       left: 0;
+      margin-top: -15px;
     }
   }
 
@@ -50,19 +50,22 @@
   .header__branding {
     width: 20%;
     transition: all ease 1s;
-    margin-bottom: -100px;
-    margin-top: -45px;
-
-    img {
-      @apply mx-auto block;
-
-      max-width: 145px;
-    }
 
     @media (max-width: 1023px) {
       @apply w-auto my-0;
 
       max-width: 100px;
+    }
+
+    img {
+      @apply mx-auto block w-full;
+
+      max-width: 145px;
+      transition: all ease 0.5s;
+
+      @media (max-width: 1023px) {
+        @apply mt-15;
+      }
     }
 
     .nav-is-open & {
@@ -114,13 +117,15 @@
       a {
         @apply uppercase;
 
-        font-size: 16px;
+        font-size: 22px;
 
         @media (max-width: 1200px) {
-          font-size: 14px;
+          font-size: 20px;
         }
 
         @media (max-width: 1023px) {
+          @apply text-white;
+
           font-size: 28px;
         }
       }
@@ -223,7 +228,6 @@
     @apply fixed w-full;
 
     margin-top: 0;
-    top: 0;
   }
 }
 
@@ -234,8 +238,11 @@
       margin-top: -60px !important;
 
       .header__branding {
-        width: 15%;
-        margin-top: 15px;
+        margin-top: 30px;
+
+        img {
+          max-width: 100px;
+        }
       }
     }
   }

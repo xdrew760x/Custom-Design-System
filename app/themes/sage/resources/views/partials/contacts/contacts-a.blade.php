@@ -26,7 +26,7 @@ padding: {!! $c_pad_y !!}px {!! $c_pad_x !!}px;
   <div itemscope itemtype="http://schema.org/LocalBusiness" class="contact--inner">
     <p itemprop="name" class="site__title">{!! get_bloginfo() !!}</p>
     <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <span itemprop="streetAddress">{!! $address !!}</span>
+      <span itemprop="streetAddress" class="mb-0">{!! $address !!}</span>
       <span itemprop="addressLocality">{!! $city !!}</span>,
       <span itemprop="addressRegion">{!! $state !!}</span>
       <span itemprop="postalCode">{!! $zip !!}</span>

@@ -3,6 +3,10 @@
 }
 
 .contact-a {
+  @apply relative;
+
+  z-index: 10;
+
   .container {
     @apply flex justify-between items-start px-0;
 
@@ -51,7 +55,7 @@
 
       a,
       span {
-        @apply text-primary-3;
+        @apply text-white;
       }
     }
 

@@ -1,0 +1,43 @@
+.section--solutions {
+  .section__content {
+    flex-flow: row wrap;
+
+    .solution--col {
+      //
+    }
+  }
+
+  .normal {
+    .solution--col {
+      @media (min-width: 1024px) {
+        @apply pl-30;
+      }
+    }
+  }
+
+  .section__bg {
+    max-height: 450px;
+
+    @media (max-width: 768px) {
+      max-height: 350px;
+    }
+
+    .gallery--slide {
+      @apply bg-cover w-full;
+
+      min-height: 450px;
+
+      @media (max-width: 768px) {
+        min-height: 350px;
+      }
+    }
+
+    .slick-arrow {
+      top: 35%;
+
+      @media (max-width: 768px) {
+        top: 45%;
+      }
+    }
+  }
+}

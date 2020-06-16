@@ -13,20 +13,24 @@ $contact_bg_desktop = get_field('contact_background_image', 'options')['sizes'][
 $background_state = !empty(get_field('contact_background_image', 'options')) ? 'js-background text-white bg-cover bg-right' : null;
 
 @endphp
-<section id="{{ $block['keywords'][0] }}" class="bg-{{$bg_color}} {!! $contact_type !!} {{ $background_state }}" role="region" aria-label="Contact" data-mobile="{{ $contact_bg_mobile }}" data-desktop="{{ $contact_bg_desktop }}">
       @switch( get_field('contact_components', 'options') )
         @case('contact-a')
+        <section id="{{ $block['keywords'][0] }}" class="bg-{{$bg_color}} {!! $contact_type !!} {{ $background_state }} relative z-40" role="region" aria-label="Contact" data-mobile="{{ $contact_bg_mobile }}" data-desktop="{{ $contact_bg_desktop }}">
           @include('partials.contacts.contacts-a')
+        </section>
         @break
         @case('contact-b')
+        <section id="{{ $block['keywords'][0] }}" class="bg-{{$bg_color}} {!! $contact_type !!} {{ $background_state }} relative z-40" role="region" aria-label="Contact" data-mobile="{{ $contact_bg_mobile }}" data-desktop="{{ $contact_bg_desktop }}">
           @include('partials.contacts.contacts-b')
+        </section>
         @break
         @case('contact-c')
+        <section id="{{ $block['keywords'][0] }}" class="bg-{{$bg_color}} {!! $contact_type !!} {{ $background_state }} relative z-40" role="region" aria-label="Contact" data-mobile="{{ $contact_bg_mobile }}" data-desktop="{{ $contact_bg_desktop }}">
           @include('partials.contacts.contacts-c')
+        </section>
         @break
         @default
-          Nothing Yet
+          <!-- Display nothing -->
         @break
       @endswitch
-  </section>
 @endif

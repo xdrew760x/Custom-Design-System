@@ -12,7 +12,10 @@
           <?php echo $__env->make('partials.headers.header-c', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php break; ?>
         <?php default: ?>
-          Nothing Yet
+        <?php case ('header-d'): ?>
+          <?php echo $__env->make('partials.headers.header-d', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php break; ?>
+          <!-- Display Nothing -->
         <?php break; ?>
       <?php endswitch; ?>
     </div>

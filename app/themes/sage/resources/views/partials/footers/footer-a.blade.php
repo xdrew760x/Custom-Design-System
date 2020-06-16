@@ -1,4 +1,4 @@
-<footer class="py-10" role="contentinfo" aria-label="Footer">
+<footer class="py-10 bg-primary-2 relative z-40" role="contentinfo" aria-label="Footer">
   <div class="w-full max-w-10xl mx-auto px-buffer">
 
     <div class="footer-a">
@@ -21,7 +21,7 @@
 
       </div>
 
-      <div class="footer__column footer__bottom md:flex md:flex-row md:items-center md:justify-between mt-5 pt-5 border-t border-solid border-primary-5">
+      <div class="footer__column footer__bottom md:flex md:flex-row md:items-center md:justify-between mt-5 pt-5 border-t border-solid border-primary-1">
 
         @if( App::siteSocialLinks() )
         <div class="social_icons w-full md:w-1/3">
@@ -36,7 +36,6 @@
 
         <div class="w-full md:w-2/3 mt-5 md:mt-0">
           <p class="copyright text-xs text-white">
-            AZ Lic no.8694  |  Buying and Selling of Park Models is handled by Sun Desert Homes.<br>
             <span class="md:inline-block">&copy; {{ date('Y') }} {{ App::siteName() }}</span>
             <span class="md:inline-block"> | License #: 1013139</span>
             <a href="{{ get_permalink(225) }}"> | ADA Compliance</a> &#124;

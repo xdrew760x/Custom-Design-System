@@ -1,7 +1,7 @@
 {{--
   Title: Carousel Gallery
   Description: Add a carousel gallery..
-  Category: brm_blocks
+  Category: columns_blocks
   Icon: images-alt
   Keywords: carousel
   Mode: preview

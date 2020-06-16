@@ -25,6 +25,9 @@
   <?php case ('contained'): ?>
   <?php echo $__env->make('partials.sections.contained', [$options], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <?php break; ?>
+  <?php case ('contained-carousel'): ?>
+  <?php echo $__env->make('partials.sections.contained-carousel', [$options], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <?php break; ?>
   <?php default: ?>
   <?php break; ?>
   <?php endswitch; ?>

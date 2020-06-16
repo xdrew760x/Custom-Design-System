@@ -1,7 +1,7 @@
 {{--
   Title: All Property Listings
   Description: Display all listings with various display controls.
-  Category: brm_blocks
+  Category: rv_blocks
   Icon: star-filled
   Keywords: all-listings
   Mode: preview

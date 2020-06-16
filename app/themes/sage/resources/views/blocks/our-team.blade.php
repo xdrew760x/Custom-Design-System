@@ -1,7 +1,7 @@
 {{--
   Title: Meet the Team
   Description: Display a specified number of Team members
-  Category: brm_blocks
+  Category: general_blocks
   Icon: star-filled
   Keywords: Meet-The-Team
   Mode: preview

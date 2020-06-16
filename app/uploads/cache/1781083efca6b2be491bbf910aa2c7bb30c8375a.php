@@ -7,12 +7,10 @@
 
   ?>
 
-  <blockquote class="mb-10 brm-testimonial text-center">
-    <?php echo apply_filters('the_content', $testimonial->post_content); ?>
-
+  <blockquote class="mb-10 brm-testimonial">
+    <span><?php echo apply_filters('the_content', $testimonial->post_content); ?></span>
     <footer class="mt-30">
-      <strong><cite class="text-sm">&#8211; <?php echo e($testimonial->post_title); ?></cite></strong>
-      <p><?php echo e($testimonial->review_source); ?></p>
+      <strong class="text-p">&#8211; <?php echo e($testimonial->post_title); ?> on <?php echo e($testimonial->review_source); ?></strong>
     </footer>
   </blockquote>
   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

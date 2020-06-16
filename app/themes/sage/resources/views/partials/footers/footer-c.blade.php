@@ -4,11 +4,7 @@ $background_state = !empty(get_field('footer_background_color','options')) ? 'te
 $company_logo = get_field('company_logo','options');
 @endphp
 
-<footer class="py-15 md:py-30 {!! $ft_bg_clr !!}" role="contentinfo" aria-label="Footer"
-style="
-background-color: {!! $ft_bg_clr !!};
-"
->
+<footer class="py-15 bg-primary-2 md:py-30 {!! $ft_bg_clr !!} relative z-40" role="contentinfo" aria-label="Footer">
 <div class="w-full max-w-10xl mx-auto px-buffer">
 
   <div class="footer-c">

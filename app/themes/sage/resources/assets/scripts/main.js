@@ -60,45 +60,76 @@ if (viewportWidth >= 50) {
   });
 }
 
+// logo on scroll
+var header_d = $('.header-d');
+
+if (viewportWidth >= 50) {
+  $(window).scroll(function() {
+    var scrollX = $(this).scrollTop();
+
+    if (scrollX >= 10) {
+      $(header_d).addClass('scroll-head--d');
+    } else {
+      $(header_d).removeClass('scroll-head--d');
+    }
+  });
+}
+
 /// Animation Controls
 function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
 
-    var elemTop = $(elem).offset().top - 200;
-    var elemBottom = elemTop + $(elem).height();
+  var elemTop = $(elem).offset().top - 200;
+  var elemBottom = elemTop + $(elem).height();
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 $(window).scroll(function () {
-   $('.animate-left').each(function () {
-      if (isScrolledIntoView(this) === true) {
-          $(this).addClass('slide-in-left')
-      }
-   });
+  $('.animate-left').each(function () {
+    if (isScrolledIntoView(this) === true) {
+      $(this).addClass('slide-in-left')
+    }
+  });
 });
 
 $(window).scroll(function () {
-   $('.animate-right').each(function () {
-      if (isScrolledIntoView(this) === true) {
-          $(this).addClass('slide-in-right')
-      }
-   });
+  $('.bounce-left').each(function () {
+    if (isScrolledIntoView(this) === true) {
+      $(this).addClass('bounce-in-left')
+    }
+  });
 });
 
 $(window).scroll(function () {
-   $('.animate-top').each(function () {
-      if (isScrolledIntoView(this) === true) {
-          $(this).addClass('slide-in-top')
-      }
-   });
+  $('.animate-right').each(function () {
+    if (isScrolledIntoView(this) === true) {
+      $(this).addClass('slide-in-right')
+    }
+  });
 });
 
 $(window).scroll(function () {
-   $('.animate-bottom').each(function () {
-      if (isScrolledIntoView(this) === true) {
-          $(this).addClass('slide-in-bottom')
-      }
-   });
+  $('.bounce-right').each(function () {
+    if (isScrolledIntoView(this) === true) {
+      $(this).addClass('bounce-in-right')
+    }
+  });
+});
+
+$(window).scroll(function () {
+  $('.animate-top').each(function () {
+    if (isScrolledIntoView(this) === true) {
+      $(this).addClass('slide-in-top')
+    }
+  });
+});
+
+$(window).scroll(function () {
+  $('.animate-bottom').each(function () {
+    if (isScrolledIntoView(this) === true) {
+      $(this).addClass('slide-in-bottom')
+    }
+  });
 });

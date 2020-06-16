@@ -1,7 +1,7 @@
 {{--
   Title: Resident Testimonials
   Description: Add a testimonials carousel for individual Communities
-  Category: brm_blocks
+  Category: rv_blocks
   Icon: format-quote
   Keywords: resident-testimonials
   Mode: preview

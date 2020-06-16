@@ -4,11 +4,13 @@ h3,
 h4,
 h5,
 h6 {
-  @apply mb-15 leading-tight capitalize;
+  @apply mb-15 leading-tight uppercase text-primary-2;
 }
 
 h1 {
-  @apply text-h1_m font-moonshiner uppercase text-primary-3;
+  @apply text-h1_m font-rmconnect uppercase;
+
+  letter-spacing: 1px;
 
   .section-brm--hero & {
     @apply text-h1_hero_m;
@@ -24,28 +26,31 @@ h1 {
 }
 
 h2 {
-  @apply text-h2 font-moonshiner text-primary-2;
+  @apply text-h2 font-rmconnect;
 }
 
 h3 {
-  @apply text-h3 uppercase font-moonshiner text-primary-2;
+  @apply text-h3 uppercase font-rmconnect;
+
+  letter-spacing: 1.5px;
 }
 
 h4 {
-  @apply text-h4 font-moonshiner text-primary-4;
+  @apply text-h4 font-d-condensed-bold;
 }
 
 h5 {
-  @apply text-h5 font-sourcesanspro-b uppercase text-primary-5;
+  @apply text-h5 font-rmconnect uppercase;
 }
 
 h6 {
-  @apply text-h6 uppercase font-sourcesanspro-b text-primary-1;
+  @apply text-h6 uppercase font-rmconnect;
 }
 
 p,
-ul:not([class]) {
-  @apply mb-15 text-base text-primary-3 leading-normal font-sourcesanspro;
+ul:not([class]),
+span {
+  @apply mb-15 text-p text-primary-2 leading-tight font-d-condensed;
 
   &:last-child {
     @apply mb-0;
@@ -54,35 +59,14 @@ ul:not([class]) {
 
 b,
 strong {
-  @apply font-sourcesanspro-b;
+  @apply font-d-condensed;
 }
 
 a {
-  @apply text-primary-3 font-sourcesanspro-b;
+  @apply text-primary-1 font-d-condensed;
 }
 
 small,
 .small-style {
-  @apply text-primary-3 uppercase font-sourcesanspro-b text-small leading-normal block mb-2;
-}
-
-.small-style {
-  @apply relative;
-
-  padding-left: 45px;
-
-  &::before {
-    @apply bg-primary-2;
-
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 12px;
-    width: 30px;
-    height: 1px;
-  }
-}
-
-.featured-style {
-  @apply text-primary-4 capitalize;
+  @apply text-primary-1 uppercase font-d-condensed text-small leading-normal block mb-2;
 }

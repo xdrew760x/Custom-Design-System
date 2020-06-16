@@ -111,22 +111,36 @@ function my_blocks_plugin_block_categories( $categories ) {
     $categories,
     array(
       array(
-        'slug' => 'brm_blocks',
-        'title' => __( 'Big Rig Media Blocks', 'mydomain' ),
+        'slug' => 'general_blocks',
+        'title' => __( 'General Blocks', 'brm' ),
+        'icon'  => 'wordpress',
+      ),
+      array(
+        'slug' => 'columns_blocks',
+        'title' => __( 'Column Blocks', 'brm' ),
+        'icon'  => 'wordpress',
+      ),
+      array(
+        'slug' => 'rv_blocks',
+        'title' => __( 'RV Park Blocks', 'brm' ),
         'icon'  => 'wordpress',
       ),
     )
   );
 }
+
 add_filter( 'block_categories', 'my_blocks_plugin_block_categories', 10, 2 );
 
-add_action('admin_head', 'my_custom_fonts');
+//// Gutenberg Backend Styling Overide
 
-function my_custom_fonts() {
+
+add_action('admin_head', 'gutenberg_styling_overide');
+
+function gutenberg_styling_overide() {
   echo '<style>
   @media (min-width: 782px) {
     .is-sidebar-opened .block-editor-editor-skeleton__sidebar {
-      width: 20% !important;
+      width: 20%;
       min-width: 20% !important;
       transition: all ease 1s;
       position: fixed !important;
@@ -135,8 +149,9 @@ function my_custom_fonts() {
       margin-top: 88px;
     }
 
-    .is-sidebar-opened .block-editor-editor-skeleton__sidebar:hover {
+    .expand-me {
       width: 40% !important;
+      z-index: 100 !important;
     }
   }
 
@@ -146,7 +161,17 @@ function my_custom_fonts() {
 
   .components-notice-list,
   .edit-post-layout__metaboxes {
-    max-width: 77%;
+    max-width: 75% !important;
+  }
+
+  .components-notice-list,
+  .edit-post-layout__metaboxes {
+    max-width: 80%;
+  }
+
+  .block-editor-block-list__layout {
+    overflow: hidden !important;
+    position: relative;
   }
 
   .wp-core-ui .button,
@@ -160,104 +185,95 @@ function my_custom_fonts() {
     color: inherit !important;
   }
 
-  </style>';
+  .wp-editor-area {
+    height: 150px !important;
+  }
+
+  .block-list-appender {
+    z-index: 10;
+    position: relative;
+  }
+
+  .editor-styles-wrapper .block-editor-block-list__block {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .open-sidebar {
+    display: none !important;
+  }
+
+  .block-editor-page .open-sidebar {
+    display: block !important;
+  }
+
+  .open-sidebar {
+    right: -155px;
+    transition: all ease  1s;
+  }
+
+  .open-sidebar::before {
+    content: "\2190";
+    padding-right: 15px;
+  }
+
+  .open-sidebar:hover {
+    right: 0px;
+  }
+
+
+  </style>
+
+  <a class="open-sidebar text-h1 button--primary"
+  style="
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  font-size: 20px;
+  padding: 15px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  "
+  >Toggle Toolbar</a>';
 }
 
-
-///////////////////////////////////////////////////////   User Role Rules  ///////////////////////////////////////////////////////
-
-if ( !current_user_can('administrator') ) {
-
-  function remove_menus() {
-
-    remove_menu_page( 'index.php' );
-    remove_menu_page( 'jetpack' );
-    //remove_menu_page( 'edit.php' );
-    remove_menu_page( 'upload.php' );
-    remove_menu_page( 'edit-comments.php' );
-    remove_menu_page( 'edit.php' );
-    remove_menu_page( 'themes.php' );
-    remove_menu_page( 'plugins.php' );
-    remove_menu_page( 'users.php' );
-    remove_menu_page( 'tools.php' );
-    remove_menu_page( 'edit.php?post_type=page' );
-    remove_menu_page( 'edit.php?post_type=testimonials' );
-    remove_menu_page('acf-options-page-components');
-    remove_menu_page( 'edit.php?post_type=testimonials' );
-    remove_menu_page( 'options-general.php' );
-  }
-
-  add_action( 'admin_menu', 'remove_menus' );
-
-
-
-
-  function shapeSpace_remove_toolbar_nodes($wp_admin_bar) {
-
-    $wp_admin_bar->remove_node('updates');
-    $wp_admin_bar->remove_node('comments');
-    $wp_admin_bar->remove_node('new-content');
-    //$wp_admin_bar->remove_node('site-name');
-    $wp_admin_bar->remove_node('edit');
-
-
-    //$wp_admin_bar->remove_node('my-account');
-    $wp_admin_bar->remove_node('search');
-
-    $wp_admin_bar->remove_node('customize');
-
-  }
-
-  ///   Remove Admin bar menu items
-
-  add_action('admin_bar_menu', 'shapeSpace_remove_toolbar_nodes', 999);
-  // Removes Evetns from Admin bar
-  define('TRIBE_DISABLE_TOOLBAR_ITEMS', true);
-
-
-  function hide_personal_options(){
-    echo "\n" . '<script type="text/javascript">jQuery(document).ready(function($) { $(\'form#your-profile > h3:first\').hide(); $(\'form#your-profile > table:first\').hide(); $(\'form#your-profile\').show(); });</script>' . "\n";
-  }
-  add_action('admin_head','hide_personal_options');
-
-
-
-
-  if(!function_exists('remove_plain_bio')){
-    function remove_bio_box($buffer){
-      $buffer = str_replace('<h3>About Yourself</h3>','<h3>User Password</h3>',$buffer);
-      $buffer = preg_replace('/<tr class=\"user-description-wrap\"[\s\S]*?<\/tr>/','',$buffer,1);
-      return $buffer;
-    }
-    function user_profile_subject_start(){ ob_start('remove_bio_box'); }
-    function user_profile_subject_end(){ ob_end_flush(); }
-  }
-  add_action('admin_head-profile.php','user_profile_subject_start');
-  add_action('admin_footer-profile.php','user_profile_subject_end');
-}
-
-if ( current_user_can('coyote_ranch') ) {
-  function remove_menu() {
-    //remove_menu_page( 'edit.php?post_type=coyote-ranch' ); // Events
-    remove_menu_page( 'edit.php?post_type=cactus-ranch' ); // Events
-    remove_menu_page( 'edit.php?post_type=araby-acres' ); // Events
-    remove_menu_page( 'edit.php?post_type=ranch-rialto' ); // Events
-    remove_menu_page( 'edit.php?post_type=tuscany-park' ); // Events
-
-  }
-
-  add_action( 'admin_menu', 'remove_menu' );
-
-}
 
 // Add class to next and previous links
 function add_class_next_post_link($html){
   $html = str_replace('<a','<a class="next-post"',$html);
   return $html;
 }
+
 add_filter('next_post_link','add_class_next_post_link',10,1);
 function add_class_previous_post_link($html){
   $html = str_replace('<a','<a class="prev-post"',$html);
   return $html;
 }
 add_filter('previous_post_link','add_class_previous_post_link',10,1);
+
+//Remove stock blocks
+
+add_filter( 'allowed_block_types', 'misha_allowed_block_types' );
+
+function misha_allowed_block_types( $allowed_blocks ) {
+
+  return array(
+    'acf/all-listings',
+    'acf/card',
+    'acf/carousel-gallery',
+    'acf/columns-slider',
+    'acf/featured-carousel',
+    'acf/featured-listings',
+    'acf/full',
+    'acf/hero',
+    'acf/our-team',
+    'acf/portals',
+    'acf/section-builder',
+    'acf/split',
+    'acf/testimonials-resident',
+    'acf/testimonials',
+    'acf/solutions',
+  );
+
+}

@@ -1,13 +1,5 @@
 // Update theme colors based off Tailwind.config
 // Output example:  var(--primary-1);
-:root {
-  --white: #fff;
-  --primary-1: #10256b;
-  --primary-2: #f70605;
-  --primary-3: #0769ac;
-  --primary-4: #474747;
-}
-
 .header-c {
   position: relative;
   margin-top: 0;
@@ -32,11 +24,11 @@
         top: -7px;
         width: 0;
         height: 0;
-        border-top: 104px solid white;
-        border-right: 110px solid transparent;
+        border-top: 114px solid white;
+        border-right: 90px solid transparent;
 
         #header-fixed & {
-          border-top: 108px solid white;
+          border-top: 113px solid white;
         }
       }
     }
@@ -54,15 +46,13 @@
         @apply block mx-auto ml-0;
 
         img {
-          @apply mx-auto mr-0 pr-15;
+          @apply mx-auto mt-15 mr-0 py-15 pr-15;
 
-          max-width: 95px;
           transition: all ease 1s;
+          max-width: 200px;
 
           @media (max-width: 1023px) {
             @apply ml-0;
-
-            max-width: 75px;
           }
         }
       }
@@ -192,7 +182,7 @@
   }
 
   .logged-in & {
-    margin-top: 30px !important;
+    //margin-top: 30px !important;
   }
 
   // Fixed Property
@@ -200,7 +190,6 @@
     @apply fixed w-full;
 
     margin-top: 0;
-    top: 0;
   }
 }
 
@@ -209,12 +198,6 @@
   .scroll-head--c {
     @media (min-width: 1024px) {
       margin-top: -60px !important;
-
-      .header__branding img {
-        @apply py-15;
-
-        margin-top: 15px;
-      }
     }
   }
 }

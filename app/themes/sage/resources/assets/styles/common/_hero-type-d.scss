@@ -1,0 +1,22 @@
+.hero__video {
+  @apply fixed w-full h-full;
+
+  top: -5px;
+  left: 0;
+  z-index: 1;
+  height: auto;
+  width: 130%;
+  min-width: 100%;
+
+  @media (max-width: 1500px) {
+    min-width: 130%;
+  }
+
+  @media (max-width: 1300px) {
+    min-width: 150%;
+  }
+
+  @media (max-width: 1023px) {
+    min-width: 350%;
+  }
+}

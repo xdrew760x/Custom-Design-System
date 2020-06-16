@@ -69,7 +69,7 @@ switch(WP_ENV){
 	// Development
 	case 'development':
 		/** The name of the local database for WordPress */
-		define('DB_NAME', 'ajoheights_db');
+		define('DB_NAME', 'lawson_db');
 
 		/** MySQL local database username */
 		define('DB_USER', 'root');
@@ -80,21 +80,21 @@ switch(WP_ENV){
 	// Production
 	case 'production':
 		/** The name of the live database for WordPress */
-		define('DB_NAME', 'ajoheightsrvpark_db');
+		define('DB_NAME', '');
 
 		/** MySQL live database username */
-		define('DB_USER', 'ajoheightsrvpark_us');
+		define('DB_USER', '');
 
 		/** MySQL live database password */
-		define('DB_PASSWORD', 'ojMcwITZpRdqXcDwTtzFm');
+		define('DB_PASSWORD', '');
 	break;
 }
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** MySQL hostname */
 
-//define('DB_HOST', '10.138.232.101');
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1');
+//define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -129,7 +129,7 @@ define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/app');
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'ah_';
+$table_prefix  = 'lc_';
 
 /**
  * WordPress Localized Language, defaults to English.

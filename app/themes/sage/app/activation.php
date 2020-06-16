@@ -397,7 +397,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'sage' ),
 			);
 
-			do_action( 'tgmpa_register' );
+			//do_action( 'tgmpa_register' );
 
 			/* After this point, the plugins should be registered and the configuration set. */
 

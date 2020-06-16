@@ -1,7 +1,7 @@
 {{--
   Title: Featured Carousel Slider
   Description: Display a specified number of featured listings within a carousel Slider.
-  Category: brm_blocks
+  Category: rv_blocks
   Icon: star-filled
   Keywords: featured-carousel-slider
   Mode: preview
