@@ -41,4 +41,12 @@ when uploaded.
 * New Testimonials Block Type Now available
 * New Resident Testimonial Block now Available for Properties Fucntion
 *  ACF Stylesheet updated. Fixed Bugs with Gutenberg Backend.
->>>>>>> 2340c4ec041aa4de0d4a8a0a976a246683b57150
+
+
+### 1.4: June 30th, 2020
+### New Blocks / Styling / Theme Component Contols / Functions / Animations
+* 2 column block has been included
+* new animations may be selected with blocks containing content
+* Portal Block now contain 2 new design options
+* Gutenberg backend now contains a button to extend the sidebar toolbar
+* Website Components have been refined for all purposes
