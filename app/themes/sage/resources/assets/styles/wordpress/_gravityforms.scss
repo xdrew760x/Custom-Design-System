@@ -54,7 +54,7 @@
 }
 
 label {
-  @apply font-d-condensed-bold capitalize;
+  @apply font-d-condensed capitalize;
 }
 
 // Right & Left Half
@@ -88,12 +88,18 @@ label {
 .ginput_container_date {
   @apply relative;
 
-  &::before {
-    @apply block absolute font-fontawesome-regular text-lg text-primary-2;
+  cursor: pointer;
 
-    content: "\f073";
-    top: 10px;
-    right: 15px;
+  &::after {
+    @apply block absolute bg-contain bg-center;
+
+    pointer-events: none;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(/app/themes/sage/resources/assets/images/calendar-icon.svg);
   }
 }
 

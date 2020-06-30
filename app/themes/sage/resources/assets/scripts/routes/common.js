@@ -103,6 +103,36 @@ export default {
     $('.gfield .datepicker').each(function () {
       $(this).attr('autocomplete', 'off'); });
 
+      //// Carousel Hero
+      if ($('.js-carousel-hero').length) {
+        $('.js-carousel-hero').slick({
+          accessibility: true,
+          adaptiveHeight: false,
+          autoplay: true,
+          autoplaySpeed: 150000,
+          fade: true,
+          pauseOnFocus: false,
+          pauseOnHover: false,
+          speed: 1000,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: true,
+          nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
+          prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+              },
+            },
+          ],
+        });
+      }
+
+
+
       // Handle portals & featured listings
       if (window.matchMedia('(max-width: 1023px)').matches) {
         // Portals Becomes Slider on mobile

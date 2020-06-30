@@ -1,27 +1,28 @@
 .button {
   @apply font-d-condensed-bold inline-block py-4 pt-5 px-30 uppercase text-p text-white;
 
+  border-radius: 45px;
   line-height: 0;
   letter-spacing: 1px;
 }
 
 .button--primary {
-  @apply border-2 border-primary-3 relative bg-primary-3;
+  @apply border-2 border-primary-2 relative bg-primary-2;
   // Hover
   @media (hover: hover) {
     &:hover {
-      @apply text-white bg-primary-2 border-primary-2;
+      @apply text-white bg-primary-1 border-primary-1;
     }
   }
 }
 
 .button--secondary,
 .gform_button {
-  @apply border-2 border-primary-2 relative bg-primary-2;
+  @apply border-2 border-primary-4 relative bg-primary-4;
   // Hover
   @media (hover: hover) {
     &:hover {
-      @apply text-white bg-primary-3 border-primary-3;
+      @apply text-white bg-primary-1 border-primary-1;
     }
   }
 }

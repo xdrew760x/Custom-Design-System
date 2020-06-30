@@ -1,5 +1,13 @@
 // Update theme colors based off Tailwind.config
 // Output example:  var(--primary-1);
+:root {
+  --white: #fff;
+  --primary-1: #10256b;
+  --primary-2: #f70605;
+  --primary-3: #0769ac;
+  --primary-4: #474747;
+}
+
 .header-d {
   position: relative;
   margin-top: 0;
@@ -11,17 +19,11 @@
   }
 
   .header__branding img {
-    filter: brightness(1000%);
+    max-width: 100%;
+    filter: brightness(10000%);
     transition: all ease 0.5s;
-    max-width: 160px;
 
-    @media (min-width: 1370px) {
-      max-width: 360px;
-    }
-
-    @media (max-width: 1023px) {
-      @apply py-2;
-
+    @media (max-width: 1185px) {
       max-width: 200px;
     }
   }
@@ -82,10 +84,39 @@
     }
   }
 
+  .current_page_item,
+  .current_page_parent {
+    @media (min-width: 1024px) {
+      position: relative;
+
+      a {
+        &::after {
+          @apply absolute w-full bg-primary-4 block mx-auto;
+
+          content: "";
+          height: 2px;
+          bottom: 10px;
+          left: 7px;
+          right: 0;
+
+          @media (max-width: 1023px) {
+            left: 0;
+          }
+        }
+      }
+
+      .sub-menu a::after {
+        @apply hidden;
+      }
+    }
+  }
+
   // Nav Mobile
   nav {
+    @apply py-15;
+
     @media (min-width: 1024px) {
-      @apply flex justify-between items-start;
+      @apply flex justify-between items-start py-0;
     }
 
     .primary-nav-a {
@@ -99,7 +130,7 @@
         @apply flex justify-end items-center mt-0 mr-60;
 
         li {
-          @apply mx-3 py-15 my-0;
+          @apply ml-3 py-15 my-0;
         }
       }
 
@@ -116,8 +147,8 @@
 
         font-size: 16px;
 
-        @media (max-width: 1370px) {
-          font-size: 14px;
+        @media (max-width: 1185px) {
+          font-size: 12px;
         }
 
         @media (max-width: 1023px) {
@@ -128,6 +159,8 @@
       // sub-menu Background Color control
       .sub-menu {
         @media (min-width: 1024px) {
+          @apply bg-white;
+
           left: -15px !important;
 
           li {
@@ -158,6 +191,32 @@
 
   .logged-in & {
     margin-top: 30px !important;
+  }
+
+  .contact-icon {
+    filter: brightness(1000%);
+  }
+
+  &:hover {
+    @media (min-width: 1024px) {
+      @apply bg-white;
+
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+
+      .header__branding img,
+      .contact-icon {
+        filter: brightness(100%);
+      }
+
+      .primary-nav-a a,
+      .header__contact a {
+        @apply text-primary-2;
+      }
+
+      .button {
+        color: white !important;
+      }
+    }
   }
 
   // Fixed Property
@@ -210,6 +269,10 @@
         }
       }
     }
+
+    .contact-icon {
+      filter: brightness(100%);
+    }
   }
 }
 
@@ -227,6 +290,10 @@
     @apply pb-90;
 
     max-height: 1000px;
+  }
+
+  p {
+    font-size: 18px;
   }
 
   .form__toggle--inner {
@@ -250,6 +317,11 @@
     background: transparent !important;
     border: none;
     border-bottom: 1px solid white !important;
+    color: white;
+  }
+
+  textarea {
+    height: 100px !important;
   }
 
   .gform_button {
@@ -258,6 +330,10 @@
     background-color: #feba12 !important;
     border: none !important;
   }
+}
+
+.pop__icon {
+  filter: brightness(1000%);
 }
 
 .button--close {

@@ -69,7 +69,7 @@ switch(WP_ENV){
 	// Development
 	case 'development':
 		/** The name of the local database for WordPress */
-		define('DB_NAME', 'lawson_db');
+		define('DB_NAME', 'system_db');
 
 		/** MySQL local database username */
 		define('DB_USER', 'root');
@@ -129,7 +129,7 @@ define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/app');
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'lc_';
+$table_prefix  = 'ds_';
 
 /**
  * WordPress Localized Language, defaults to English.

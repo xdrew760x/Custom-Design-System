@@ -4,7 +4,7 @@
   Category: general_blocks
   Icon: format-quote
   Keywords: testimonials
-  Mode: preview
+  Mode: edit
   Align: full
   --}}
 
@@ -22,7 +22,35 @@
   @if(is_admin())
   <script type="text/javascript" src="/app/themes/sage/resources/assets/scripts/slick.min.js"></script>
   @endif
-  <section id="{{ $block['keywords'][0] }}" class="testimonial--{{ $testimonial_type }} bg-center bg-cover bg-no-repeat {!! $text_state !!} bg-primary-4" data-mobile="{{ $testimonials_mbl }}" data-desktop="{{ $testimonials_dsk }}" style="background-image:url({{ $testimonials_dsk }})" role="region" aria-label="Testimonials">
+  <script type="text/javascript">
+  // Handle testimonials
+  jQuery(document).ready( function($){
+
+
+    if ($('.js-testimonials').length) {
+      $('.js-testimonials').slick({
+        accessibility: true,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
+        nextArrow: '<div class="next"><img src="/app/themes/sage/resources/assets/images/slick-right.svg" alt="select Next Testimonial"></div>',
+        prevArrow: '<div class="prev"><img src="/app/themes/sage/resources/assets/images/slick-left.svg" alt="select Previous Testimonial"></div>',
+        dots: false,
+        fade: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      })
+    }
+
+
+  });
+
+  </script>
+  <section id="{{ $block['keywords'][0] }}" class="testimonial--{{ $testimonial_type }} bg-center bg-cover bg-no-repeat {!! $text_state !!}" data-mobile="{{ $testimonials_mbl }}" data-desktop="{{ $testimonials_dsk }}" style="background-image:url({{ $testimonials_dsk }})" role="region" aria-label="Testimonials">
 
     @switch( get_field('testimonial_type') )
     @case('type-a')
@@ -31,10 +59,6 @@
     @case('type-b')
     @include('partials.testimonials.testimonial-b', [$options])
     @break
-    @case('type-c')
-    @include('partials.testimonials.testimonial-c', [$options])
-    @break
-
     @default
     @break
     @endswitch

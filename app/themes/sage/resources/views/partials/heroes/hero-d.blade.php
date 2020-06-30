@@ -4,6 +4,8 @@ $video_group = get_field('hero_video');
 $content_width = get_field('content_carousel_width');
 $content_position = get_field('content_position');
 $max_height = get_field('hero_height');
+//Animation
+$hero_animation = get_field('hero_animation');
 
 @endphp
 
@@ -33,7 +35,7 @@ jQuery(document).ready( function($){
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: false,
-      arrows: true,
+      arrows: false,
       nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
       prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
       responsive: [
@@ -48,17 +50,22 @@ jQuery(document).ready( function($){
 });
 </script>
 
-<section id="{{ $block['keywords'][0] }}" class="w-full brm-hero" role="region" aria-label="Hero">
-  <section class="section-brm--hero flex flex-row items-center js-carousel-hero">
+<section id="{{ $block['keywords'][0] }}" class="w-full brm-hero hero__type--c flex flex-row items-center" role="region" aria-label="Hero"
+  style="min-height: {!! $max_height !!}px;"
+>
+  <section class="section-brm--hero js-carousel-hero @if(! is_admin()) {!! $hero_animation !!} @endif">
     @if( have_rows('hero_carousel') )
     @while( have_rows('hero_carousel') ) @php the_row() @endphp
     @php
     $carousel_content = get_sub_field('slide_content');
     @endphp
 
-    <div class="section-brm--hero flex flex-col flex-wrap justify-start md:justify-center bg-no-repeat js-background">
-      <div class="hero_content text-white mx-auto block {{ $content_width === 'w-full' ? 'w-full' : ' w-full md:w-1/2' }} {{ $content_position === 'ml-0' ? 'ml-0' : 'full' }} {{ $content_position === 'mr-0' ? 'mr-0' : 'full' }}" style="background-image: url({!! $hero_graphic !!}); max-height: {!! $max_height !!}px;">
-        <div class="hero_content--container container @if(!is_admin()){!! $hero_animation !!}@endif">
+    <div class="section-brm--hero flex items-center justify-center bg-no-repeat js-background">
+      <div class="hero_content text-white mx-auto block {{ $content_width === 'w-full' ? 'w-full' : ' w-full md:w-1/2' }} {{ $content_position === 'ml-0' ? 'ml-0' : 'full' }} {{ $content_position === 'mr-0' ? 'mr-0' : 'full' }}"
+      style="
+      background-image: url({!! $hero_graphic !!});
+      ">
+        <div class="hero_content--container container @if(!is_admin()){!! $hero_animation !!}@endif pt-30 md:pt-60">
           {!! $carousel_content !!}
         </div>
       </div>

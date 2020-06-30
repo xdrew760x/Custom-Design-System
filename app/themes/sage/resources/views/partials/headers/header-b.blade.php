@@ -10,13 +10,13 @@ $state = get_field('state', 'options');
 $zip = get_field('zipcode', 'options');
 @endphp
 
-<div class="header-b bg-white">
+<div class="header-b">
   <div class="container">
 
-    <div class="header__top md:flex md:flex-row md:items-start md:justify-between md:mb-2">
+    <div class="header__top md:flex md:flex-row md:items-start md:justify-between md:-mb-5">
       <div class="col--left">
         @if( $phone )
-        <a class="hidden md:inline-block text-sm md:pr-30" href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}"><i class="fas fa-phone-volume"></i> {{ $phone }}</a>
+        <a class="hidden md:inline-block text-sm md:pr-30" href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}"><i class="fas fa-phone"></i> {{ $phone }}</a>
         @endif
 
         @if($address)
@@ -62,12 +62,12 @@ $zip = get_field('zipcode', 'options');
 
           @if( $phone )
           <a class="mobile--tele ml-auto desktop-none" href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}" aria-labelledby="call">
-            <i class="fas fa-phone-volume"></i> <span class="hidden ml-15">{{ $phone }}</span>
+            <img src="/app/themes/sage/resources/assets/images/telephone.svg" alt="Contact us button" > <span class="hidden ml-15">{{ $phone }}</span>
           </a>
           @endif
         </div>
 
-        <a class="button button--secondary ml-30 hidden" href="#">Book now</a>
+        <a class="button button--primary ml-30 hidden" href="#">Book now</a>
 
       </nav>
     </div>

@@ -2,7 +2,7 @@
 $footer_background_color = get_field('footer_background_color', 'options');
 @endphp
 
-<footer class="py-10 bg-primary-2 relative z-40" role="contentinfo" aria-label="Footer"
+<footer class="py-10 @if($footer_background_color) text-white @endif" role="contentinfo" aria-label="Footer"
 style="background-color: {!! $footer_background_color !!};"
 >
   <div class="w-full max-w-10xl mx-auto px-buffer">
@@ -41,7 +41,7 @@ style="background-color: {!! $footer_background_color !!};"
               <span itemprop="postalCode">{!! $zip !!}</span>
             </address>
             <p class="contact-info--tel mt-15 mb-0">
-              <a itemprop="telephone" href="tel:'.preg_replace('/[^0-9]/', '', $phone).'">(855) CMM-HVAC, (855-266-4822)</a>
+              <a itemprop="telephone" href="tel:{!! preg_replace('/[^0-9]/', '', $phone) !!}">(855) CMM-HVAC, (855-266-4822)</a>
             </p>
             @if($email)
             <p class="contact-info--email">
@@ -71,7 +71,7 @@ style="background-color: {!! $footer_background_color !!};"
         @endif
       </div>
 
-      <div class="footer__bottom md:flex md:flex-row md:items-end md:justify-between mt-5 pt-5 border-t border-solid border-white">
+      <div class="footer__bottom md:flex md:flex-row md:items-end md:justify-between mt-5 pt-5 border-t border-solid border-primary-1">
         <a href="{{ home_url('/') }}" class="footer_branding">
           @if( $branding )
           <img src="{{ $branding }}" alt="{{ get_bloginfo('name', 'display') }}" />
@@ -82,9 +82,8 @@ style="background-color: {!! $footer_background_color !!};"
 
         <p class="copyright text-xs">
           <span class="md:inline-block">&copy; {{ date('Y') }} {{ App::siteName() }}</span>
-          <span class="md:inline-block"> | License #: 1013139</span>
-          <a href="{{ get_permalink(190) }}"> | ADA Compliance</a> &#124;
-          <a href="{{ get_permalink(3) }}">Privacy Policy</a>
+          <a href="/ada-compliance/"> | ADA Compliance</a> &#124;
+          <a href="/privacy-policy/">Privacy Policy</a>
           <span>| WEBSITE BY <a href="https://www.bigrigmedia.com/custom-website-development/">BIG RIG MEDIA LLC ®</a></span>
         </p>
       </div>

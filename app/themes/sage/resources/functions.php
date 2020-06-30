@@ -132,8 +132,6 @@ function my_blocks_plugin_block_categories( $categories ) {
 add_filter( 'block_categories', 'my_blocks_plugin_block_categories', 10, 2 );
 
 //// Gutenberg Backend Styling Overide
-
-
 add_action('admin_head', 'gutenberg_styling_overide');
 
 function gutenberg_styling_overide() {
@@ -147,6 +145,7 @@ function gutenberg_styling_overide() {
       right: 0px !important;
       left: auto !important;
       margin-top: 88px;
+      z-index: 50;
     }
 
     .expand-me {
@@ -237,8 +236,6 @@ function gutenberg_styling_overide() {
   "
   >Toggle Toolbar</a>';
 }
-
-
 // Add class to next and previous links
 function add_class_next_post_link($html){
   $html = str_replace('<a','<a class="next-post"',$html);
@@ -251,6 +248,7 @@ function add_class_previous_post_link($html){
   return $html;
 }
 add_filter('previous_post_link','add_class_previous_post_link',10,1);
+
 
 //Remove stock blocks
 
@@ -274,6 +272,7 @@ function misha_allowed_block_types( $allowed_blocks ) {
     'acf/testimonials-resident',
     'acf/testimonials',
     'acf/solutions',
+    'core/block' // add this for reusable block
   );
 
 }

@@ -1,60 +1,49 @@
 .header-a {
+  @apply pt-15 pb-15 bg-white;
+
   margin-top: 0;
   transition: all ease 1s;
   z-index: 100;
 
   @media (max-width: 1023px) {
-    @apply py-15;
-  }
-
-  .logged-in & {
-    @media (max-width: 1023px) {
-      @apply mt-15;
-    }
+    @apply pb-15;
   }
 
   // Wesbite Logo Styling
   .header__branding {
+    margin-top: -45px;
+    margin-bottom: -45px;
+
     @media (max-width: 768px) {
-      @apply block mx-auto ml-0 mt-0;
+      @apply block mx-auto mt-0;
     }
 
     img {
       @apply block mx-auto;
 
-      max-width: 200px;
+      max-width: 100px;
       transition: all ease 1s;
 
       @media (max-width: 768px) {
-        @apply ml-0;
-
-        max-width: 120px;
+        max-width: 75px;
       }
     }
   }
 
   // Phone Number & CTA
   .header__top {
-    @apply bg-primary-1;
+    h6 {
+      @apply m-0;
+    }
 
     @media (min-width: 1024px) {
-      @apply flex items-end;
+      @apply flex items-end pb-15;
 
       flex-flow: row wrap;
 
       a {
-        @apply ml-30 text-white;
+        @apply ml-30;
       }
-    }
-
-    h6 {
-      @apply m-0;
-    }
-  }
-
-  .header__bottom {
-    @media (min-width: 1024px) {
-      @apply py-15;
     }
   }
 
@@ -64,13 +53,13 @@
 
   // hamburger Icon
   .w-hamburger {
-    @apply bg-primary-1 relative;
+    @apply bg-white relative;
 
     left: 15px;
     margin-top: 0;
 
     .nav-is-open & {
-      @apply bg-transparent mb-0;
+      @apply bg-white mb-30;
     }
   }
 
@@ -89,6 +78,18 @@
     }
   }
 
+  // Last Menu item
+  .menu-item-122 {
+    @apply border-2 border-primary-2 py-2;
+
+    border-radius: 10px;
+    max-width: 175px;
+
+    a {
+      @apply p-15 text-primary-2;
+    }
+  }
+
   // Nav Mobile
   .primary-nav-a {
     z-index: 100;
@@ -101,12 +102,12 @@
       @apply flex justify-end items-center mt-0;
 
       li {
-        @apply ml-15 mt-0;
+        @apply ml-15;
       }
     }
 
     a {
-      @apply uppercase leading-normal text-primary-2;
+      @apply uppercase leading-normal;
 
       font-size: 18px;
 
@@ -121,7 +122,7 @@
 
       // Navigation Open
       .nav-is-open & {
-        @apply block mt-30 p-30 absolute w-full bg-primary-1;
+        @apply block mt-30 p-30 absolute w-full bg-white;
 
         left: 0;
         height: 100vh;
@@ -156,6 +157,9 @@
   // Fixed Property
   #header-fixed & {
     @apply fixed w-full;
+
+    margin-top: 0;
+    top: 0;
   }
 }
 

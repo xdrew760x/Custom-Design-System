@@ -30,9 +30,13 @@ h2 {
 }
 
 h3 {
-  @apply text-h3 uppercase font-rmconnect;
+  @apply text-h3_m uppercase font-rmconnect;
 
   letter-spacing: 1.5px;
+
+  @media (min-width: 1024px) {
+    @apply text-h3;
+  }
 }
 
 h4 {
@@ -50,20 +54,24 @@ h6 {
 p,
 ul:not([class]),
 span {
-  @apply mb-15 text-p text-primary-2 leading-tight font-d-condensed;
+  @apply mb-15 text-p text-primary-2 leading-normal font-d-condensed;
 
   &:last-child {
     @apply mb-0;
+  }
+
+  @media (max-width: 1023px) {
+    @apply text-p_m;
   }
 }
 
 b,
 strong {
-  @apply font-d-condensed;
+  @apply font-d-condensed-bold;
 }
 
 a {
-  @apply text-primary-1 font-d-condensed;
+  @apply text-primary-1 font-d-condensed font-d-condensed-bold;
 }
 
 small,

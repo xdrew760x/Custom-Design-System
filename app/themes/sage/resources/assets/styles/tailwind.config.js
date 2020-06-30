@@ -71,11 +71,11 @@ module.exports = {
         900: '#2a4365'
       },
       primary: {
-        1: '#97050c',
-        2: '#333333',
-        3: '#999999',
-        4: '#ECECEC',
-        5: '#F38630',
+        1: '#74B2C2',
+        2: '#28627F',
+        3: '#181818',
+        4: '#FEBA12',
+        5: '#D8D8D8',
 
       }
     },
@@ -263,6 +263,7 @@ module.exports = {
       h6: '16px',
 
       p: '24px',
+      p_m: '21px',
 
       small: '18px',
 
@@ -297,8 +298,8 @@ module.exports = {
       hero_mobile: '360px',
       hero_secondary: '400px',
       hero_secondary_mobile: '300px',
-      icon: '30px',
-      dot: '20px',
+      icon: '20px',
+      dot: '15px',
       hamburger: '4px'
     }),
     inset: {

@@ -30,6 +30,9 @@
 
   // Animation
   $animate = get_field('animate_content');
+  $animate_h = get_field('animate_header_tags');
+  $animate_p = get_field('animate_p_tags');
+  $animate_b = get_field('animate_border');
 
   // Section Padding
   $pad_y = get_field('section_padding_y');
@@ -38,17 +41,10 @@
   // Container Transparent color
   $t_bg_color = get_field('t_bg_color');
 
-  // Border Styling
-  $border_style = get_field('border_style') === 'yes';
-
-  // text color
-  $text_color = get_field('text_color');
-
-
   @endphp
 
 
-  <section class="section section--full {{ $background_state }} {{ $background_color_state }} {!! $text_color !!} bg-center bg-cover bg-no-repeat"
+  <section class="section section--full {{ $background_state }} {{ $background_color_state }} bg-center bg-cover bg-no-repeat"
   style="
   background-image:url({{ $bg_desktop }});
   padding: {!! $pad_y !!}px {!! $pad_x !!}px;
@@ -56,7 +52,7 @@
   data-mobile="{{ $bg_mobile }}"
   data-desktop="{{ $bg_desktop }}">
   @if( $content )
-  <div class="container p-30 md:p-45 @if(!is_admin()){!!$animate !!}@endif @if($border_style) border-style-left @endif"
+  <div class="container p-30 md:p-45 @if(! is_admin()) {!!$animate !!} {!! $animate_h !!} {!! $animate_p !!}@endif {!! $animate_b !!}"
   style="
   background-color: {!! $t_bg_color !!};
   "

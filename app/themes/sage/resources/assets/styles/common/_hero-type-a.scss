@@ -4,10 +4,7 @@
   @media (max-width: 1023px) {
     @apply bg-bottom;
 
-    .home & {
-      height: auto;
-      max-height: auto !important;
-    }
+    min-height: 350px !important;
   }
 
   .slick-dots {

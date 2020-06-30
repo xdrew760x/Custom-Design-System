@@ -2,11 +2,13 @@
   .w-ful {
     @apply px-15;
   }
+
+  .slick-list {
+    @apply w-full;
+  }
 }
 
 .section-brm--hero {
-  height: 100vh;
-
   .home &,
   .wp-core-ui & {
     .container {
@@ -26,12 +28,10 @@
   .hero_content {
     @apply flex items-center bg-cover bg-right;
 
-    height: 100vh;
+    height: auto;
 
     @media (max-width: 1023px) {
       @apply px-0;
-
-      max-height: 350px !important;
     }
 
     h1 {
@@ -90,8 +90,4 @@
       }
     }
   }
-}
-// Carousel
-.hero__carousel__image {
-  @apply flex items-center;
 }

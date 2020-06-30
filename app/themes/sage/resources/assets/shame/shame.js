@@ -10,4 +10,6 @@
   $('.open-sidebar').click(function() {
     $('.block-editor-editor-skeleton__sidebar').toggleClass('expand-me');
   });
+
+  
 })(jQuery);

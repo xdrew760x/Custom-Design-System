@@ -27,8 +27,8 @@
       slidesToScroll: 1,
       dots: false,
       arrows: true,
-      nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
-      prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>',
+      nextArrow: '<div class="next"><img src="/app/themes/sage/resources/assets/images/slick-right.svg" alt="select Next Testimonial"></div>',
+      prevArrow: '<div class="prev"><img src="/app/themes/sage/resources/assets/images/slick-left.svg" alt="select Previous Testimonial"></div>',
     });
   });
   </script>

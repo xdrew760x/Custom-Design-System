@@ -2,6 +2,7 @@
 
 $content_width = get_field('content_carousel_width');
 $max_height = get_field('hero_height');
+
 @endphp
 
 @if(is_admin())
@@ -43,9 +44,7 @@ jQuery(document).ready( function($){
 
 <section id="{{ $block['keywords'][0] }}" class="w-full brm-hero" role="region" aria-label="Hero">
 @if( have_rows('hero_carousel') )
-<section class="section-brm--hero js-carousel-hero"
-  style="max-height: {!! $max_height !!}px;"
->
+<section class="section-brm--hero js-carousel-hero">
   @while( have_rows('hero_carousel') ) @php the_row() @endphp
   @php
   if ( get_sub_field('hero_carousel_image') ) {
@@ -56,7 +55,11 @@ jQuery(document).ready( function($){
   }
   @endphp
 
-  <div class="hero__carousel__image h-hero_mobile md:h-hero bg-center bg-cover bg-no-repeat js-background" style="background-image:url({{ $carousel_desktop }})" data-mobile="{{ $carousel_mobile }}" data-desktop="{{ $carousel_desktop }}">
+  <div class="hero__carousel__image h-hero md:h-hero_mobile bg-center bg-cover bg-no-repeat js-background"
+  style="background-image:url({{ $carousel_desktop }});
+  min-height: {!! $max_height !!}px;
+  "
+   data-mobile="{{ $carousel_mobile }}" data-desktop="{{ $carousel_desktop }}">
     <div class="container">
       <div class="{{ $content_width === 'w-full' ? 'w-full' : 'w-1/2' }}">
         {!! $carousel_content !!}

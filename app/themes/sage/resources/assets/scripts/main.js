@@ -65,7 +65,7 @@ var header_d = $('.header-d');
 
 if (viewportWidth >= 50) {
   $(window).scroll(function() {
-    var scrollX = $(this).scrollTop();
+    var scrollX = $(this).scrollTop() - 100;
 
     if (scrollX >= 10) {
       $(header_d).addClass('scroll-head--d');
@@ -75,16 +75,18 @@ if (viewportWidth >= 50) {
   });
 }
 
-/// Animation Controls
+/// Read size of the screen. include margin barrier for activation for both top and bottom
 function isScrolledIntoView(elem) {
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
 
-  var elemTop = $(elem).offset().top - 200;
+  var elemTop = $(elem).offset().top;
   var elemBottom = elemTop + $(elem).height();
 
-  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  return ((elemBottom - 300 <= docViewBottom) && (elemTop >= docViewTop));
 }
+
+// Class holder animations set
 
 $(window).scroll(function () {
   $('.animate-left').each(function () {
@@ -95,25 +97,9 @@ $(window).scroll(function () {
 });
 
 $(window).scroll(function () {
-  $('.bounce-left').each(function () {
-    if (isScrolledIntoView(this) === true) {
-      $(this).addClass('bounce-in-left')
-    }
-  });
-});
-
-$(window).scroll(function () {
   $('.animate-right').each(function () {
     if (isScrolledIntoView(this) === true) {
       $(this).addClass('slide-in-right')
-    }
-  });
-});
-
-$(window).scroll(function () {
-  $('.bounce-right').each(function () {
-    if (isScrolledIntoView(this) === true) {
-      $(this).addClass('bounce-in-right')
     }
   });
 });
@@ -132,4 +118,87 @@ $(window).scroll(function () {
       $(this).addClass('slide-in-bottom')
     }
   });
+});
+
+
+
+$(window).scroll(function () {
+
+  /// Animations for Header tags
+
+  //// Left
+  window.setTimeout(function(){
+    $('.animate-h-left h1,.animate-h-left h2,.animate-h-left h3,.animate-h-left h4,.animate-h-left h5,.animate-h-left h6').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slide-in-left');
+      }
+    });
+  }, 500);
+
+  //// Right
+  window.setTimeout(function(){
+    $('.animate-h-right h1,.animate-h-right h2,.animate-h-right h3,.animate-h-right h4,.animate-h-right h5,.animate-h-right h6').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slide-in-right');
+      }
+    });
+  }, 500);
+
+  //// Top
+  window.setTimeout(function(){
+    $('.animate-h-top h1,.animate-h-top h2,.animate-h-top h3,.animate-h-top h4,.animate-h-top h5,.animate-h-top h6').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slide-in-top');
+      }
+    });
+  }, 500);
+
+  //// Top
+  window.setTimeout(function(){
+    $('.animate-h-bottom h1,.animate-h-bottom h2,.animate-h-bottom h3,.animate-h-bottom h4,.animate-h-bottom h5,.animate-h-bottom h6').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slide-in-bottom');
+      }
+    });
+  }, 500);
+
+
+
+  /// Animations for Paragraph tags
+
+  //// Left
+  window.setTimeout(function(){
+    $('.animate-p-left p,.animate-p-left p,.animate-p-left p,.animate-p-left p,.animate-p-left p,.animate-p-left p').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slide-in-left');
+      }
+    });
+  }, 500);
+
+  //// Right
+  window.setTimeout(function(){
+    $('.animate-p-right p,.animate-p-right p,.animate-p-right p,.animate-p-right p,.animate-p-right p,.animate-p-right p').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slide-in-right');
+      }
+    });
+  }, 500);
+
+  //// Top
+  window.setTimeout(function(){
+    $('.animate-p-top p,.animate-p-top p,.animate-p-top p,.animate-p-top p,.animate-p-top p,.animate-p-top p').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slide-in-top');
+      }
+    });
+  }, 500);
+
+  //// Top
+  window.setTimeout(function(){
+    $('.animate-p-bottom p,.animate-p-bottom p,.animate-p-bottom p,.animate-p-bottom p,.animate-p-bottom p,.animate-p-bottom p').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slide-in-bottom');
+      }
+    });
+  }, 500);
 });

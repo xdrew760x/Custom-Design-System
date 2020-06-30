@@ -4,7 +4,11 @@ $background_state = !empty(get_field('footer_background_color','options')) ? 'te
 $company_logo = get_field('company_logo','options');
 @endphp
 
-<footer class="py-15 bg-primary-2 md:py-30 {!! $ft_bg_clr !!} relative z-40" role="contentinfo" aria-label="Footer">
+<footer class="py-15 md:py-30 {!! $ft_bg_clr !!}" role="contentinfo" aria-label="Footer"
+style="
+background-color: {!! $ft_bg_clr !!};
+"
+>
 <div class="w-full max-w-10xl mx-auto px-buffer">
 
   <div class="footer-c">
@@ -35,8 +39,8 @@ $company_logo = get_field('company_logo','options');
         <p class="copyright text-xs text-center">
           <span class="md:inline-block">&copy; {{ date('Y') }} {{ App::siteName() }} </span>
           <span class="hidden md:inline-block text-white">&#124;</span>
-          <a href="{{ get_permalink(225) }}">ADA Compliance</a> &#124;
-          <a href="{{ get_permalink(3) }}">Privacy Policy</a>
+          <a href="/ada-compliance/"> | ADA Compliance</a> &#124;
+          <a href="/privacy-policy/">Privacy Policy</a>
           <span>| Website by <a href="https://www.bigrigxpress.com/xpress-website-development/">Big Rig Media Xpress</a></span>
         </p>
       </div>
