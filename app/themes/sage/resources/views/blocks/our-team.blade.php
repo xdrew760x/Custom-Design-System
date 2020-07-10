@@ -8,15 +8,22 @@
   Align: full
   --}}
 
-@php
+  @php
   // Background Color State
   $background_color_state = get_field('featured_bg_color');
-@endphp
+  @endphp
 
-  @if( class_exists('ACF') )
   <section id="{{ $block['keywords'][0] }}" class="section section--team" role="region" aria-label="Meet the Team">
     <div class="container">
-      @include('partials.team.our-team')
+      @switch( get_field('design_type_team') )
+      @case('design-a')
+      @include('partials.team.our-team-a')
+      @break
+      @case('design-b')
+      @include('partials.team.our-team-b')
+      @break
+      @default
+      @break
+      @endswitch
     </div>
   </section>
-  @endif

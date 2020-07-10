@@ -47,7 +47,7 @@ add_shortcode('card', function( $atts, $content = null ) {
     'width' => '1/2',
   ], $atts));
 
-  return '<div class="card bg-primary-5 px-buffer">'.do_shortcode($content).'<a href="/reservations/" class="button button--primary">Book now</a></div>';
+  return '<div class="card bg-primary-5 px-buffer text-white">'.do_shortcode($content).'<a href="/reservations/" class="button button--primary">Book now</a></div>';
 });
 
 // Special Card

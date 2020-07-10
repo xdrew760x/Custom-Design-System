@@ -50,3 +50,11 @@ when uploaded.
 * Portal Block now contain 2 new design options
 * Gutenberg backend now contains a button to extend the sidebar toolbar
 * Website Components have been refined for all purposes
+
+### 1.5: July 10th, 2020
+### Styling / Theme Component Contols /
+* Header A has been updated
+* Our Team Block has new Design option of choice.
+* New Google Maps Block has been Included
+* Footer B has been updated
+* New block created by Adrian is now available

@@ -81,13 +81,13 @@
   @apply flex items-center justify-center;
 
   flex-flow: row wrap;
-  max-height: 400px;
+  max-height: 300px;
   overflow: hidden;
   position: relative;
-  min-height: 400px;
+  min-height: 250px;
 
   @media (max-width: 1023px) {
-    min-height: 200px;
+    min-height: 250px;
   }
 
   img {
@@ -96,7 +96,8 @@
     top: 0;
     bottom: 0;
     right: 0;
-    min-width: 400px;
+    min-width: 300px;
+    object-fit: fill;
 
     @media (max-width: 1023px) {
       min-width: 200px;
@@ -176,14 +177,32 @@ div.gallery-columns-7 {
     flex-flow: column nowrap;
     width: 30%;
     min-height: 222px;
+    background-image: url(/app/themes/sage/resources/assets/images/oktoberfest-pattern-green.png);
 
-    @media (max-width: 550px) {
+    @media (max-width: 900px) {
       width: 100%;
       min-height: 175px;
     }
 
     h6 {
-      @apply m-0;
+      @apply mb-30 relative;
+
+      &::after {
+        @apply absolute bg-white mx-auto block;
+
+        content: "";
+        left: 0;
+        right: 0;
+        width: 90%;
+        height: 2px;
+        bottom: -15px;
+      }
+    }
+
+    h3 {
+      @apply font-raleway-regular mb-30;
+
+      font-size: 40px;
     }
 
     br {

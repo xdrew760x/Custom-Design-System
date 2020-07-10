@@ -19,7 +19,7 @@
   }
 
   .header__branding img {
-    max-width: 100%;
+    max-width: 340px;
     filter: brightness(10000%);
     transition: all ease 0.5s;
 
@@ -70,7 +70,7 @@
     }
 
     a {
-      @apply text-white font-d-condensed-bold;
+      @apply text-white font-raleway-bold;
 
       font-size: 24px;
 
@@ -143,7 +143,7 @@
       }
 
       a {
-        @apply uppercase leading-normal text-white font-rmconnect;
+        @apply uppercase leading-normal text-white;
 
         font-size: 16px;
 

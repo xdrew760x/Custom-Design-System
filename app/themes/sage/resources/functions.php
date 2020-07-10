@@ -140,7 +140,7 @@ function gutenberg_styling_overide() {
     .is-sidebar-opened .block-editor-editor-skeleton__sidebar {
       width: 20%;
       min-width: 20% !important;
-      transition: all ease 1s;
+      transition: all ease .2s;
       position: fixed !important;
       right: 0px !important;
       left: auto !important;
@@ -171,6 +171,10 @@ function gutenberg_styling_overide() {
   .block-editor-block-list__layout {
     overflow: hidden !important;
     position: relative;
+  }
+
+  .block-editor-block-list__layout .block-editor-block-list__layout {
+    width: 100% !important;
   }
 
   .wp-core-ui .button,
@@ -208,7 +212,7 @@ function gutenberg_styling_overide() {
 
   .open-sidebar {
     right: -155px;
-    transition: all ease  1s;
+    transition: all ease  .2s;
   }
 
   .open-sidebar::before {
@@ -258,7 +262,6 @@ function misha_allowed_block_types( $allowed_blocks ) {
 
   return array(
     'acf/all-listings',
-    'acf/card',
     'acf/carousel-gallery',
     'acf/columns-slider',
     'acf/featured-carousel',
@@ -267,11 +270,12 @@ function misha_allowed_block_types( $allowed_blocks ) {
     'acf/hero',
     'acf/our-team',
     'acf/portals',
-    'acf/section-builder',
     'acf/split',
     'acf/testimonials-resident',
     'acf/testimonials',
     'acf/solutions',
+    'acf/column-builder',
+    'acf/google-maps',
     'core/block' // add this for reusable block
   );
 

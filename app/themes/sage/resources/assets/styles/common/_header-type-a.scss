@@ -1,75 +1,48 @@
 .header-a {
-  @apply pt-15 pb-15 bg-white;
+  @apply bg-white;
 
   margin-top: 0;
   transition: all ease 1s;
   z-index: 100;
 
-  @media (max-width: 1023px) {
-    @apply pb-15;
-  }
-
   // Wesbite Logo Styling
   .header__branding {
-    margin-top: -45px;
-    margin-bottom: -45px;
-
-    @media (max-width: 768px) {
-      @apply block mx-auto mt-0;
-    }
-
     img {
       @apply block mx-auto;
 
-      max-width: 100px;
+      max-width: 340px;
       transition: all ease 1s;
 
-      @media (max-width: 768px) {
-        max-width: 75px;
+      @media (max-width: 1200px) {
+        max-width: 250px;
+      }
+
+      @media (max-width: 1023px) {
+        max-width: 200px;
       }
     }
   }
 
-  // Phone Number & CTA
-  .header__top {
-    h6 {
-      @apply m-0;
-    }
-
-    @media (min-width: 1024px) {
-      @apply flex items-end pb-15;
-
-      flex-flow: row wrap;
-
-      a {
-        @apply ml-30;
-      }
-    }
-  }
-
-  [data-state="open"] .sub-menu {
-    @apply p-0 m-0;
+  .header__bottom {
+    @apply py-15;
   }
 
   // hamburger Icon
   .w-hamburger {
     @apply bg-white relative;
 
-    left: 15px;
-    margin-top: 0;
-
     .nav-is-open & {
-      @apply bg-white mb-30;
+      @apply bg-primary-1;
     }
   }
 
   .nav-toggle {
     span {
-      @apply bg-primary-2;
+      @apply bg-white;
 
       &::before,
       &::after {
-        @apply bg-primary-2;
+        @apply bg-white;
 
         .nav-is-open & {
           opacity: 1;
@@ -78,43 +51,9 @@
     }
   }
 
-  // Last Menu item
-  .menu-item-122 {
-    @apply border-2 border-primary-2 py-2;
-
-    border-radius: 10px;
-    max-width: 175px;
-
-    a {
-      @apply p-15 text-primary-2;
-    }
-  }
-
   // Nav Mobile
-  .primary-nav-a {
+  nav {
     z-index: 100;
-
-    li {
-      @apply mt-2;
-    }
-
-    @media (min-width: 1024px) {
-      @apply flex justify-end items-center mt-0;
-
-      li {
-        @apply ml-15;
-      }
-    }
-
-    a {
-      @apply uppercase leading-normal;
-
-      font-size: 18px;
-
-      @media (max-width: 1023px) {
-        font-size: 24px;
-      }
-    }
 
     // 1023 <=
     @media (max-width: 1023px) {
@@ -122,14 +61,73 @@
 
       // Navigation Open
       .nav-is-open & {
-        @apply block mt-30 p-30 absolute w-full bg-white;
+        @apply block mt-120 p-30 absolute w-full bg-primary-1;
 
         left: 0;
+        top: 0;
         height: 100vh;
 
         a {
-          @apply uppercase leading-normal;
+          @apply uppercase leading-normal text-white font-raleway-bold;
+
+          span {
+            @apply pl-2 font-raleway-bold;
+          }
         }
+      }
+    }
+
+    .primary-nav-a {
+      @media (min-width: 1024px) {
+        @apply flex justify-end items-center mt-0;
+      }
+
+      @media (max-width: 1023px) {
+        @apply relative mb-30;
+
+        &::after {
+          @apply bg-white absolute;
+
+          content: "";
+          width: 75px;
+          height: 2px;
+          bottom: -15px;
+        }
+      }
+    }
+
+    li {
+      @media (min-width: 1024px) {
+        @apply ml-15;
+      }
+
+      @media (max-width: 1023px) {
+        @apply mt-2;
+      }
+
+      a {
+        @apply uppercase leading-normal text-primary-3;
+
+        font-size: 18px;
+
+        @media (max-width: 1200px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 1023px) {
+          @apply text-white;
+
+          font-size: 24px;
+        }
+      }
+    }
+
+    // Last Menu item
+    .menu-item-122 {
+      @apply border-2 border-primary-2 py-2;
+
+      a {
+        @apply p-15 text-primary-2;
       }
     }
 
@@ -150,6 +148,38 @@
 
       a {
         @apply capitalize;
+      }
+    }
+
+    [data-state="open"] .sub-menu {
+      @apply p-0 m-0;
+    }
+  }
+
+  // Phone Number & CTA
+  .header__top {
+    .container {
+      @apply flex justify-end items-center;
+
+      flex-flow: row wrap;
+
+      @media (max-width: 1023px) {
+        justify-content: space-between;
+      }
+
+      a {
+        span,
+        svg {
+          @apply ml-2 font-raleway-bold;
+        }
+
+        @media (min-width: 1024px) {
+          @apply ml-30 text-white font-raleway-bold;
+        }
+      }
+
+      h6 {
+        @apply m-0;
       }
     }
   }

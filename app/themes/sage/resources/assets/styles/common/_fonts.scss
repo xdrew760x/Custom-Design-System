@@ -35,22 +35,29 @@
 }
 
 @font-face {
-  font-family: "d-condensed-bold";
-  src: url("../fonts/d-condensed-bold.woff") format("woff");
+  font-family: "raleway-black";
+  src: url("../fonts/raleway-black.woff") format("woff");
   font-style: normal;
   font-weight: 900;
 }
 
 @font-face {
-  font-family: "d-condensed";
-  src: url("../fonts/d-condensed.woff") format("woff");
+  font-family: "raleway-bold";
+  src: url("../fonts/raleway-bold.woff") format("woff");
   font-style: normal;
   font-weight: 900;
 }
 
 @font-face {
-  font-family: "rmconnect";
-  src: url("../fonts/rmconnect.woff") format("woff");
+  font-family: "raleway-italic";
+  src: url("../fonts/raleway-italic.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "raleway-regular";
+  src: url("../fonts/raleway-regular.woff") format("woff");
   font-style: normal;
   font-weight: 900;
 }

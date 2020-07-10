@@ -1,39 +1,28 @@
 .button {
-  @apply font-d-condensed-bold inline-block py-4 pt-5 px-30 uppercase text-p text-white;
+  @apply inline-block py-1 px-30 uppercase text-p text-white;
 
-  border-radius: 45px;
-  line-height: 0;
+  border-radius: 10px;
   letter-spacing: 1px;
 }
 
 .button--primary {
-  @apply border-2 border-primary-2 relative bg-primary-2;
+  @apply text-primary-2 border-2 border-primary-2 bg-white;
+
   // Hover
   @media (hover: hover) {
     &:hover {
-      @apply text-white bg-primary-1 border-primary-1;
+      @apply text-white bg-primary-2;
     }
   }
 }
 
 .button--secondary,
 .gform_button {
-  @apply border-2 border-primary-4 relative bg-primary-4;
+  @apply border-2 border-primary-2 relative bg-primary-2;
   // Hover
   @media (hover: hover) {
     &:hover {
       @apply text-white bg-primary-1 border-primary-1;
-    }
-  }
-}
-
-.button--white {
-  @apply text-white border-2 border-white relative;
-
-  // Hover
-  @media (hover: hover) {
-    &:hover {
-      @apply text-primary-2 border-primary-2;
     }
   }
 }

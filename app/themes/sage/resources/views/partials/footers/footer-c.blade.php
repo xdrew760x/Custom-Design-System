@@ -41,7 +41,7 @@ background-color: {!! $ft_bg_clr !!};
           <span class="hidden md:inline-block text-white">&#124;</span>
           <a href="/ada-compliance/"> | ADA Compliance</a> &#124;
           <a href="/privacy-policy/">Privacy Policy</a>
-          <span>| Website by <a href="https://www.bigrigxpress.com/xpress-website-development/">Big Rig Media Xpress</a></span>
+          <span>| WEBSITE BY <a href="https://www.bigrigmedia.com/outdoor-hospitality-website-development/">BIG RIG MEDIA LLC ®</a></span>
         </p>
       </div>
 

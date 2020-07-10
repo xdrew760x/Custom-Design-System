@@ -4,16 +4,18 @@ h3,
 h4,
 h5,
 h6 {
-  @apply mb-15 leading-tight uppercase text-primary-2;
+  @apply mb-15 leading-tight text-primary-2 font-raleway-black;
 }
 
 h1 {
-  @apply text-h1_m font-rmconnect uppercase;
+  @apply text-h1_m text-primary-1;
 
   letter-spacing: 1px;
 
   .section-brm--hero & {
     @apply text-h1_hero_m;
+
+    text-shadow: 4px 4px 0 #8a0000;
   }
   // 1024
   @media (min-width: 1024px) {
@@ -26,11 +28,11 @@ h1 {
 }
 
 h2 {
-  @apply text-h2 font-rmconnect;
+  @apply text-h2 text-primary-1;
 }
 
 h3 {
-  @apply text-h3_m uppercase font-rmconnect;
+  @apply text-h3_m text-primary-3;
 
   letter-spacing: 1.5px;
 
@@ -40,21 +42,20 @@ h3 {
 }
 
 h4 {
-  @apply text-h4 font-d-condensed-bold;
+  @apply text-h4 text-primary-1;
 }
 
 h5 {
-  @apply text-h5 font-rmconnect uppercase;
+  @apply text-h5 text-primary-2;
 }
 
 h6 {
-  @apply text-h6 uppercase font-rmconnect;
+  @apply text-h6 text-primary-1;
 }
 
 p,
-ul:not([class]),
-span {
-  @apply mb-15 text-p text-primary-2 leading-normal font-d-condensed;
+ul:not([class]) {
+  @apply mb-15 text-p text-primary-3 leading-normal font-raleway-regular;
 
   &:last-child {
     @apply mb-0;
@@ -63,18 +64,23 @@ span {
   @media (max-width: 1023px) {
     @apply text-p_m;
   }
+
+  .section-brm--hero & {
+    @apply text-hero_p;
+  }
 }
 
 b,
-strong {
-  @apply font-d-condensed-bold;
+strong,
+span {
+  @apply font-raleway-bold;
 }
 
 a {
-  @apply text-primary-1 font-d-condensed font-d-condensed-bold;
+  @apply text-primary-1 font-raleway-bold;
 }
 
 small,
 .small-style {
-  @apply text-primary-1 uppercase font-d-condensed text-small leading-normal block mb-2;
+  @apply text-primary-1 text-small leading-normal block mb-2;
 }

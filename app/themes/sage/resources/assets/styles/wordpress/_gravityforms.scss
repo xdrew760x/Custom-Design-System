@@ -54,7 +54,7 @@
 }
 
 label {
-  @apply font-d-condensed capitalize;
+  @apply font-raleway-bold capitalize;
 }
 
 // Right & Left Half
@@ -95,12 +95,18 @@ label {
 
     pointer-events: none;
     content: "";
-    top: 0;
-    right: 0;
+    top: 8px;
+    right: 15px;
     width: 30px;
     height: 30px;
-    background-image: url(/app/themes/sage/resources/assets/images/calendar-icon.svg);
+    background-image: url(/app/themes/sage/resources/assets/images/calendar-icon-blue.png);
   }
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev {
+  line-height: 0 !important;
+  background-image: none !important;
 }
 
 // Body

@@ -71,10 +71,10 @@ module.exports = {
         900: '#2a4365'
       },
       primary: {
-        1: '#74B2C2',
-        2: '#28627F',
-        3: '#181818',
-        4: '#FEBA12',
+        1: '#1A3F1C',
+        2: '#7C0000',
+        3: '#3A3A3A',
+        4: '#F5F5F5',
         5: '#D8D8D8',
 
       }
@@ -196,14 +196,18 @@ module.exports = {
       'fontawesome-solid': [
         'Font Awesome\\ 5 Pro Solid'
       ],
-      'd-condensed-bold': [
-        'd-condensed-bold'
+
+      'raleway-black': [
+        'raleway-black'
       ],
-      'd-condensed': [
-        'd-condensed'
+      'raleway-bold': [
+        'raleway-bold'
       ],
-      'rmconnect': [
-        'rmconnect'
+      'raleway-italic': [
+        'raleway-italic'
+      ],
+      'raleway-regular': [
+        'raleway-regular'
       ],
 
       sans: [
@@ -247,25 +251,26 @@ module.exports = {
       drop: '24px',
       drop: '24px',
 
-      h1_hero: '76px',
-      h1_hero_m: '27px',
+      h1_hero: '70px',
+      h1_hero_m: '46px',
 
-      h1: '76px',
-      h1_m: '27px',
+      h1: '40px',
+      h1_m: '40px',
 
-      h2: '56px',
+      h2: '38px',
 
-      h3: '34px',
-      h3_m: '24px',
+      h3: '36px',
+      h3_m: '36px',
 
-      h4: '26px',
-      h5: '24px',
-      h6: '16px',
+      h4: '34px',
+      h5: '30px',
+      h6: '25px',
 
-      p: '24px',
-      p_m: '21px',
+      p: '23px',
+      p_m: '23px',
 
       small: '18px',
+      hero_p: '40px',
 
       xs: '1rem',
       sm: '1.125rem',

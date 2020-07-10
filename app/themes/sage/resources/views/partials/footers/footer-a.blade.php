@@ -39,7 +39,7 @@
             <span class="md:inline-block">&copy; {{ date('Y') }} {{ App::siteName() }}</span>
             <a href="/ada-compliance/"> | ADA Compliance</a> &#124;
             <a href="/privacy-policy/">Privacy Policy</a>
-            <span>| WEBSITE BY <a href="https://www.bigrigmedia.com/custom-website-development/">BIG RIG MEDIA LLC ®</a></span>
+            <span>| WEBSITE BY <a href="https://www.bigrigmedia.com/outdoor-hospitality-website-development/">BIG RIG MEDIA LLC ®</a></span>
           </p>
         </div>
 
