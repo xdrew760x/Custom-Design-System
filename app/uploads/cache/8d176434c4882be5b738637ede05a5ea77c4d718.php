@@ -15,7 +15,6 @@
       'content' => $hero_cnt,
     ];
   ?>
-  <section id="<?php echo e($block['keywords'][0]); ?>" class="w-full brm-hero" role="region" aria-label="Hero">
     <?php switch( get_field('hero_component') ):
       case ('hero-a'): ?>
         <?php echo $__env->make('partials.heroes.hero-a', [$options], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -32,5 +31,4 @@
       <?php default: ?>
       <?php break; ?>
     <?php endswitch; ?>
-  </section>
 <?php endif; ?>

@@ -69,7 +69,7 @@ switch(WP_ENV){
 	// Development
 	case 'development':
 		/** The name of the local database for WordPress */
-		define('DB_NAME', 'system_db');
+		define('DB_NAME', 'design_db');
 
 		/** MySQL local database username */
 		define('DB_USER', 'root');

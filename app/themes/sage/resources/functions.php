@@ -263,6 +263,7 @@ function misha_allowed_block_types( $allowed_blocks ) {
   return array(
     'acf/all-listings',
     'acf/carousel-gallery',
+    'acf/amenities',
     'acf/columns-slider',
     'acf/featured-carousel',
     'acf/featured-listings',
@@ -273,6 +274,7 @@ function misha_allowed_block_types( $allowed_blocks ) {
     'acf/split',
     'acf/testimonials-resident',
     'acf/testimonials',
+    'acf/reservations',
     'acf/solutions',
     'acf/column-builder',
     'acf/google-maps',

@@ -19,11 +19,6 @@ $border_bl = get_sub_field('radius_bl');
 $border_tr = get_sub_field('radius_tr');
 $border_br = get_sub_field('radius_br');
 
-// Animation
-$animate = get_sub_field('animate_content');
-$animate_h = get_sub_field('animate_header_tags');
-$animate_p = get_sub_field('animate_p_tags');
-
 // Margin
 $margin_value_left = get_sub_field('content_margen_left');
 $margin_value_right = get_sub_field('content_margen_right');
@@ -56,7 +51,7 @@ $content = get_sub_field('section_builder_content');
   "
   data-mobile="{{ $bg_mobile }}" data-desktop="{{ $bg_desktop }}"></div>
   @if( $content )
-  <div class="section__content w-full md:{!! $content_width !!} relative @if($margin_value_left) bg-white border-style-left @endif @if($margin_value_right) bg-white border-style-right @endif @if(! is_admin()) {!!$animate !!} {!! $animate_h !!} {!! $animate_p !!}@endif "
+  <div class="section__content w-full md:{!! $content_width !!} relative @if($margin_value_left) bg-white border-style-left @endif @if($margin_value_right) bg-white border-style-right @endif"
   style="
   padding: {!! $pad_y !!}px {!! $pad_x !!}px;
   @if($margin_value_left)

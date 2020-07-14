@@ -1,6 +1,10 @@
 .section,
 .section--contained {
   @apply py-60;
+
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
 }
 
 .section__bg {
@@ -42,8 +46,16 @@
 
   max-width: 690px;
 
+  .two-thirds & {
+    max-width: 1270px;
+  }
+
   .three-fourth & {
-    max-width: 1170px;
+    max-width: 1270px;
+  }
+
+  .full & {
+    max-width: 100%;
   }
 
   @media (max-width: 1023px) {
@@ -53,7 +65,7 @@
   }
 
   .flip & {
-    @apply block mx-auto mr-0 p-30 pl-15;
+    @apply block mx-auto ml-0 p-30 pl-15;
   }
 }
 

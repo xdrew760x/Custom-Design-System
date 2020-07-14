@@ -1,5 +1,353 @@
 [
     {
+        "key": "group_5f08ece27c983",
+        "title": "Amenities",
+        "fields": [
+            {
+                "key": "field_5f08eceb58e4c",
+                "label": "Amenities Selection",
+                "name": "amenities_selection",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Self Service Washers and Dryers": "Self Service Washers and Dryers",
+                    "Patio Area": "Patio Area",
+                    "Horseshoe Pit": "Horseshoe Pit",
+                    "Convenience Store": "Convenience Store",
+                    "Bathrooms with Heated Showers": "Bathrooms with Heated Showers",
+                    "Trash and Recyclables Disposal Areas": "Trash and Recyclables Disposal Areas",
+                    "Propane Service": "Propane Service",
+                    "Dump Station": "Dump Station",
+                    "Max amp (50-amp)": "Max amp (50-amp)",
+                    "Private gated RV community": "Private gated RV community",
+                    "Pet-friendly": "Pet-friendly",
+                    "Laundry room": "Laundry room",
+                    "Fitness center": "Fitness center",
+                    "Swimming Pool": "Swimming Pool",
+                    "Free Cable TV and Free Wi-Fi": "Free Cable TV and Free Wi-Fi",
+                    "Clean Restrooms and Showers": "Clean Restrooms and Showers",
+                    "Picnic tables and Fire Rings": "Picnic tables and Fire Rings",
+                    "Water hookup": "Water hookup",
+                    "Electricity hookup": "Electricity hookup",
+                    "Full hookups": "Full hookups",
+                    "Basic Information and Directions to Local Attractions": "Basic Information and Directions to Local Attractions",
+                    "Limited Wi-Fi Access": "Limited Wi-Fi Access",
+                    "Cable\/TV Hookup Access": "Cable\/TV Hookup Access",
+                    "Picnic Tables on All Sites": "Picnic Tables on All Sites",
+                    "Dish Washing Facility in the Tent Area": "Dish Washing Facility in the Tent Area"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 1,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5f08f7a054cf0",
+                "label": "Amenities Column Count",
+                "name": "amenities_column_count",
+                "type": "range",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 1,
+                "max": 4,
+                "step": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5f08edf54ae66",
+                "label": "Background Image",
+                "name": "background_image_amenities",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5f08ee204ae67",
+                "label": "Component Order",
+                "name": "component_order",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "normal": "Normal",
+                    "flip": "Flip"
+                },
+                "allow_null": 0,
+                "other_choice": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_5f08f0374ae68",
+                "label": "Section Padding Y Axis",
+                "name": "padding_y_axis_amenities",
+                "type": "range",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": "",
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5f08f06b4ae69",
+                "label": "Section Padding X Axiis",
+                "name": "padding_x_axiis_amenities",
+                "type": "range",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": "",
+                "max": 45,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5f08f0b24ae6a",
+                "label": "Background Color",
+                "name": "bg_color_amenities",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "bg-primary-1": "Primary 1",
+                    "bg-primary-2": "Primary 2",
+                    "bg-primary-3": "Primary 3",
+                    "bg-primary-4": "Primary 4"
+                },
+                "default_value": false,
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5f08f0f84ae6b",
+                "label": "Image Section Width",
+                "name": "image_section_width_amenities",
+                "type": "select",
+                "instructions": "Select the width of the image Section",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "w-full": "Full",
+                    "w-1\/2": "1\/2",
+                    "w-1\/3": "1\/3",
+                    "w-2\/3": "2\/3",
+                    "w-1\/4": "1\/4",
+                    "w-3\/4": "3\/4",
+                    "w-0": "none"
+                },
+                "default_value": "w-1\/2",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5f08f1254ae6c",
+                "label": "Content Section Width",
+                "name": "content_section_width_amenities",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "w-full full": "Full",
+                    "w-1\/2 one-half": "1\/2",
+                    "w-1\/3 one-third": "1\/3",
+                    "w-2\/3 two-thirds": "2\/3",
+                    "w-1\/4 one-fourth": "1\/4",
+                    "w-3\/4 three-fourth": "3\/4"
+                },
+                "default_value": "w-1\/2",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5f08f1504ae6d",
+                "label": "Animate Content Container",
+                "name": "animate_emnities",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "animate-right fade": "Right",
+                    "fade animate-left": "Left",
+                    "animate-top fade": "Top",
+                    "animate-bottom fade": "Bottom",
+                    "bounce-left": "Bounce In Left",
+                    "bounce-right": "Bounce In Right"
+                },
+                "default_value": false,
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5f08f1654ae6e",
+                "label": "Animate Header Tags",
+                "name": "animate_header_amenities",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "animate-h animate-h-right fade": "Right",
+                    "animate-h animate-h-left fade": "Left",
+                    "animate-h animate-h-top fade": "Top",
+                    "animate-h animate-h-bottom fade": "Bottom"
+                },
+                "default_value": false,
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5f08f1834ae6f",
+                "label": "Animate Paragraph Tags",
+                "name": "animate_paragraph_amenities",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "animate-p animate-p-right fade": "Right",
+                    "animate-p animate-p-left fade": "Left",
+                    "animate-p animate-p-top fade": "Top",
+                    "animate-p animate-p-bottom fade": "Bottom"
+                },
+                "default_value": false,
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/amenities"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_5e597af8e79ec",
         "title": "Block Column Slider",
         "fields": [
@@ -247,6 +595,440 @@
         "menu_order": 0,
         "position": "side",
         "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5ef66e40eddf7",
+        "title": "Column Builder Block",
+        "fields": [
+            {
+                "key": "field_5ef92f5c2040f",
+                "label": "Section Background Color",
+                "name": "section_background_color",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "bg-primary-1": "Primary 1",
+                    "bg-primary-2": "Primary 2",
+                    "bg-primary-3": "Primary 3"
+                },
+                "allow_null": 1,
+                "other_choice": 0,
+                "default_value": "",
+                "layout": "vertical",
+                "return_format": "value",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_5ef927b04bf95",
+                "label": "Min Height",
+                "name": "min_height",
+                "type": "number",
+                "instructions": "Used to set the minimum height for the column section. Useful for preventing some columns from shrinking too much on mobile.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": 200,
+                "max": "",
+                "step": ""
+            },
+            {
+                "key": "field_5ef6787e0bc6c",
+                "label": "Section Padding X",
+                "name": "section_padding_x",
+                "type": "range",
+                "instructions": "Used to set the padding on the X axis for the column container.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 0,
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5ef6791bb0bb4",
+                "label": "Section Padding Y",
+                "name": "section_padding_y",
+                "type": "range",
+                "instructions": "Used to set the padding on the Y axis for the column container.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 0,
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5ef91bf2837fe",
+                "label": "Mobile Padding X",
+                "name": "mobile_padding_x",
+                "type": "range",
+                "instructions": "Used to set the padding on the X axis for the column container on mobile.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 0,
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5ef91c0a837ff",
+                "label": "Mobile Padding Y",
+                "name": "mobile_padding_y",
+                "type": "range",
+                "instructions": "Used to set the padding on the Y axis for the column container on mobile.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 0,
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5ef7e89aee220",
+                "label": "Automatically fit items",
+                "name": "flex_shorthand",
+                "type": "true_false",
+                "instructions": "Forces widths to automatically add up to 100%",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5ef92ba1c71d7",
+                "label": "Remaining Space",
+                "name": "flex_justify",
+                "type": "select",
+                "instructions": "Used to set how the remaining space will be distributed. For example, having just two columns with 25% width will result in empty space.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5ef7e89aee220",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "justify-between": "Distribute space between columns",
+                    "justify-around": "Distribute space around columns, similar to above",
+                    "justify-center": "Group columns and distribute space around",
+                    "justify-start": "Group columns and distribute space to the right",
+                    "justify-end": "Group columns and distribute space to the left"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5ef9331c038f9",
+                "label": "Vertical Spacing",
+                "name": "vertical_spacing",
+                "type": "range",
+                "instructions": "Used to set the vertical spacing of items when on mobile.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 0,
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5efab7cb0d840",
+                "label": "Horizontal Spacing",
+                "name": "horizontal_spacing",
+                "type": "range",
+                "instructions": "Used to set the horizontal spacing of items.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 0,
+                "max": 150,
+                "step": 15,
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5ef66e4d7aa1d",
+                "label": "Columns",
+                "name": "columns",
+                "type": "repeater",
+                "instructions": "Add your columns here. When setting the width be sure all your widths add up to 100% to avoid unexpected behavior.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Add Column",
+                "sub_fields": [
+                    {
+                        "key": "field_5ef66ea17aa1f",
+                        "label": "Width",
+                        "name": "width",
+                        "type": "number",
+                        "instructions": "What percentage of the available space should the column take up?",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "min": "",
+                        "max": "",
+                        "step": ""
+                    },
+                    {
+                        "key": "field_5ef7f0361dc5d",
+                        "label": "Background Type",
+                        "name": "background_type",
+                        "type": "radio",
+                        "instructions": "Sets the type of background to use for this column.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "color": "Color",
+                            "image": "Image"
+                        },
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "default_value": "",
+                        "layout": "vertical",
+                        "return_format": "value",
+                        "save_other_choice": 0
+                    },
+                    {
+                        "key": "field_5ef7ec90e3249",
+                        "label": "Background Image",
+                        "name": "background_image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5ef7f0361dc5d",
+                                    "operator": "==",
+                                    "value": "image"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5ef7f0881dc5e",
+                        "label": "Background Color",
+                        "name": "background_color",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5ef7f0361dc5d",
+                                    "operator": "==",
+                                    "value": "color"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "bg-primary-1": "Primary 1",
+                            "bg-primary-2": "Primary 2",
+                            "bg-primary-3": "Primary 3"
+                        },
+                        "allow_null": 1,
+                        "other_choice": 0,
+                        "default_value": "",
+                        "layout": "vertical",
+                        "return_format": "value",
+                        "save_other_choice": 0
+                    },
+                    {
+                        "key": "field_5ef7f28bd660b",
+                        "label": "Column Padding X",
+                        "name": "column_padding_x",
+                        "type": "range",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "min": 0,
+                        "max": 150,
+                        "step": 15,
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5ef7f26ed660a",
+                        "label": "Column Padding Y",
+                        "name": "column_padding_y",
+                        "type": "range",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "min": 0,
+                        "max": 150,
+                        "step": 15,
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5ef66e547aa1e",
+                        "label": "Column content",
+                        "name": "column_content",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/column-builder"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
@@ -520,9 +1302,90 @@
         "description": ""
     },
     {
+        "key": "group_5f03a6c376cf0",
+        "title": "Google Maps Block",
+        "fields": [
+            {
+                "key": "field_5f03a889ecc17",
+                "label": "Iframe Src",
+                "name": "iframe_src",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5f03a6d0ecc16",
+                "label": "Iframe Height",
+                "name": "iframe_height",
+                "type": "range",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": 300,
+                "max": 600,
+                "step": 50,
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/google-maps"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_5e8e4bed9aeb5",
         "title": "Member Information",
         "fields": [
+            {
+                "key": "field_5f08af094d872",
+                "label": "Position Tittle",
+                "name": "position_tittle",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
             {
                 "key": "field_5e8e4bfc29113",
                 "label": "Phone Number",
@@ -532,7 +1395,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "33",
                     "class": "",
                     "id": ""
                 },
@@ -551,7 +1414,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "33",
                     "class": "",
                     "id": ""
                 },
@@ -584,6 +1447,31 @@
         "key": "group_5e8f50ca9f82c",
         "title": "Our Team Controls",
         "fields": [
+            {
+                "key": "field_5f07aa811306b",
+                "label": "Design Type",
+                "name": "design_type_team",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "design-a": "Design A",
+                    "design-b": "Design B"
+                },
+                "default_value": "design-a",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
             {
                 "key": "field_5e8f51817a79b",
                 "label": "Our Team blurb",
@@ -1031,6 +1919,81 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "araby-acres"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5f08de0216a3b",
+        "title": "Reservation Block",
+        "fields": [
+            {
+                "key": "field_5f08de0b4b83c",
+                "label": "Reservation Type",
+                "name": "reservation_type",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "gravity": "Gravity Forms",
+                    "Iframe": "Third Party Iframe"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5f08e0839b9fc",
+                "label": "Iframe Script",
+                "name": "iframe_script",
+                "type": "text",
+                "instructions": "Please place your Third Party Iframe embed code here.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5f08de0b4b83c",
+                            "operator": "==",
+                            "value": "Iframe"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/reservations"
                 }
             ]
         ],
@@ -2684,6 +3647,21 @@
         "title": "Portal Component",
         "fields": [
             {
+                "key": "field_5e8e46ea4fa39",
+                "label": "Background Color",
+                "name": "background_color_portal",
+                "type": "color_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
+            },
+            {
                 "key": "field_5e8e256901c92",
                 "label": "Portal Blurb",
                 "name": "portal_blurb",
@@ -2704,10 +3682,10 @@
             },
             {
                 "key": "field_5e8e24cb6947b",
-                "label": "Would you like the excerpt to display on hover?",
+                "label": "What Design would you like to use?",
                 "name": "hover_excerpt",
                 "type": "select",
-                "instructions": "",
+                "instructions": "Choose from 1 of 3 designs for your Portal Block.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -2716,8 +3694,10 @@
                     "id": ""
                 },
                 "choices": {
-                    "no": "No",
-                    "yes": "Yes"
+                    "design_1": "Design 1",
+                    "design_2": "Design 2",
+                    "design_3": "Design 3",
+                    "design_4": "Design 4"
                 },
                 "default_value": "no",
                 "allow_null": 0,
@@ -2728,11 +3708,11 @@
                 "placeholder": ""
             },
             {
-                "key": "field_5e8e46ea4fa39",
-                "label": "Background Color",
-                "name": "background_color_portal",
-                "type": "color_picker",
-                "instructions": "Theme Colors:\r\n<br>\r\nPrimary-1 = #4E2D58\r\n<br>\r\nPrimary-2 = #DA5432\r\n<br>\r\nPrimary-3 = #EFEFEF\r\n<br>\r\nPrimary-4 = #474747",
+                "key": "field_5eeb88f18449f",
+                "label": "Apply Carousel on mobile?",
+                "name": "carousel_control",
+                "type": "select",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -2740,7 +3720,43 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": ""
+                "choices": {
+                    "yes": "Yes"
+                },
+                "default_value": false,
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5ee73a6ea299f",
+                "label": "Portal Width",
+                "name": "portal_width",
+                "type": "select",
+                "instructions": "Select the Width you would like to apply to all portals.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "w-1\/4": "1\/4",
+                    "w-1\/3": "1\/3",
+                    "w-1\/2": "1\/2",
+                    "w-full": "Full"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
             },
             {
                 "key": "field_5e334c299664c",
@@ -2964,6 +3980,32 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": ""
+            },
+            {
+                "key": "field_5f03a04692838",
+                "label": "BG Image Size",
+                "name": "background_image_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "bg-cover": "Cover",
+                    "bg-contain": "Contain",
+                    "auto": "Auto"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
             },
             {
                 "key": "field_5ed9030994d1b",
