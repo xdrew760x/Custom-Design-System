@@ -1,6 +1,6 @@
 {{--
-  Title: Amenities
-  Description: list amenities available.
+  Title: Amenities / Attractions
+  Description: list amenities / attractions available.
   Category: rv_blocks
   Icon: images-alt2
   Keywords: Privacy Policy Statement
@@ -38,38 +38,48 @@
   // Amenities List
   $amenities = get_field( 'amenities_selection' );
 
+  // Attractions
+  $attractions = get_field( 'attraction_content' );
+  $attraction_link = get_field( 'attraction_link' );
+
   // Columns Count
   $column_count = get_field('amenities_column_count');
 
   @endphp
 
 
-  <section class="section--split {{ $background_color_state }}">
-    <div class="container {{ $order_state }} md:flex md:justify-between md:items-center md: flex-row">
-      @if($bg_desktop)
-      <div class="section__bg {{ $background_state }} w-full bg-cover bg-center md:{!! $image_width !!}"
-      style="
-      background-image: url({{ $bg_desktop }});
-      "
-      data-mobile="{{ $bg_mobile }}" data-desktop="{{ $bg_desktop }}"></div>
-      @endif
-      @if($amenities)
-      <div class="section__content w-full md:{!! $content_width !!} relative @if(! is_admin()) {!! $animate !!} {!! $animate_h !!} {!! $animate_p !!}@endif "
-      style="
-      padding: {!! $pad_y !!}px {!! $pad_x !!}px;
-      ">
-        <div class="section__content__inner">
-        <ul
-        style="
-        columns: {!! $column_count !!};
-        ">
-          @foreach ($amenities as $amenities_value)
-          <li>{!! $amenities_value !!}</li>
-          @endforeach
-        </ul>
-      </div>
-    </div>
+  <section class="section--split {{ $order_state }} {{ $background_color_state }}">
+    @if($bg_desktop)
+    <div class="section__bg {{ $background_state }} w-full bg-cover bg-center md:{!! $image_width !!}"
+    style="
+    background-image: url({{ $bg_desktop }});
+    "
+    data-mobile="{{ $bg_mobile }}" data-desktop="{{ $bg_desktop }}"></div>
     @endif
+    <div class="section__content w-full md:{!! $content_width !!} relative"
+    style="
+    padding: {!! $pad_y !!}px {!! $pad_x !!}px;
+    ">
+    <div class="section__content__inner">
+      <ul
+      style="
+      columns: {!! $column_count !!};
+      ">
+      @if($amenities)
+      @foreach ($amenities as $amenities_value)
+      <li>{!! $amenities_value !!}</li>
+      @endforeach
+      @endif
 
+      @if($attractions)
+      {!! $attractions !!}
+      @endif
+
+      @if($attraction_link)
+      <a href="{!! $attraction_link !!}" class="button button--primary">Learn More</a>
+      @endif
+
+    </ul>
   </div>
+</div>
 </section>
